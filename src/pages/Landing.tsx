@@ -3,14 +3,13 @@ import { useEffect, useRef, useState } from 'react';
 import { ALL_DOLLS, CATEGORY_META, type DollCategory } from '@/data/dolls';
 import { motion } from 'framer-motion';
 
-const CATEGORY_ORDER: DollCategory[] = ['corporate', 'relationship', 'family', 'friendship', 'neighborhood'];
+const CATEGORY_ORDER: DollCategory[] = ['corporate', 'relationship', 'family', 'friendship'];
 
-const CATEGORY_INTROS: Record<DollCategory, { packNum: string; title: string[]; subtitle: string }> = {
-  corporate: { packNum: 'Pack 1 of 5', title: ['Corporate', 'Voodoo™'], subtitle: 'The boardroom. The synergy. The reply-all incident of 2024.' },
-  relationship: { packNum: 'Pack 2 of 5', title: ['Relationship', 'Voodoo™'], subtitle: "The text at 2am. The \"it's complicated.\" The read receipts." },
-  family: { packNum: 'Pack 3 of 5', title: ['Family', 'Matters™'], subtitle: 'The holidays. The group chat. The unsolicited advice.' },
-  friendship: { packNum: 'Pack 4 of 5', title: ['With Friends', 'Like These™'], subtitle: 'The group chat. The brunch. The "I\'m almost there" text sent from home.' },
-  neighborhood: { packNum: 'New · Standalone', title: ['Neighborhood', 'Watch™'], subtitle: 'He\'s not a friend. He\'s not a colleague. He lives twelve feet away.' },
+const CATEGORY_INTROS: Partial<Record<DollCategory, { packNum: string; title: string[]; subtitle: string }>> = {
+  corporate: { packNum: 'Pack 1 of 4', title: ['Corporate', 'Voodoo™'], subtitle: 'The boardroom. The synergy. The reply-all incident of 2024.' },
+  relationship: { packNum: 'Pack 2 of 4', title: ['Relationship', 'Voodoo™'], subtitle: "The text at 2am. The \"it's complicated.\" The read receipts." },
+  family: { packNum: 'Pack 3 of 4', title: ['Family', 'Matters™'], subtitle: 'The holidays. The group chat. The unsolicited advice.' },
+  friendship: { packNum: 'Pack 4 of 4', title: ['With Friends', 'Like These™'], subtitle: 'The group chat. The brunch. The "I\'m almost there" text sent from home.' },
 };
 
 function FadeUp({ children, className = '' }: { children: React.ReactNode; className?: string }) {
@@ -58,7 +57,7 @@ export default function Landing() {
               {cat === 'friendship' ? 'Friends' : cat.charAt(0).toUpperCase() + cat.slice(1)}
             </a>
           ))}
-          <a href="#mystery" className="font-body text-voodoo-muted text-xs tracking-[0.12em] uppercase hover:text-voodoo-gold transition-colors no-underline">Mystery</a>
+          <a href="#bonus" className="font-body text-voodoo-muted text-xs tracking-[0.12em] uppercase hover:text-voodoo-gold transition-colors no-underline">Bonus</a>
           <Link to="/doll/micromanager" className="bg-voodoo-red text-cream px-4 py-1.5 text-xs tracking-[0.1em] uppercase font-medium rounded-sm hover:brightness-90 transition no-underline">
             Play Now ✦
           </Link>
@@ -131,11 +130,11 @@ export default function Landing() {
         return (
           <section key={cat} id={cat} className={catIdx % 2 === 1 ? 'bg-[#f0ebe0]' : 'bg-cream'}>
             <FadeUp className="text-center py-16 px-8">
-              <div className="font-body text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-muted mb-4">{intro.packNum}</div>
+              <div className="font-body text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-muted mb-4">{intro?.packNum}</div>
               <h2 className="font-display font-bold leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
-                {intro.title[0]}<br />{intro.title[1]}
+                {intro?.title[0]}<br />{intro?.title[1]}
               </h2>
-              <p className="text-base text-ink-mid max-w-[520px] mx-auto leading-relaxed">{intro.subtitle}</p>
+              <p className="text-base text-ink-mid max-w-[520px] mx-auto leading-relaxed">{intro?.subtitle}</p>
             </FadeUp>
 
             <div className="max-w-[1400px] mx-auto px-8 pb-16">
@@ -179,38 +178,45 @@ export default function Landing() {
         );
       })}
 
-      {/* MYSTERY DOLL */}
-      <section id="mystery" className="bg-mystery py-20 px-8 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(184,42,36,0.15)_0%,transparent_70%)]" />
-        <div className="relative z-10">
-          <FadeUp>
-            <div className="text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-gold/60 mb-6 font-body">Pack 6 · Bonus</div>
-          </FadeUp>
-          <FadeUp>
-            <div className="w-[140px] h-[180px] bg-cream/[0.03] border-2 border-dashed border-voodoo-gold/25 rounded-md mx-auto mb-8 flex flex-col items-center justify-center gap-2">
-              <span className="text-6xl text-voodoo-gold/25">?</span>
-              <span className="text-[0.6rem] tracking-[0.25em] uppercase text-cream/20 font-body">Identity hidden</span>
+      {/* BONUS DOLL — The Inner You */}
+      {(() => {
+        const bonusDoll = ALL_DOLLS.find(d => d.category === 'bonus');
+        if (!bonusDoll) return null;
+        return (
+          <section id="bonus" className="bg-mystery py-20 px-8 text-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(192,57,74,0.15)_0%,transparent_70%)]" />
+            <div className="relative z-10">
+              <FadeUp>
+                <div className="text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-gold/60 mb-6 font-body">Bonus Doll</div>
+              </FadeUp>
+              <FadeUp>
+                <Link to={`/doll/${bonusDoll.id}`} className="no-underline">
+                  <div className="w-[140px] h-[180px] bg-cream/[0.06] border-2 border-voodoo-gold/30 rounded-md mx-auto mb-8 flex flex-col items-center justify-center gap-2 hover:-translate-y-2 hover:border-voodoo-gold transition-all duration-300">
+                    <span className="text-6xl">{bonusDoll.emoji}</span>
+                  </div>
+                </Link>
+              </FadeUp>
+              <FadeUp>
+                <h2 className="font-display font-black italic text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
+                  The <span className="text-voodoo-red">Inner</span><br />You.
+                </h2>
+              </FadeUp>
+              <FadeUp>
+                <p className="font-handwritten text-base text-cream/50 max-w-[440px] mx-auto mb-12 leading-loose">
+                  This one is different. No pins. No curses.<br />
+                  Just wishes, fortunes, and a reminder<br />
+                  that you were never the problem.
+                </p>
+              </FadeUp>
+              <FadeUp>
+                <Link to={`/doll/${bonusDoll.id}`} className="bg-transparent text-cream border border-cream/40 px-8 py-3 rounded-sm text-sm tracking-[0.12em] uppercase font-medium hover:border-cream hover:-translate-y-0.5 transition-all no-underline">
+                  Meet The Inner You ✦
+                </Link>
+              </FadeUp>
             </div>
-          </FadeUp>
-          <FadeUp>
-            <h2 className="font-display font-black italic text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
-              The <span className="text-voodoo-red">Mystery</span><br />Doll.
-            </h2>
-          </FadeUp>
-          <FadeUp>
-            <p className="font-handwritten text-base text-cream/50 max-w-[440px] mx-auto mb-12 leading-loose">
-              One doll. No name. No category. No spoilers.<br />
-              Someone is coming that you didn't expect.<br />
-              You'll know them when you see them.
-            </p>
-          </FadeUp>
-          <FadeUp>
-            <button className="bg-transparent text-cream border border-cream/40 px-8 py-3 rounded-sm text-sm tracking-[0.12em] uppercase font-medium hover:border-cream hover:-translate-y-0.5 transition-all">
-              Notify Me When It Drops
-            </button>
-          </FadeUp>
-        </div>
-      </section>
+          </section>
+        );
+      })()}
 
       {/* CTA */}
       <section className="bg-voodoo-red py-16 px-8 text-center">
@@ -239,7 +245,7 @@ export default function Landing() {
         </div>
         <div className="text-xs tracking-[0.15em] uppercase text-voodoo-muted mb-8">Stick it to them. Virtually.</div>
         <div className="flex gap-8 justify-center mb-8 flex-wrap">
-          {['Corporate Pack', 'Relationships', 'Family', 'Friends', 'Mystery'].map(label => (
+          {['Corporate Pack', 'Relationships', 'Family', 'Friends', 'Bonus'].map(label => (
             <a key={label} href="#" className="text-xs text-voodoo-muted no-underline tracking-[0.1em] uppercase hover:text-voodoo-gold transition-colors">
               {label}
             </a>
