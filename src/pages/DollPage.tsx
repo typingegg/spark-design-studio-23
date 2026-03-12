@@ -86,7 +86,7 @@ function WishesSection({ wishes, showToast }: { wishes: WishCategory[]; showToas
   );
 }
 
-
+export default function DollPage() {
   const { dollId } = useParams<{ dollId: string }>();
   const doll = getDollById(dollId || '');
 
