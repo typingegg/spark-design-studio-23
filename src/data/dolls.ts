@@ -1,5 +1,12 @@
 export type DollCategory = 'corporate' | 'relationship' | 'family' | 'friendship' | 'bonus';
 
+export interface WishCategory {
+  icon: string;
+  category: string;
+  color: string;
+  pool: string[];
+}
+
 export interface DollConfig {
   id: string;
   name: string;
@@ -31,6 +38,7 @@ export interface DollConfig {
   vibesSectionTitle: string[];
   footerTagline: string;
   footerDisclaimer: string;
+  wishes?: WishCategory[];
 }
 
 export const CATEGORY_META: Record<DollCategory, { label: string; tagClass: string; packTitle: string }> = {
