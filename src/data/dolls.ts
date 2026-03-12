@@ -2929,34 +2929,35 @@ const INNER_YOU: DollConfig = {
 };
 
 export const ALL_DOLLS: DollConfig[] = [
-  // ── CORPORATE ──
+  // ── CORPORATE (5) ──
   MICROMANAGER,
-  makeDoll({ id: 'narcissist', name: 'The Narcissist', tagline: 'Mirror, mirror on the wall — actually, just keep talking about me.', emoji: '🪞', category: 'corporate', categoryLabel: 'Corporate Voodoo™', accentColor: '#b82a24' }),
   CREDIT_GRABBER,
   GASLIGHTER,
   CLOWN,
-  DUMPER,
+  EXPLOITER,
 
-  // ── RELATIONSHIP ──
+  // ── RELATIONSHIP (5) ──
   GHOSTER,
   LOVE_BOMBER,
   CLINGY_ONE,
   COMMITMENT_PHOBE,
   GOLD_DIGGER,
 
-  // ── FAMILY ──
+  // ── FAMILY (5) ──
   MOTHER,
   DRUNK_UNCLE,
   JUDGMENTAL_AUNT,
   GOLDEN_CHILD,
   SISTER,
 
-  // ── FRIENDSHIP ──
+  // ── FRIENDSHIP (5) ──
   KAREN,
   BRIDEZILLA,
   MESSY_ROOMMATE,
   FAKE_FRIEND,
   BAD_INFLUENCE,
+
+  // ── BONUS (1) ──
   INNER_YOU,
 ];
 
