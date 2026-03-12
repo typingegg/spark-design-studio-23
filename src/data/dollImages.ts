@@ -23,6 +23,7 @@ import drunkUncle from '@/assets/dolls/drunk-uncle.jpeg';
 import karen from '@/assets/dolls/karen.jpeg';
 import bridezilla from '@/assets/dolls/bridezilla.jpeg';
 import messyRoommate from '@/assets/dolls/messy-roommate.jpeg';
+import fakeFriend from '@/assets/dolls/fake-friend.jpeg';
 import badInfluence from '@/assets/dolls/bad-influence.jpeg';
 
 // Bonus
