@@ -15,6 +15,7 @@ import goldDigger from '@/assets/dolls/gold-digger.jpeg';
 // Family dolls
 import mother from '@/assets/dolls/mother.jpeg';
 import judgmentalAunt from '@/assets/dolls/judgmental-aunt.jpeg';
+import goldenChild from '@/assets/dolls/golden-child.jpeg';
 import sister from '@/assets/dolls/sister.jpeg';
 import drunkUncle from '@/assets/dolls/drunk-uncle.jpeg';
 
@@ -22,6 +23,7 @@ import drunkUncle from '@/assets/dolls/drunk-uncle.jpeg';
 import karen from '@/assets/dolls/karen.jpeg';
 import bridezilla from '@/assets/dolls/bridezilla.jpeg';
 import messyRoommate from '@/assets/dolls/messy-roommate.jpeg';
+import fakeFriend from '@/assets/dolls/fake-friend.jpeg';
 import badInfluence from '@/assets/dolls/bad-influence.jpeg';
 
 // Bonus
@@ -40,11 +42,13 @@ export const DOLL_IMAGES: Record<string, string> = {
   'gold-digger': goldDigger,
   'mother': mother,
   'judgmental-aunt': judgmentalAunt,
+  'golden-child': goldenChild,
   'sister': sister,
   'drunk-uncle': drunkUncle,
   'karen': karen,
   'bridezilla': bridezilla,
   'messy-roommate': messyRoommate,
+  'fake-friend': fakeFriend,
   'bad-influence': badInfluence,
   'inner-you': innerYou,
 };
