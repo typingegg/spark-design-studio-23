@@ -96,7 +96,7 @@ export default function DollPage() {
   function revealFortune() {
     if (!doll) return;
     const r = Math.random();
-    let pool, cls: string;
+    let pool: { text: string; rarity: string }[], cls: string;
     if (r < 0.6) { pool = doll.fortunes.common; cls = 'common'; }
     else if (r < 0.9) { pool = doll.fortunes.uncommon; cls = 'uncommon'; }
     else { pool = doll.fortunes.rare; cls = 'rare'; }
