@@ -89,6 +89,7 @@ function WishesSection({ wishes, showToast }: { wishes: WishCategory[]; showToas
 export default function DollPage() {
   const { dollId } = useParams<{ dollId: string }>();
   const doll = getDollById(dollId || '');
+  const isBonus = doll?.category === 'bonus';
 
   const [pinCount, setPinCount] = useState(0);
   const [escPct, setEscPct] = useState(2);
