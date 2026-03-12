@@ -32,6 +32,7 @@ function FadeUp({ children, className = '' }: { children: React.ReactNode; class
 
 export default function Landing() {
   const [count, setCount] = useState(55000);
+  const [requestSent, setRequestSent] = useState(false);
 
   useEffect(() => {
     const today = new Date();
