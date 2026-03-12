@@ -258,6 +258,28 @@ export default function DollPage() {
     area.appendChild(svg);
   }
 
+  const HEART_GLYPHS = ["♥","❤","♡","❥","💕","💗","💓","💞","✨","✦"];
+  const HEART_COLORS = ["#c8a030","#e8c060","#c0394a","#e07080","#e8a0b0","#d4a000","#f0d060","#b02040"];
+
+  function spawnHearts(area: HTMLElement, x: number, y: number) {
+    const count = 10 + Math.floor(Math.random() * 6);
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement("span");
+      el.className = "sparkle";
+      el.textContent = pick(HEART_GLYPHS);
+      el.style.color = pick(HEART_COLORS);
+      el.style.fontSize = (0.8 + Math.random() * 1.2) + "rem";
+      el.style.left = x + "px";
+      el.style.top = y + "px";
+      const angle = Math.random() * Math.PI * 2;
+      const dist = 40 + Math.random() * 80;
+      el.style.setProperty("--tx", Math.cos(angle) * dist + "px");
+      el.style.setProperty("--ty", (Math.sin(angle) * dist - 30) + "px");
+      area.appendChild(el);
+      setTimeout(() => el.remove(), 1200);
+    }
+  }
+
   const handleDollClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!doll || !dollAreaRef.current) return;
     const area = dollAreaRef.current;
