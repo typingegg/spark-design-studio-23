@@ -276,8 +276,13 @@ export default function DollPage() {
     setTimeout(() => setStabbed(false), 320);
 
     spawnSparkles(area, x, y);
-    spawnOuch(area, x, y);
-    spawnPin(area, x, y);
+
+    if (isBonus) {
+      spawnHearts(area, x, y);
+    } else {
+      spawnOuch(area, x, y);
+      spawnPin(area, x, y);
+    }
 
     // Get zone from click position
     const areaHeight = rect.height;
