@@ -130,7 +130,7 @@ export default function Landing() {
         return (
           <section key={cat} id={cat} className={catIdx % 2 === 1 ? 'bg-[#f0ebe0]' : 'bg-cream'}>
             <FadeUp className="text-center py-16 px-8">
-              <div className="font-body text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-muted mb-4">{intro.packNum}</div>
+              <div className="font-body text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-muted mb-4">{intro?.packNum}</div>
               <h2 className="font-display font-bold leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
                 {intro.title[0]}<br />{intro.title[1]}
               </h2>
