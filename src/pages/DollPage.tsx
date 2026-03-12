@@ -429,86 +429,97 @@ export default function DollPage() {
 
       <hr className="border-none border-t border-foreground/[0.14]" />
 
-      {/* CURSE / ANNOYANCE */}
-      <section id="curse">
-        <div className="px-8 py-16 flex flex-col gap-4 items-start">
-          <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
-            <span className="w-8 h-px bg-voodoo-muted" />{doll.curseLabel}
-          </div>
-          <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
-            {doll.curseSectionTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor }}>{doll.curseSectionTitle[1]}</em>
-          </h2>
-          <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px]">
-            Not a curse. An annoyance. A minor inconvenience with impeccable aim. Think of someone who deserves a little cosmic nudge today.
-          </p>
-          <input
-            id="curseRecipient"
-            type="text"
-            placeholder="Enter their name…"
-            maxLength={40}
-            className="font-body text-[0.88rem] bg-cream border-none border-b-[1.5px] border-b-ink px-1 py-2 text-ink w-full max-w-[460px] outline-none"
-            onChange={() => { if (curAnnoyance.current) setCurseText(buildPersonalized(curAnnoyance.current, (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR BOSS', doll.accentColor)); }}
-          />
-          <div className="bg-cream border-[1.5px] border-ink rounded-sm p-5 font-handwritten text-[0.95rem] text-ink leading-relaxed w-full max-w-[700px] min-h-[90px] cursor-pointer relative"
-            style={{ boxShadow: '3px 3px 0 hsl(var(--ink))' }}
-            onClick={shuffleCurse}>
-            <span dangerouslySetInnerHTML={{ __html: curseText }} />
-            <span className="absolute bottom-2 right-3 font-mono text-[0.47rem] tracking-[0.1em] uppercase text-voodoo-muted">click to refresh</span>
-          </div>
-          <div className="flex gap-3 flex-wrap">
-            <button onClick={shuffleCurse}
-              className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-voodoo-muted border-[1.5px] border-foreground/[0.14] px-5 py-3.5 cursor-pointer hover:text-ink hover:border-ink transition-all">
-              🎲 New Annoyance
-            </button>
-            <button onClick={() => showToast(`✦ The spirits have been dispatched.`)}
-              className="font-body text-[0.78rem] font-bold tracking-[0.06em] uppercase bg-ink text-cream border-none px-6 py-3.5 cursor-pointer hover:bg-voodoo-red transition-colors inline-flex items-center gap-2">
-              ✉ Send the Curse
-            </button>
-          </div>
-        </div>
-      </section>
+      {/* WISHES (bonus doll) or CURSE + VIBES (regular dolls) */}
+      {doll.wishes && doll.wishes.length > 0 ? (
+        <WishesSection wishes={doll.wishes} showToast={showToast} />
+      ) : (
+        <>
+          {/* CURSE / ANNOYANCE */}
+          {doll.annoyances.length > 0 && (
+            <section id="curse">
+              <div className="px-8 py-16 flex flex-col gap-4 items-start">
+                <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
+                  <span className="w-8 h-px bg-voodoo-muted" />{doll.curseLabel}
+                </div>
+                <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
+                  {doll.curseSectionTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor }}>{doll.curseSectionTitle[1]}</em>
+                </h2>
+                <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px]">
+                  Not a curse. An annoyance. A minor inconvenience with impeccable aim. Think of someone who deserves a little cosmic nudge today.
+                </p>
+                <input
+                  id="curseRecipient"
+                  type="text"
+                  placeholder="Enter their name…"
+                  maxLength={40}
+                  className="font-body text-[0.88rem] bg-cream border-none border-b-[1.5px] border-b-ink px-1 py-2 text-ink w-full max-w-[460px] outline-none"
+                  onChange={() => { if (curAnnoyance.current) setCurseText(buildPersonalized(curAnnoyance.current, (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR BOSS', doll.accentColor)); }}
+                />
+                <div className="bg-cream border-[1.5px] border-ink rounded-sm p-5 font-handwritten text-[0.95rem] text-ink leading-relaxed w-full max-w-[700px] min-h-[90px] cursor-pointer relative"
+                  style={{ boxShadow: '3px 3px 0 hsl(var(--ink))' }}
+                  onClick={shuffleCurse}>
+                  <span dangerouslySetInnerHTML={{ __html: curseText }} />
+                  <span className="absolute bottom-2 right-3 font-mono text-[0.47rem] tracking-[0.1em] uppercase text-voodoo-muted">click to refresh</span>
+                </div>
+                <div className="flex gap-3 flex-wrap">
+                  <button onClick={shuffleCurse}
+                    className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-voodoo-muted border-[1.5px] border-foreground/[0.14] px-5 py-3.5 cursor-pointer hover:text-ink hover:border-ink transition-all">
+                    🎲 New Annoyance
+                  </button>
+                  <button onClick={() => showToast(`✦ The spirits have been dispatched.`)}
+                    className="font-body text-[0.78rem] font-bold tracking-[0.06em] uppercase bg-ink text-cream border-none px-6 py-3.5 cursor-pointer hover:bg-voodoo-red transition-colors inline-flex items-center gap-2">
+                    ✉ Send the Curse
+                  </button>
+                </div>
+              </div>
+            </section>
+          )}
 
-      <hr className="border-none border-t border-foreground/[0.14]" />
+          <hr className="border-none border-t border-foreground/[0.14]" />
 
-      {/* GOOD VIBES */}
-      <section id="good-vibes">
-        <div className="px-8 py-16 flex flex-col gap-4 items-start">
-          <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
-            <span className="w-8 h-px bg-voodoo-muted" />{doll.vibesLabel}
-          </div>
-          <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
-            {doll.vibesSectionTitle[0]}<br /><em className="italic text-voodoo-gold">{doll.vibesSectionTitle[1]}</em>
-          </h2>
-          <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px]">
-            You stuck the pins. You sent the curse. Now balance the universe. Think of someone who deserves a little magic today.
-          </p>
-          <input
-            id="vibesRecipient"
-            type="text"
-            placeholder="Enter their name for the full magic…"
-            maxLength={40}
-            className="font-body text-[0.88rem] bg-cream border-none border-b-[1.5px] border-b-voodoo-gold px-1 py-2 text-ink w-full max-w-[460px] outline-none"
-            onChange={() => { if (curVibe.current) setVibesText(buildPersonalized(curVibe.current, (document.getElementById('vibesRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR FAVORITE PERSON', '#c8a030')); }}
-          />
-          <div className="rounded-sm p-5 font-handwritten text-[0.95rem] text-[#a07820] leading-relaxed w-full max-w-[700px] min-h-[90px] cursor-pointer relative"
-            style={{ background: 'linear-gradient(135deg, #fffef5, #fff8e7)', border: '2px solid #c8a030', boxShadow: '4px 4px 0 #c8a030' }}
-            onClick={shuffleVibes}>
-            <span dangerouslySetInnerHTML={{ __html: vibesText }} />
-            <span className="absolute bottom-2 right-3 font-mono text-[0.47rem] tracking-[0.1em] uppercase text-voodoo-muted">click to refresh</span>
-          </div>
-          <div className="flex gap-3 flex-wrap">
-            <button onClick={shuffleVibes}
-              className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-voodoo-muted border-[1.5px] border-foreground/[0.14] px-5 py-3.5 cursor-pointer hover:text-ink hover:border-ink transition-all">
-              ✨ New Vibe
-            </button>
-            <button onClick={() => showToast(`✨ Good vibes sent. The universe is on it.`)}
-              className="font-body text-[0.78rem] font-bold tracking-[0.06em] uppercase text-white border-none px-6 py-3.5 cursor-pointer hover:brightness-90 transition-all inline-flex items-center gap-2"
-              style={{ background: '#c8a030' }}>
-              ✨ Send the Good Vibes
-            </button>
-          </div>
-        </div>
-      </section>
+          {/* GOOD VIBES */}
+          {doll.goodVibes.length > 0 && (
+            <section id="good-vibes">
+              <div className="px-8 py-16 flex flex-col gap-4 items-start">
+                <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
+                  <span className="w-8 h-px bg-voodoo-muted" />{doll.vibesLabel}
+                </div>
+                <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
+                  {doll.vibesSectionTitle[0]}<br /><em className="italic text-voodoo-gold">{doll.vibesSectionTitle[1]}</em>
+                </h2>
+                <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px]">
+                  You stuck the pins. You sent the curse. Now balance the universe. Think of someone who deserves a little magic today.
+                </p>
+                <input
+                  id="vibesRecipient"
+                  type="text"
+                  placeholder="Enter their name for the full magic…"
+                  maxLength={40}
+                  className="font-body text-[0.88rem] bg-cream border-none border-b-[1.5px] border-b-voodoo-gold px-1 py-2 text-ink w-full max-w-[460px] outline-none"
+                  onChange={() => { if (curVibe.current) setVibesText(buildPersonalized(curVibe.current, (document.getElementById('vibesRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR FAVORITE PERSON', '#c8a030')); }}
+                />
+                <div className="rounded-sm p-5 font-handwritten text-[0.95rem] text-[#a07820] leading-relaxed w-full max-w-[700px] min-h-[90px] cursor-pointer relative"
+                  style={{ background: 'linear-gradient(135deg, #fffef5, #fff8e7)', border: '2px solid #c8a030', boxShadow: '4px 4px 0 #c8a030' }}
+                  onClick={shuffleVibes}>
+                  <span dangerouslySetInnerHTML={{ __html: vibesText }} />
+                  <span className="absolute bottom-2 right-3 font-mono text-[0.47rem] tracking-[0.1em] uppercase text-voodoo-muted">click to refresh</span>
+                </div>
+                <div className="flex gap-3 flex-wrap">
+                  <button onClick={shuffleVibes}
+                    className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-voodoo-muted border-[1.5px] border-foreground/[0.14] px-5 py-3.5 cursor-pointer hover:text-ink hover:border-ink transition-all">
+                    ✨ New Vibe
+                  </button>
+                  <button onClick={() => showToast(`✨ Good vibes sent. The universe is on it.`)}
+                    className="font-body text-[0.78rem] font-bold tracking-[0.06em] uppercase text-white border-none px-6 py-3.5 cursor-pointer hover:brightness-90 transition-all inline-flex items-center gap-2"
+                    style={{ background: '#c8a030' }}>
+                    ✨ Send the Good Vibes
+                  </button>
+                </div>
+              </div>
+            </section>
+          )}
+        </>
+      )}
 
       <hr className="border-none border-t border-foreground/[0.14]" />
 
