@@ -581,19 +581,19 @@ const CLOWN: DollConfig = {
 // ═══════════════════════════════════════════════════════════════
 // THE DUMPER — Fully configured
 // ═══════════════════════════════════════════════════════════════
-const DUMPER: DollConfig = {
-  id: 'dumper',
-  name: 'The Dumper',
+const EXPLOITER: DollConfig = {
+  id: 'exploiter',
+  name: 'The Exploiter',
   archetype: 'Task Delegator',
   tagline: 'Delegates everything. Takes credit anyway.',
   emoji: '📦',
   category: 'corporate',
   categoryLabel: 'Corporate Voodoo™',
-  navTagText: 'Dumper Edition',
+  navTagText: 'Exploiter Edition',
   accentColor: '#b82a24',
-  heroTitle: ['Dump the', 'Corporate'],
-  heroItalicWord: 'Burden.',
-  heroDescription: 'Know someone who delegates everything?\nTakes credit for your work. Blames you for theirs.\nStick pins. Reclaim your sanity.',
+  heroTitle: ['Expose the', 'Corporate'],
+  heroItalicWord: 'Exploiter.',
+  heroDescription: 'Know someone who exploits everyone around them?\nTakes credit for your work. Blames you for theirs.\nStick pins. Reclaim your sanity.',
   escLabels: ["Mild Annoyance", "Mounting Frustration", "Quiet Corporate Rage", "Fully Unhinged", "⚡ Maximum Chaos ⚡"],
   bossLines: ["I need this done. When can you get it to me?", "Can someone just handle this? I'm in back-to-backs all day.", "I don't need the details. Just give me the answer.", "Loop me in when it's finished. Not before."],
   ouchLines: ["Redo it.", "I don't see your point.", "Just fix it.", "That's not what I asked for.", "Do it again.", "I'll need this by EOD.", "I don't have time for this.", "That's not good enough.", "Figure it out.", "Have someone else do it.", "This isn't rocket science.", "I'm not explaining this again.", "Just get it done.", "Why is this still not done?", "Not my problem. Fix it."],
