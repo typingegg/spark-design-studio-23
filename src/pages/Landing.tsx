@@ -151,23 +151,30 @@ export default function Landing() {
 
               <FadeUp>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                  {dolls.map(doll => (
-                    <Link key={doll.id} to={`/doll/${doll.id}`} className="no-underline">
-                      <div className="relative rounded-md overflow-hidden aspect-[3/4] bg-ink cursor-pointer hover:-translate-y-1.5 hover:rotate-[-1deg] transition-all duration-300 group">
-                        <div className="w-full h-full flex flex-col items-center justify-center gap-2"
-                          style={{ background: `linear-gradient(135deg, ${doll.accentColor}22, ${doll.accentColor}08)` }}>
-                          <span className="text-5xl">{doll.emoji}</span>
+                  {dolls.map(doll => {
+                    const img = getDollImage(doll.id);
+                    return (
+                      <Link key={doll.id} to={`/doll/${doll.id}`} className="no-underline">
+                        <div className="relative rounded-md overflow-hidden aspect-[3/4] bg-ink cursor-pointer hover:-translate-y-1.5 hover:rotate-[-1deg] transition-all duration-300 group">
+                          {img ? (
+                            <img src={img} alt={doll.name} className="w-full h-full object-cover object-top" />
+                          ) : (
+                            <div className="w-full h-full flex flex-col items-center justify-center gap-2"
+                              style={{ background: `linear-gradient(135deg, ${doll.accentColor}22, ${doll.accentColor}08)` }}>
+                              <span className="text-5xl">{doll.emoji}</span>
+                            </div>
+                          )}
+                          <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent opacity-90 flex flex-col justify-end p-4">
+                            <div className="font-display text-sm font-bold text-cream leading-tight mb-1">{doll.name}</div>
+                            <div className="font-body text-[0.65rem] text-cream/60 tracking-wide leading-snug">{doll.tagline}</div>
+                          </div>
+                          <span className="absolute top-2 right-2 bg-voodoo-gold text-ink text-[0.58rem] tracking-[0.15em] uppercase px-2 py-0.5 rounded-sm font-body">
+                            Live ✦
+                          </span>
                         </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent opacity-90 flex flex-col justify-end p-4">
-                          <div className="font-display text-sm font-bold text-cream leading-tight mb-1">{doll.name}</div>
-                          <div className="font-body text-[0.65rem] text-cream/60 tracking-wide leading-snug">{doll.tagline}</div>
-                        </div>
-                        <span className="absolute top-2 right-2 bg-voodoo-gold text-ink text-[0.58rem] tracking-[0.15em] uppercase px-2 py-0.5 rounded-sm font-body">
-                          Live ✦
-                        </span>
-                      </div>
-                    </Link>
-                  ))}
+                      </Link>
+                    );
+                  })}
                 </div>
               </FadeUp>
             </div>
