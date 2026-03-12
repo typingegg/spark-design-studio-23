@@ -87,7 +87,7 @@ export default function DollPage() {
   }
 
   function shuffleVibes() {
-    if (!doll) return;
+    if (!doll || doll.goodVibes.length === 0) return;
     const template = pick(doll.goodVibes);
     curVibe.current = template;
     const name = (document.getElementById('vibesRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR FAVORITE PERSON';
