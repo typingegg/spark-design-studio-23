@@ -42,11 +42,13 @@ export const DOLL_IMAGES: Record<string, string> = {
   'gold-digger': goldDigger,
   'mother': mother,
   'judgmental-aunt': judgmentalAunt,
+  'golden-child': goldenChild,
   'sister': sister,
   'drunk-uncle': drunkUncle,
   'karen': karen,
   'bridezilla': bridezilla,
   'messy-roommate': messyRoommate,
+  'fake-friend': fakeFriend,
   'bad-influence': badInfluence,
   'inner-you': innerYou,
 };
