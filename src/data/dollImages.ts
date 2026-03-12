@@ -15,6 +15,7 @@ import goldDigger from '@/assets/dolls/gold-digger.jpeg';
 // Family dolls
 import mother from '@/assets/dolls/mother.jpeg';
 import judgmentalAunt from '@/assets/dolls/judgmental-aunt.jpeg';
+import goldenChild from '@/assets/dolls/golden-child.jpeg';
 import sister from '@/assets/dolls/sister.jpeg';
 import drunkUncle from '@/assets/dolls/drunk-uncle.jpeg';
 
