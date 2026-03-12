@@ -320,7 +320,7 @@ export default function DollPage() {
     } else {
       showBoss(pick(doll.escLines[esc.tier] || doll.escLines.mild));
     }
-  }, [doll, pinCount]);
+  }, [doll, pinCount, isBonus]);
 
   function resetPins() {
     setPinCount(0);
