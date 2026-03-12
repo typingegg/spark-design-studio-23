@@ -614,31 +614,27 @@ export default function DollPage() {
       <hr className="border-none border-t border-foreground/[0.14]" />
 
       {/* DONATE / SUPPORT */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-8 py-16">
-        <div>
-          <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
-            <span className="w-8 h-px bg-voodoo-muted" />Support the Craft
-          </div>
-          <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
-            Keep the<br /><em className="italic" style={{ color: doll.accentColor }}>Spirits Funded.</em>
-          </h2>
-          <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
-            Running a voodoo operation isn't free. If this brought you even one moment of cathartic relief — consider throwing the spirits a coin or two.
-          </p>
+      <section className="px-8 py-16 text-center">
+        <div className="flex items-center justify-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-4">
+          <span className="w-8 h-px bg-voodoo-muted" />Support the Craft<span className="w-8 h-px bg-voodoo-muted" />
         </div>
-        <div className="flex flex-col gap-3.5">
+        <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>
+          Keep the <em className="italic" style={{ color: doll.accentColor }}>Spirits Funded.</em>
+        </h2>
+        <p className="text-[0.85rem] leading-relaxed text-ink-mid font-light mb-8 max-w-[460px] mx-auto">
+          If this brought you even a moment of relief — consider throwing the spirits a coin.
+        </p>
+        <div className="flex gap-3 justify-center flex-wrap">
           {[
-            { title: 'Merch on Etsy', desc: 'T-shirts & toys. Corporate trauma, now wearable.', icon: '🛍' },
-            { title: 'Venmo', desc: 'Send a little something to keep the spirits happy.', icon: '💙' },
-            { title: 'PayPal', desc: 'Old school. The spirits accept all currencies.', icon: '💛' },
+            { title: 'PayPal', icon: '💛', href: '#' },
+            { title: 'Venmo', icon: '💙', href: '#' },
+            { title: 'Buy Me a Coffee', icon: '☕', href: '#' },
           ].map(item => (
-            <div key={item.title} className="border-[1.5px] border-foreground/[0.14] rounded-sm p-4 hover:border-ink hover:-translate-y-0.5 hover:shadow-[3px_3px_0_hsl(var(--ink))] transition-all cursor-pointer">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-lg">{item.icon}</span>
-                <span className="font-body text-sm font-bold">{item.title}</span>
-              </div>
-              <div className="text-xs text-voodoo-muted font-light">{item.desc}</div>
-            </div>
+            <a key={item.title} href={item.href} target="_blank" rel="noopener noreferrer"
+              className="no-underline border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-3 hover:border-ink hover:-translate-y-0.5 hover:shadow-[3px_3px_0_hsl(var(--ink))] transition-all cursor-pointer flex items-center gap-2">
+              <span className="text-lg">{item.icon}</span>
+              <span className="font-body text-sm font-bold text-ink">{item.title}</span>
+            </a>
           ))}
         </div>
       </section>
