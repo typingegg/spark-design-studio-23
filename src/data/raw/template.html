@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Corporate Voodoo — Template</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;700&family=DM+Mono:wght@400;500&family=Special+Elite&display=swap');
+
+</style>
+<style>
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream:    #f5f0e8;
+  --ink:      #1a1410;
+  --ink-mid:  #3a3028;
+  --red:      #b82a24;
+  --gold:     #c8a030;
+  --muted:    #8a7a6a;
+  --border:   rgba(26,20,16,0.14);
+  --pad:      2rem;
+  --gap:      4rem;
+}
+
+html { scroll-behavior: smooth; background: #f5f0e8; }
+body {
+  background: #f5f0e8 !important;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── NAV ─────────────────────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 300;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--pad); height: 58px;
+  background: rgba(245,240,232,0.96);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif; font-weight: 900;
+  font-size: 1rem; color: var(--ink); letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.nav-logo span { color: var(--red); }
+.nav-links {
+  display: flex; gap: 1.5rem; align-items: center;
+}
+.nav-links a {
+  font-family: 'DM Mono', monospace; font-size: 0.58rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-right { display: flex; align-items: center; gap: 1rem; }
+.nav-counter {
+  font-family: 'DM Mono', monospace; font-size: 0.56rem;
+  letter-spacing: 0.1em; color: var(--muted);
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.pulse-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #2ecc71; flex-shrink: 0;
+  animation: pulse-anim 2s infinite;
+}
+@keyframes pulse-anim {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.65); }
+}
+.nav-cta {
+  font-family: 'DM Sans', sans-serif; font-size: 0.7rem;
+  font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  background: var(--ink); color: var(--cream);
+  border: none; padding: 0.48rem 1.1rem; cursor: pointer;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--red); }
+
+/* ── HERO ────────────────────────────────────────────────────── */
+.hero {
+  display: grid; grid-template-columns: 28fr 72fr;
+  min-height: 100vh; padding-top: 58px;
+}
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 3rem var(--pad) 3rem;
+  background: var(--cream); position: relative; z-index: 2;
+}
+.hero-eyebrow {
+  font-family: 'DM Mono', monospace; font-size: 0.58rem;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
+  margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.6rem;
+}
+.hero-eyebrow::before {
+  content: ''; display: inline-block;
+  width: 2rem; height: 1px; background: var(--muted); flex-shrink: 0;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif; font-weight: 900;
+  font-size: clamp(2.6rem, 4.8vw, 4.2rem); line-height: 1.0;
+  color: var(--ink); margin-bottom: 1.1rem;
+}
+.hero-title .red-italic { color: var(--red); font-style: italic; }
+.hero-desc {
+  font-size: 0.96rem; line-height: 1.5; color: var(--ink-mid);
+  font-weight: 300; max-width: 460px; margin-bottom: 1.6rem;
+}
+
+/* ── BUTTONS ─────────────────────────────────────────────────── */
+.btn-ink {
+  font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  background: var(--ink); color: var(--cream);
+  border: none; padding: 0.82rem 1.5rem; cursor: pointer;
+  transition: background 0.2s; white-space: nowrap;
+}
+.btn-ink:hover { background: var(--red); }
+
+.btn-outline {
+  font-family: 'DM Mono', monospace; font-size: 0.6rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  background: none; color: var(--ink);
+  border: 1.5px solid var(--border);
+  padding: 0.82rem 1.4rem; cursor: pointer;
+  transition: border-color 0.2s; white-space: nowrap;
+}
+.btn-outline:hover { border-color: var(--ink); }
+
+.btn-red {
+  font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  background: var(--red); color: var(--cream);
+  border: none; padding: 0.82rem 1.4rem; cursor: pointer;
+  transition: background 0.2s; display: inline-flex; align-items: center; gap: 0.4rem;
+}
+.btn-red:hover { background: #8a1e1a; }
+
+.btn-ghost {
+  font-family: 'DM Mono', monospace; font-size: 0.6rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  background: none; color: var(--muted);
+  border: 1.5px solid var(--border);
+  padding: 0.82rem 1.2rem; cursor: pointer; transition: all 0.2s;
+}
+.btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
+
+.btn-shuffle {
+  font-family: 'DM Mono', monospace; font-size: 0.6rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  background: none; color: var(--muted);
+  border: 1.5px solid var(--border);
+  padding: 0.88rem 1.4rem; cursor: pointer; transition: all 0.2s;
+}
+.btn-shuffle:hover { color: var(--ink); border-color: var(--ink); }
+
+.btn-send-curse {
+  font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--ink); color: var(--cream);
+  border: none; padding: 0.88rem 1.7rem; cursor: pointer;
+  transition: background 0.2s;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+}
+.btn-send-curse:hover { background: var(--red); }
+
+.btn-send-vibes {
+  font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--gold); color: #fff;
+  border: none; padding: 0.88rem 1.7rem; cursor: pointer;
+  transition: background 0.2s;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+}
+.btn-send-vibes:hover { background: #a07820; }
+
+/* ── HERO BUTTON ROWS ────────────────────────────────────────── */
+.hero-btns { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.65rem; }
+.pin-strip { display: flex; align-items: flex-start; gap: 2rem; padding-top: 1.4rem; }
+.pin-stat .num {
+  font-family: 'Playfair Display', serif; font-weight: 900;
+  font-size: 3rem; line-height: 1; display: block; color: var(--ink);
+}
+.pin-stat .lbl {
+  font-family: 'DM Mono', monospace; font-size: 0.54rem;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  display: block; color: var(--muted); margin-top: 0.15rem;
+}
+
+/* ── HERO RIGHT (DOLL AREA) ──────────────────────────────────── */
+.hero-right {
+  position: relative;
+  background: #f5f0e8;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: calc(100vh - 58px);
+  padding: 3rem 2rem;
+  overflow: visible;
+  cursor: crosshair;
+  border-left: 1px solid var(--border);
+  box-shadow: inset 8px 0 60px rgba(200,160,48,0.07), inset -2px 0 0 rgba(200,160,48,0.04);
+}
+/* Subtle radial spotlight behind doll */
+.hero-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 65% 65% at 52% 48%, rgba(255,255,255,0.38) 0%, transparent 72%);
+  pointer-events: none;
+  z-index: 0;
+}
+.doll-badge { display: none; }
+
+
+/* ── DOLL FRAME ── */
+.doll-frame {
+  position: relative;
+  width: min(72vh, 82%);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #e8e6e2;
+  border: 2.5px solid rgba(26,20,16,0.18);
+  box-shadow:
+    inset 0 0 0 5px rgba(255,255,255,0.32),
+    inset 0 0 0 7px rgba(26,20,16,0.07),
+    0 32px 80px rgba(40,24,8,0.32),
+    0 6px 18px rgba(40,24,8,0.14);
+  border-radius: 6px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.doll-instruction {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
+.pin-instruction-badge { display: none;
+  position: absolute;
+  top: -1.1rem; left: 50%; transform: translateX(-50%);
+  background: var(--cream); border: 1.5px solid var(--ink);
+  border-radius: 40px; padding: 0.55rem 1.4rem;
+  display: flex; align-items: center; gap: 0.55rem;
+  box-shadow: 3px 3px 0 var(--ink);
+  pointer-events: none; user-select: none; white-space: nowrap;
+  z-index: 20;
+  animation: badge-bob 3s ease-in-out infinite;
+}
+.pin-instruction-badge .pin-icon {
+  font-size: 1.1rem; line-height: 1;
+}
+.pin-instruction-badge .pin-text {
+  font-family: 'DM Mono', monospace; font-size: 0.62rem;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink);
+  font-weight: 500;
+}
+@keyframes badge-bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(-4px); }
+}
+#dollImg {
+  width: 100%; height: 100%; max-width: none; display: block; object-fit: cover; object-position: center 10%;
+  user-select: none; pointer-events: none;
+  position: relative; z-index: 2;
+  filter: drop-shadow(0 20px 56px rgba(60,35,10,0.42)) drop-shadow(0 4px 14px rgba(60,35,10,0.22));
+  transition: transform 0.08s, filter 0.08s;
+}
+#dollImg.stabbed { animation: stab 0.32s ease; }
+@keyframes stab {
+  0%   { transform: scale(1) rotate(0deg); }
+  30%  { transform: scale(0.97) rotate(-1.2deg); }
+  65%  { transform: scale(1.02) rotate(0.5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+
+/* ── PINS ─────────────────────────────────────────────────────────────────── */
+.doll-pin {
+  position: absolute;
+  pointer-events: none;
+  z-index: 15;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.35));
+  animation: pin-plant 0.28s cubic-bezier(0.34,1.56,0.64,1) forwards;
+}
+@keyframes pin-plant {
+  from { opacity: 0.2; transform: translateY(-30px) scaleY(0.5); }
+  to   { opacity: 1;   transform: translateY(0)     scaleY(1);   }
+}
+
+/* ── OUCH POPS ───────────────────────────────────────────────── */
+.ouch-pop {
+  position: absolute; font-family: 'Special Elite', cursive;
+  font-size: 1.05rem; color: var(--red); pointer-events: none;
+  z-index: 20; white-space: nowrap;
+  animation: ouch-up 1.2s ease-out forwards;
+}
+@keyframes ouch-up {
+  0%   { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-65px) scale(0.65); }
+}
+
+/* ── SPARKLES ────────────────────────────────────────────────── */
+.sparkle {
+  position: absolute; pointer-events: none; z-index: 19;
+  animation: spark-out 0.9s ease-out forwards;
+}
+@keyframes spark-out {
+  0%   { opacity: 1; transform: translate(0,0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0); }
+}
+
+/* ── ESCALATION BAR ──────────────────────────────────────────── */
+.esc-bar {
+  width: 100%; background: var(--cream);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0.72rem var(--pad);
+}
+.esc-row { display: flex; align-items: center; gap: 1.2rem; width: 100%; }
+.esc-label {
+  font-family: 'DM Mono', monospace; font-size: 0.54rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); flex-shrink: 0;
+}
+.esc-track {
+  flex: 1; height: 8px;
+  background: rgba(26,20,16,0.1); border-radius: 4px; overflow: hidden;
+}
+.esc-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, #b82a24, #e83c34);
+  border-radius: 4px;
+  transition: width 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.esc-status {
+  font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600;
+  color: var(--ink); flex-shrink: 0; min-width: 155px; text-align: right;
+}
+
+/* ── BOSS BAR ────────────────────────────────────────────────── */
+.boss-bar {
+  width: 100%; background: var(--cream);
+  padding: 1.3rem var(--pad) 1.8rem;
+  border-bottom: 1px solid var(--border);
+  opacity: 0; transition: opacity 0.4s; min-height: 68px;
+}
+.boss-bar.visible { opacity: 1; }
+.boss-label {
+  font-family: 'DM Mono', monospace; font-size: 0.52rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.55rem;
+}
+.boss-bubble {
+  background: var(--cream); border: 1.5px solid var(--ink);
+  border-radius: 20px; padding: 0.9rem 1.5rem;
+  box-shadow: 4px 4px 0 var(--ink);
+  font-family: 'Special Elite', cursive;
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  color: var(--ink); line-height: 1.4;
+  display: inline-block; max-width: min(680px, 90vw);
+  opacity: 0; transform: translateY(6px);
+  transition: opacity 0.32s, transform 0.32s;
+  position: relative;
+}
+.boss-bubble.show { opacity: 1; transform: translateY(0); }
+/* speech tail — points UP (boss is "speaking" from below) */
+.boss-bubble::before {
+  content: ''; position: absolute;
+  top: -10px; left: 2rem;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--ink);
+}
+.boss-bubble::after {
+  content: ''; position: absolute;
+  top: -7.5px; left: calc(2rem + 1.5px);
+  border-left: 8.5px solid transparent;
+  border-right: 8.5px solid transparent;
+  border-bottom: 8.5px solid var(--cream);
+}
+.boss-dots {
+  font-family: 'DM Mono', monospace; font-size: 1rem;
+  letter-spacing: 0.32em; color: var(--muted);
+  animation: blink 1.2s infinite;
+}
+@keyframes blink { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+
+/* ── DIVIDER ─────────────────────────────────────────────────── */
+.divider { border: none; border-top: 1px solid var(--border); }
+
+/* ── SHARED SECTION ──────────────────────────────────────────── */
+.sec-eyebrow {
+  font-family: 'DM Mono', monospace; font-size: 0.58rem;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
+  margin-bottom: 0.55rem; display: flex; align-items: center; gap: 0.6rem;
+}
+.sec-eyebrow::before {
+  content: ''; display: inline-block;
+  width: 2rem; height: 1px; background: var(--muted); flex-shrink: 0;
+}
+.sec-title {
+  font-family: 'Playfair Display', serif; font-weight: 900;
+  font-size: clamp(1.9rem, 3vw, 2.7rem); line-height: 1.1;
+  color: var(--ink); margin-bottom: 0.8rem;
+}
+.sec-title em { font-style: italic; color: var(--red); }
+.sec-body {
+  font-size: 0.92rem; line-height: 1.5; color: var(--ink-mid);
+  font-weight: 300; margin-bottom: 1rem;
+}
+.sec-note {
+  font-size: 0.78rem; color: var(--muted); font-weight: 300;
+  margin-top: -0.6rem; margin-bottom: 1rem;
+}
+
+/* ── FORTUNE SECTION ─────────────────────────────────────────── */
+#fortune .sec-inner {
+  padding: var(--gap) var(--pad); width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
+}
+.fortune-trigger {
+  font-family: 'DM Mono', monospace; font-size: 0.64rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  background: none; color: var(--ink); border: 1.5px solid var(--ink);
+  padding: 0.9rem 2rem; cursor: pointer; transition: all 0.2s;
+  display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;
+}
+.fortune-trigger:hover { background: var(--ink); color: var(--cream); }
+.rarity-hint {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-family: 'DM Mono', monospace; font-size: 0.54rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+  cursor: pointer; position: relative;
+}
+.rarity-tip {
+  display: none; position: absolute; bottom: 130%; left: 0;
+  background: var(--ink); color: var(--cream);
+  padding: 0.85rem 1.1rem; border-radius: 4px;
+  font-size: 0.7rem; line-height: 1.5; width: 250px;
+  z-index: 100; letter-spacing: 0.02em; text-transform: none;
+}
+.rarity-hint:hover .rarity-tip { display: block; }
+.fortune-card {
+  background: var(--cream); border: 1.5px solid var(--ink);
+  padding: 1.7rem 1.9rem; box-shadow: 4px 4px 0 var(--ink);
+  border-radius: 2px; display: none;
+}
+.fortune-card.show {
+  display: block;
+  animation: card-drop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes card-drop {
+  from { opacity: 0; transform: translateY(-10px) rotate(-0.7deg); }
+  to   { opacity: 1; transform: translateY(0) rotate(0); }
+}
+.fortune-eyebrow {
+  font-family: 'DM Mono', monospace; font-size: 0.52rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.6rem;
+}
+.fortune-text {
+  font-family: 'Special Elite', cursive; font-size: 1rem;
+  color: var(--ink); line-height: 1.55; margin-bottom: 0.8rem;
+}
+.fortune-rarity {
+  font-family: 'DM Mono', monospace; font-size: 0.54rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.25rem 0.6rem; border-radius: 2px; display: inline-block;
+}
+.fortune-rarity.common   { background: rgba(26,20,16,0.06); color: var(--muted); }
+.fortune-rarity.uncommon { background: rgba(200,160,48,0.15); color: #a07820; }
+.fortune-rarity.rare     { background: rgba(184,42,36,0.1); color: var(--red); }
+
+/* ── CURSE / VIBES SECTIONS ──────────────────────────────────── */
+.curse-sec, .vibes-sec {
+  padding: var(--gap) var(--pad); width: 100%;
+  display: flex; flex-direction: column; gap: 1.1rem; align-items: flex-start;
+}
+.text-input-ink {
+  font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
+  background: var(--cream); border: none;
+  border-bottom: 1.5px solid var(--ink);
+  padding: 0.52rem 0.2rem; color: var(--ink);
+  width: 100%; max-width: 460px; outline: none;
+}
+.text-input-gold {
+  font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
+  background: var(--cream); border: none;
+  border-bottom: 1.5px solid var(--gold);
+  padding: 0.52rem 0.2rem; color: var(--ink);
+  width: 100%; max-width: 460px; outline: none;
+}
+.prompt-label {
+  font-family: 'DM Mono', monospace; font-size: 0.57rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+}
+.curse-card {
+  background: var(--cream); border: 1.5px solid var(--ink); border-radius: 3px;
+  padding: 1.3rem 1.7rem; font-family: 'Special Elite', cursive;
+  font-size: 0.95rem; color: var(--ink); line-height: 1.55;
+  width: 100%; max-width: 700px; min-height: 90px;
+  box-shadow: 3px 3px 0 var(--ink); cursor: pointer;
+  position: relative;
+}
+.vibes-card {
+  background: linear-gradient(135deg, #fffef5, #fff8e7);
+  border: 2px solid var(--gold); border-radius: 3px;
+  padding: 1.3rem 1.7rem; font-family: 'Special Elite', cursive;
+  font-size: 0.95rem; color: #a07820; line-height: 1.55;
+  width: 100%; max-width: 700px; min-height: 90px;
+  box-shadow: 4px 4px 0 var(--gold); cursor: pointer;
+  position: relative;
+}
+.card-hint {
+  position: absolute; bottom: 0.55rem; right: 0.8rem;
+  font-family: 'DM Mono', monospace; font-size: 0.47rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+}
+.action-row { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+/* ── COMING SOON ─────────────────────────────────────────────── */
+.coming-sec { padding: var(--gap) var(--pad); width: 100%; }
+.coming-tag {
+  display: inline-block; background: var(--ink); color: var(--cream);
+  font-family: 'DM Mono', monospace; font-size: 0.54rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 0.32rem 0.8rem; margin-bottom: 0.8rem;
+}
+.coming-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 1.8rem; gap: 1rem; flex-wrap: wrap;
+}
+.coming-sub {
+  font-size: 0.85rem; color: var(--muted); max-width: 270px;
+  font-weight: 300; line-height: 1.5;
+}
+.coming-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem; margin-bottom: 1.5rem;
+}
+.doll-card {
+  border: 1.5px solid var(--border); border-radius: 3px;
+  overflow: hidden; background: var(--cream);
+}
+.doll-card.live {
+  border-color: var(--ink);
+  transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+}
+.doll-card.live:hover {
+  transform: translateY(-3px); box-shadow: 4px 4px 0 var(--ink);
+}
+.doll-card img { width: 100%; display: block; }
+.doll-card img.greyed { filter: grayscale(1) opacity(0.4); }
+.doll-card-label {
+  font-family: 'DM Mono', monospace; font-size: 0.54rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); padding: 0.6rem 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.doll-card.live .doll-card-label { color: var(--ink); }
+.notify-row {
+  display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;
+}
+.notify-p {
+  font-family: 'DM Mono', monospace; font-size: 0.56rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+}
+.notify-input {
+  font-family: 'DM Sans', sans-serif; font-size: 0.82rem;
+  background: var(--cream); border: none;
+  border-bottom: 1.5px solid var(--ink);
+  padding: 0.45rem 0.2rem; color: var(--ink);
+  outline: none; min-width: 200px;
+}
+.notify-btn {
+  font-family: 'DM Mono', monospace; font-size: 0.54rem;
+  letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
+  background: var(--ink); color: var(--cream);
+  border: none; padding: 0.5rem 1rem; cursor: pointer; transition: background 0.2s;
+}
+.notify-btn:hover { background: var(--red); }
+
+/* ── DONATE ──────────────────────────────────────────────────── */
+.donate-sec {
+  padding: var(--gap) var(--pad); width: 100%;
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: start;
+}
+.donate-note {
+  font-family: 'Special Elite', cursive; font-size: 0.76rem;
+  color: var(--muted); font-style: italic;
+  margin-top: 0.7rem; line-height: 1.45;
+}
+.donate-cards { display: flex; flex-direction: column; gap: 0.9rem; }
+.donate-card {
+  border: 1.5px solid var(--border); border-radius: 3px;
+  padding: 1.1rem 1.3rem; transition: all 0.2s; cursor: pointer;
+  text-decoration: none; color: var(--ink); display: block;
+}
+.donate-card:hover {
+  border-color: var(--ink); transform: translateY(-2px);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.donate-card.etsy { border-color: #f1641e; }
+.donate-card.etsy:hover { box-shadow: 3px 3px 0 #f1641e; }
+.dc-head { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; }
+.dc-title { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 700; }
+.dc-desc { font-size: 0.75rem; color: var(--muted); line-height: 1.4; font-weight: 300; }
+
+/* ── APP STRIP ───────────────────────────────────────────────── */
+.app-strip {
+  background: var(--cream); border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem var(--pad);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem;
+}
+.app-label {
+  font-family: 'DM Mono', monospace; font-size: 0.56rem;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+}
+.app-badges { display: flex; gap: 0.8rem; }
+.app-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 500;
+  color: var(--ink); border: 1.5px solid var(--ink);
+  padding: 0.38rem 0.9rem; border-radius: 4px;
+  text-decoration: none; transition: all 0.2s;
+}
+.app-badge:hover { background: var(--ink); color: var(--cream); }
+
+/* ── FOOTER ──────────────────────────────────────────────────── */
+footer {
+  background: var(--cream); border-top: 1.5px solid var(--border);
+  padding: 1.6rem var(--pad) 1.2rem;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 0.3rem; text-align: center;
+}
+.foot-logo {
+  font-family: 'Playfair Display', serif; font-weight: 900;
+  font-size: 0.95rem; color: var(--ink);
+}
+.foot-logo span { color: var(--red); }
+.foot-copy { font-size: 0.76rem; color: var(--muted); line-height: 1.45; }
+.foot-disc { font-size: 0.65rem; color: var(--muted); opacity: 0.55; letter-spacing: 0.04em; }
+.foot-complaint { font-size: 0.76rem; color: var(--muted); line-height: 1.45; max-width: 520px; margin-top: 0.2rem; }
+.foot-complaint a { color: var(--red); font-weight: 700; }
+.foot-diamond { color: var(--gold); font-size: 1rem; margin-top: 0.4rem; }
+
+/* ── TOAST ───────────────────────────────────────────────────── */
+.toast {
+  position: fixed; bottom: 2rem; left: 50%;
+  transform: translateX(-50%) translateY(16px);
+  background: var(--ink); color: var(--cream);
+  font-family: 'DM Mono', monospace; font-size: 0.64rem;
+  letter-spacing: 0.1em; padding: 0.75rem 1.4rem;
+  border-radius: 2px; opacity: 0;
+  transition: opacity 0.36s, transform 0.36s;
+  z-index: 500; white-space: nowrap; pointer-events: none;
+}
+.toast.show {
+  opacity: 1; transform: translateX(-50%) translateY(0);
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { min-height: 70vw; }
+  #fortune .sec-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .donate-sec { grid-template-columns: 1fr; gap: 2rem; }
+  .coming-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .nav-counter, .nav-links { display: none; }
+}
+@media (max-width: 600px) {
+  .action-row { flex-direction: column; }
+  .btn-shuffle, .btn-send-curse, .btn-send-vibes { width: 100%; justify-content: center; }
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body { background-color: #f5f0e8 !important; color: #1a1410 !important; color-scheme: light; }
+  nav { background: rgba(245,240,232,0.97) !important; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ── NAV ───────────────────────────────────────────────── -->
+<nav>
+  <a class="nav-logo" href="#">Corporate <span>Voodoo</span>™</a>
+  <div class="nav-links">
+    <a href="#fortune">Fortune</a>
+    <a href="#curse">Annoyance</a>
+    <a href="#good-vibes">Good Vibes</a>
+    <a href="#coming-soon">Coming Soon</a>
+    <a href="#donate">Support</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-counter">
+      <span class="pulse-dot"></span>
+      <span id="visitCount">55,000</span>&nbsp;tortured souls served
+    </div>
+    <button class="nav-cta" onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'})">
+      Support the Craft ✦
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">The Original Corporate Voodoo Doll</div>
+    <h1 class="hero-title">
+      Hands on<br>
+      Corporate<br>
+      <span class="red-italic">Therapy.</span>
+    </h1>
+    <p class="hero-desc">
+      Having a tough day?<br>
+      Get through it with a Corporate Voodoo Doll.<br>
+      Stick pins. Consult the Office Spirits.<br>
+      Feel marginally better about your Monday.
+    </p>
+    <div class="hero-btns">
+      <button class="btn-ink" onclick="document.getElementById('dollArea').scrollIntoView({behavior:'smooth'})">
+        &#8595;&nbsp;Meet the Micromanager
+      </button>
+      <button class="btn-outline" onclick="revealFortune();document.getElementById('fortune').scrollIntoView({behavior:'smooth'})">
+        Get a Fortune
+      </button>
+    </div>
+    <div class="hero-btns">
+      <button class="btn-outline" onclick="document.getElementById('curse').scrollIntoView({behavior:'smooth'})">
+        &#127922;&nbsp;Send an Annoyance
+      </button>
+      <button class="btn-outline" onclick="document.getElementById('good-vibes').scrollIntoView({behavior:'smooth'})">
+        &#10024;&nbsp;Send Good Vibes
+      </button>
+    </div>
+    <div class="hero-btns">
+      <button class="btn-red" onclick="shareDoll()">&#11014;&nbsp;Send to a Friend</button>
+      <button class="btn-ghost" onclick="resetPins()">&#x21BA;&nbsp;Reset Pins</button>
+    </div>
+    <div class="pin-strip">
+      <div class="pin-stat">
+        <span class="num" id="pinCount">0</span>
+        <span class="lbl">Pins Stuck</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right" id="dollArea" onclick="handleDollClick(event)">
+        <p class="doll-instruction">&#128204;&nbsp; Click anywhere on the doll to stick a pin</p>
+        <div class="doll-frame">
+      <img id="dollImg" src="" alt="Voodoo Doll" alt="The Micromanager — Corporate Voodoo Doll" draggable="false">
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ESCALATION BAR ────────────────────────────────────── -->
+<div class="esc-bar">
+  <div class="esc-row">
+    <span class="esc-label">Escalation</span>
+    <div class="esc-track">
+      <div class="esc-fill" id="escFill"></div>
+    </div>
+    <span class="esc-status" id="escStatus">Mild Annoyance</span>
+  </div>
+</div>
+
+<!-- ── BOSS BAR ──────────────────────────────────────────── -->
+<div class="boss-bar" id="bossBar">
+  <div class="boss-label">The Boss Says:</div>
+  <div class="boss-bubble" id="bossBubble"></div>
+</div>
+
+<hr class="divider">
+
+<!-- ── FORTUNE ───────────────────────────────────────────── -->
+<section id="fortune">
+  <div class="sec-inner">
+    <div>
+      <div class="sec-eyebrow">Office Prophecy</div>
+      <h2 class="sec-title">The Spirits<br>Have <em>Spoken.</em></h2>
+      <p class="sec-body">
+        Every workplace has its omens. Let the spirits reveal what
+        corporate fate awaits you today. Fortunes range from painfully
+        common to devastatingly rare.
+      </p>
+      <button class="fortune-trigger" onclick="revealFortune()">
+        ❆&nbsp;&nbsp;Consult the Spirits
+      </button>
+      <div class="rarity-hint">
+        ❆&nbsp;What’s a Rare Pull?
+        <span class="rarity-tip">
+          Fortunes have 3 rarity tiers:<br><br>
+          <strong>Common (60%)</strong> — everyday corporate misery.<br><br>
+          <strong>Uncommon (30%)</strong> — the kind that makes you stare at the ceiling.<br><br>
+          <strong>❆ Rare (10%)</strong> — devastatingly specific. The brutal ones.
+        </span>
+      </div>
+    </div>
+    <div>
+      <div class="fortune-card" id="fortuneCard">
+        <div class="fortune-eyebrow">Today’s Corporate Prophecy</div>
+        <div class="fortune-text" id="fortuneText"></div>
+        <div class="fortune-rarity" id="fortuneRarity"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── CURSE ─────────────────────────────────────────────── -->
+<section id="curse">
+  <div class="curse-sec">
+    <div class="sec-eyebrow">Corporate Mischief</div>
+    <h2 class="sec-title">Send a Little<br><em>Annoyance.</em></h2>
+    <p class="sec-body">
+      Not a real curse. Just a harmless little inconvenience, delivered
+      with love. Pick your target, generate their fate, and watch it
+      vanish in a puff of smoke.
+    </p>
+    <p class="sec-note">❆ No managers were actually harmed. Probably.</p>
+
+    <input
+      class="text-input-ink"
+      type="text"
+      id="curseRecipient"
+      placeholder="Enter their name to personalize…"
+      maxlength="40"
+    >
+    <p class="prompt-label">❆&nbsp;Read this out loud for maximum effect&nbsp;❆</p>
+    <div class="curse-card" id="curseCard" onclick="shuffleCurse()">
+      <span id="curseText">Click to generate their fate…</span>
+      <span class="card-hint">click to refresh</span>
+    </div>
+    <div class="action-row">
+      <button class="btn-shuffle" onclick="shuffleCurse()">&#127922;&nbsp;New Annoyance</button>
+      <button class="btn-send-curse" onclick="sendCurse()">&#9993;&nbsp;Send the Curse</button>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── GOOD VIBES ────────────────────────────────────────── -->
+<section id="good-vibes">
+  <div class="vibes-sec">
+    <div class="sec-eyebrow">Karmic Balance</div>
+    <h2 class="sec-title">Now Send Some<br><em>Good Vibes.</em></h2>
+    <p class="sec-body">
+      You stuck the pins. You sent the curse. Now balance the universe.
+      Think of someone who deserves a little magic today — a good friend,
+      a great colleague, someone who refilled the coffee.
+    </p>
+    <p class="sec-note">❆ The spirits reward kindness. Probably.</p>
+
+    <input
+      class="text-input-gold"
+      type="text"
+      id="vibesRecipient"
+      placeholder="Enter their name for the full magic…"
+      maxlength="40"
+    >
+    <p class="prompt-label">❆&nbsp;Say it out loud — the universe is listening&nbsp;❆</p>
+    <div class="vibes-card" id="vibesCard" onclick="shuffleVibes()">
+      <span id="vibesText">Click to generate their good luck…</span>
+      <span class="card-hint">click to refresh</span>
+    </div>
+    <div class="action-row">
+      <button class="btn-shuffle" onclick="shuffleVibes()">&#10024;&nbsp;New Vibe</button>
+      <button class="btn-send-vibes" onclick="sendVibes()">&#10024;&nbsp;Send the Good Vibes</button>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── COMING SOON ───────────────────────────────────────── -->
+<section id="coming-soon">
+  <div class="coming-sec">
+    <div class="coming-header">
+      <div>
+        <div class="coming-tag">Coming Soon</div>
+        <h2 class="sec-title">More Archetypes.<br><em>More Suffering.</em></h2>
+      </div>
+      <p class="coming-sub">
+        New dolls are in the works. Each one more painfully recognizable than the last.
+      </p>
+    </div>
+    <div class="coming-grid">
+      <div class="doll-card live">
+        <img src="" alt="The Micromanager">
+        <div class="doll-card-label">The Micromanager ✦ Live</div>
+      </div>
+      <div class="doll-card">
+        <img class="greyed" src="" alt="The Gaslighter">
+        <div class="doll-card-label">The Gaslighter — Soon</div>
+      </div>
+      <div class="doll-card">
+        <img class="greyed" src="" alt="HR Karen">
+        <div class="doll-card-label">HR Karen — Soon</div>
+      </div>
+      <div class="doll-card">
+        <img class="greyed" src="" alt="The Burnt Out One">
+        <div class="doll-card-label">The Burnt Out One — Soon</div>
+      </div>
+    </div>
+    <div class="notify-row">
+      <p class="notify-p">Get notified when new dolls drop —</p>
+      <input class="notify-input" type="email" id="notifyEmail" placeholder="your@email.com">
+      <button class="notify-btn" onclick="handleNotify()">Notify Me</button>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── DONATE ────────────────────────────────────────────── -->
+<section id="donate">
+  <div class="donate-sec">
+    <div>
+      <div class="sec-eyebrow">Support the Craft</div>
+      <h2 class="sec-title">Keep the<br><em>Pins Coming.</em></h2>
+      <p class="sec-body">
+        This is a one-person labor of love, spite, and seeing too many
+        friends get laid off. If this made your day 0.3% better,
+        consider buying the spirits a coffee or a snack.
+      </p>
+      <p class="donate-note">
+        No pressure. No subscription. No passive-aggressive follow-up email.
+        Just genuine appreciation and possibly a rare fortune in your honor.
+      </p>
+    </div>
+    <div class="donate-cards">
+      <a class="donate-card etsy" href="https://etsy.com" target="_blank">
+        <div class="dc-head">
+          <span style="font-size:1.1rem;">&#128717;</span>
+          <div class="dc-title">Merch on Etsy</div>
+        </div>
+        <div class="dc-desc">T-shirts &amp; toys. Corporate trauma, now wearable.</div>
+      </a>
+      <a class="donate-card" href="https://venmo.com/YOUR-VENMO-HANDLE" target="_blank">
+        <div class="dc-head">
+          <span style="font-size:1.1rem;">&#128153;</span>
+          <div class="dc-title">Venmo</div>
+        </div>
+        <div class="dc-desc">Send a little something to keep the spirits happy.</div>
+      </a>
+      <a class="donate-card" href="https://paypal.me/YOURPAYPALHANDLE" target="_blank">
+        <div class="dc-head">
+          <span style="font-size:1.1rem;">&#128155;</span>
+          <div class="dc-title">PayPal</div>
+        </div>
+        <div class="dc-desc">Old school. The spirits accept all currencies.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── APP STORE STRIP ───────────────────────────────────── -->
+<div class="app-strip">
+  <div class="app-label">Corporate Voodoo™ — Coming Soon to Mobile</div>
+  <div class="app-badges">
+    <a class="app-badge" href="#">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+      </svg>
+      App Store
+    </a>
+    <a class="app-badge" href="#">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3.18 23.76c.3.17.65.19.97.07l12.32-7.12-2.7-2.7-10.59 9.75zm-1.14-20.9C1.7 3.3 1.5 3.87 1.5 4.5v15c0 .63.2 1.2.54 1.64l.09.08 8.4-8.4v-.2L2.13 2.77l-.09.09zM21.1 10.3l-2.5-1.44-2.98 2.98 2.98 2.98 2.52-1.45c.72-.41.72-1.66-.02-2.07zM4.15.24L16.47 7.36l-2.7 2.7L3.18.31C3.5.19 3.85.21 4.15.24z"/>
+      </svg>
+      Google Play
+    </a>
+  </div>
+</div>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer>
+  <div class="foot-logo">Corporate <span>Voodoo</span>™</div>
+  <div class="foot-copy">
+    No actual managers were harmed in the making of this experience.<br>
+    Any similarities to real people are purely coincidental… and deeply unfortunate for you.
+  </div>
+  <div class="foot-disc">&#9888; No real voodoo was used. Only wishful thinking. Maybe. &#128521;</div>
+  <div class="foot-complaint">
+    Got a complaint? A suggestion? A deeply personal grievance?
+    Want a custom corporate doll made in someone’s exact likeness? <em>Oh, we can talk.</em>
+    We hear you. We feel you. We are also underpaid.
+    <a href="#donate">Send a small donation — help us stick it to them!</a>
+    We might fix it. Big might.
+  </div>
+  <div class="foot-diamond">❖</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+
+/* ═══════════════════════════════════════════════════════════════
+   DOLL CONFIG — edit everything in this block to create a new doll
+   ═══════════════════════════════════════════════════════════════ */
+const DOLL_CONFIG = {
+
+  // ── Identity ─────────────────────────────────────────────────
+  name:           "The Chief Exec",           // shown in nav + coming-soon card
+  archetype:      "Chief Exec.",              // shown in nav-tag
+  navTagText:     "Chief Exec. Edition",      // right side of nav bar
+
+  // ── Image ────────────────────────────────────────────────────
+  // Paste a base64 data URI here: "data:image/jpeg;base64,/9j/..."
+  // Or a regular URL:             "https://example.com/doll.png"
+  image: "",  // ← paste your base64 data URI or image URL here
+
+  // ── Coming-soon card images (other archetypes teased below) ──
+  // Same format as above — base64 or URL
+  comingSoon: [
+    { image: "",  // ← paste image here name: "The Micromanager",  desc: "Needs to be CC'd on everything. Schedules meetings about meetings." },
+    { image: "",  // ← paste image here name: "The Gaslighter",    desc: "\"That's not what I said.\" Yes it is. We all heard it." },
+    { image: "",  // ← paste image here name: "HR Karen",          desc: "Protects the company. Not you. Never you." },
+    { image: "",  // ← paste image here name: "The Burnt Out One", desc: "Running on cold brew and quiet desperation since 2019." },
+  ],
+
+  // ── Reactions by escalation tier ─────────────────────────────
+  reactions: {
+    mild: [
+      "Have you seen my ROI deck?",
+      "I'll need to align stakeholders on this.",
+      "Let's take this offline after the offsite.",
+      "I'm going to need a 30-60-90 on that.",
+      "Have you considered a pivot?",
+      "That's not scalable. Think bigger.",
+      "I see this more as a learnable moment.",
+      "Let's pressure-test this assumption.",
+      "My assistant will circle back with you.",
+      "I actually invented that idea first.",
+    ],
+    moderate: [
+      "You'll need to present this to the board.",
+      "Why wasn't I looped in on this earlier?",
+      "We're disrupting ourselves before someone else does.",
+      "I need this completed before my 7am tee time.",
+      "Your department's headcount is being right-sized.",
+      "The culture here is entrepreneurial. No overtime pay.",
+      "I've decided to rebrand the company. Again.",
+      "Synergy. That's the word. Write it down.",
+      "I'm not saying you're replaceable. But.",
+      "My vision requires sacrifice. Yours specifically.",
+    ],
+    intense: [
+      "BONUS CANCELLED. EQUITY GRANTED. (Unvested.)",
+      "We're pivoting. Your role doesn't exist in the new org.",
+      "The layoffs are actually an opportunity. For us.",
+      "I just bought a boat. Morale should be higher.",
+      "Your entire team is being 'right-sized.' You're welcome.",
+      "We call it a 'strategic reduction in workforce alignment.'",
+      "Unlimited PTO — theoretically. Practically: a warning.",
+      "The new ERP system costs $40M. Your raise does not exist.",
+      "I've been featured in Forbes. Your health plan has not.",
+      "Congratulations on $2B in sales. I got a third home.",
+    ],
+  },
+
+  // ── Fortune messages ─────────────────────────────────────────
+  fortunes: {
+    common: [
+      "A deck will be sent. You will not read it. You will present it.",
+      "Someone will say 'disruptive.' They will mean 'cheaper.'",
+      "A meeting will be called about the meeting culture.",
+      "An all-hands will answer none of your questions.",
+      "Your bonus is tied to metrics you cannot control.",
+      "The vision will change. The work will not stop.",
+      "A consultant will be paid your salary to tell you your job.",
+      "Someone will say 'we move fast.' No one will define fast.",
+      "The CEO will Tweet something. HR will send a clarification.",
+      "A reorg is coming. No one will tell you until it has happened.",
+    ],
+    uncommon: [
+      "A Slack message marked URGENT will not be urgent.",
+      "The all-hands will end with 'exciting times ahead.'",
+      "Your raise is 'recognition of your incredible contributions.'",
+      "Congratulations on $2B in sales. Enjoy the branded tote.",
+      "This could have been an email. It is a two-hour summit.",
+    ],
+    rare: [
+      "PROMOTION DENIED. LINKEDIN POST GRANTED.",
+      "Your role isn't being eliminated. It's being 'evolved.' Your badge still works. For now.",
+      "The CEO has discovered purpose. Your healthcare plan has not.",
+      "We are family. Families do layoffs via Zoom at 9am on a Tuesday.",
+      "Your feedback has been received, actioned, and filed in: /dev/null.",
+    ],
+  },
+};
+/* ═══════════════════════════════════════════════════════════════
+   END CONFIG — do not edit below this line
+   ═══════════════════════════════════════════════════════════════ */
+
+
+// ── Apply config to page ─────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  // Nav
+  const navTag = document.querySelector('.nav-tag');
+  if (navTag) navTag.textContent = DOLL_CONFIG.navTagText;
+
+  // Doll image
+  const dollImg = document.getElementById('dollImg');
+  if (dollImg) dollImg.src = DOLL_CONFIG.image;
+
+  // Coming soon cards
+  const cards = document.querySelectorAll('.doll-card:not(.live)');
+  cards.forEach((card, i) => {
+    const data = DOLL_CONFIG.comingSoon[i];
+    if (!data) return;
+    const img = card.querySelector('img');
+    const name = card.querySelector('.doll-card-name');
+    const desc = card.querySelector('.doll-card-desc');
+    if (img)  img.src = data.image;
+    if (name) name.textContent = data.name;
+    if (desc) desc.textContent = data.desc;
+  });
+
+  // Live card name
+  const liveName = document.querySelector('.doll-card.live .doll-card-name');
+  if (liveName) liveName.textContent = DOLL_CONFIG.name;
+});
+
+// ── State ────────────────────────────────────────────────────────────────────
+let pinCount = 0, fortuneCount = 0, rareCount = 0;
+let bubbleTimer = null;
+
+// ── Escalation tiers ─────────────────────────────────────────────────────────
+const ESCALATIONS = [
+  { min: 0,  pct: 2,   label: "Mild Annoyance",      tier: "mild" },
+  { min: 5,  pct: 22,  label: "Mounting Frustration", tier: "mild" },
+  { min: 12, pct: 48,  label: "Quiet Corporate Rage", tier: "moderate" },
+  { min: 25, pct: 74,  label: "Fully Unhinged",       tier: "moderate" },
+  { min: 40, pct: 100, label: "⚡ Maximum Chaos ⚡",  tier: "intense" },
+];
+
+function getEsc() {
+  let e = ESCALATIONS[0];
+  for (const l of ESCALATIONS) if (pinCount >= l.min) e = l;
+  return e;
+}
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+// ── Sparkles ─────────────────────────────────────────────────────────────────
+function spawnSparkles(container, x, y) {
+  const syms   = ["✦","✧","★","·","⋆","✸","◆","✼"];
+  const colors = ["#c8a030","#b82a24","#e8c050","#7a4f2a","#fff8ee"];
+  for (let i = 0; i < 9; i++) {
+    const el = document.createElement("div");
+    el.className = "sparkle-el";
+    const ang = (Math.PI*2*i/9) + Math.random()*0.4;
+    const d   = 38 + Math.random()*55;
+    el.style.left = x + "px"; el.style.top = y + "px";
+    el.style.setProperty("--dx", Math.cos(ang)*d + "px");
+    el.style.setProperty("--dy", Math.sin(ang)*d + "px");
+    el.style.color = colors[Math.floor(Math.random()*colors.length)];
+    el.style.animationDelay = (Math.random()*0.08) + "s";
+    el.textContent = syms[Math.floor(Math.random()*syms.length)];
+    container.appendChild(el);
+    setTimeout(() => el.remove(), 800);
+  }
+}
+
+// ── Pins ─────────────────────────────────────────────────────────────────────
+const PIN_COLORS = ["#c62828","#1565c0","#2e7d32","#f9a825","#6a1b9a","#ad1457","#e65100","#00838f"];
+let pinColorIdx = 0;
+
+function spawnPin(container, x, y) {
+  const pin = document.createElement("div");
+  pin.className = "pin-on-doll";
+  const col   = PIN_COLORS[pinColorIdx % PIN_COLORS.length];
+  pinColorIdx++;
+  const angle = (Math.random() * 30) - 15;
+  pin.innerHTML = `<svg width="18" height="52" viewBox="0 0 18 52" xmlns="http://www.w3.org/2000/svg"
+    style="filter:drop-shadow(1px 3px 4px rgba(0,0,0,0.55))">
+    <circle cx="9" cy="9" r="8.5" fill="${col}" stroke="rgba(0,0,0,0.3)" stroke-width="1.2"/>
+    <circle cx="6.5" cy="6" r="3.2" fill="rgba(255,255,255,0.45)"/>
+    <rect x="8" y="17" width="2" height="35" rx="1" fill="#c8b87a" stroke="rgba(0,0,0,0.2)" stroke-width="0.5"/>
+  </svg>`;
+  pin.style.left      = (x - 9)  + "px";
+  pin.style.top       = (y - 52) + "px";
+  pin.style.transform = `rotate(${angle}deg)`;
+  container.appendChild(pin);
+}
+
+// ── Speech bubble ─────────────────────────────────────────────────────────────
+function showBubble(container, text) {
+  const old = container.querySelector(".speech-bubble");
+  if (old) old.remove();
+  if (bubbleTimer) clearTimeout(bubbleTimer);
+  const b = document.createElement("div");
+  b.className = "speech-bubble";
+  b.textContent = text;
+  container.appendChild(b);
+  bubbleTimer = setTimeout(() => b.remove(), 3200);
+}
+
+// ── Ouch pop ─────────────────────────────────────────────────────────────────
+const OUCH = ["Ow!","OW.","ouch.","!","ugh.","...","hey!","rude.","FINE.","noted.","ok.",
+              "bold.","sir.","ma'am.","okay!","stop.","really?","wow.","k.","cool cool.","fun."];
+let ouchIdx = 0;
+function spawnOuch(container, x, y) {
+  const el = document.createElement("div");
+  el.className = "ouch-pop";
+  el.textContent = OUCH[ouchIdx % OUCH.length];
+  ouchIdx++;
+  el.style.left = x + "px"; el.style.top = (y - 10) + "px";
+  container.appendChild(el);
+  setTimeout(() => el.remove(), 700);
+}
+
+// ── Doll click ────────────────────────────────────────────────────────────────
+function handleDollClick(e) {
+  const area = document.getElementById("dollArea");
+  const img  = document.getElementById("dollImg");
+  const rect = area.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  pinCount++;
+  document.getElementById("pinCount").textContent = pinCount;
+
+  const esc = getEsc();
+  document.getElementById("escFill").style.width   = esc.pct + "%";
+  document.getElementById("escStatus").textContent = esc.label;
+
+  img.classList.remove("stabbed"); void img.offsetWidth; img.classList.add("stabbed");
+
+  spawnSparkles(area, x, y);
+  spawnPin(area, x, y);
+  spawnOuch(area, x, y);
+
+  // Show reaction every 3rd pin or zone hit
+  if (pinCount % 3 === 0) {
+    const pool = DOLL_CONFIG.reactions[esc.tier];
+    showBubble(area, pick(pool));
+  }
+}
+
+// ── Share + Reset ────────────────────────────────────────────────────────────
+function shareDoll() {
+  const url = window.location.href;
+  if (navigator.share) {
+    navigator.share({ title: "Corporate Voodoo", text: "I found the perfect thing for your Monday. 📌", url }).catch(()=>{});
+  } else {
+    navigator.clipboard.writeText(url).then(() => {
+      const t = document.createElement("div");
+      t.className = "share-toast";
+      t.textContent = "✦ Link copied — send it to someone who needs this.";
+      document.body.appendChild(t);
+      setTimeout(() => t.classList.add("show"), 10);
+      setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 400); }, 3000);
+    });
+  }
+}
+
+function resetPins() {
+  const area = document.getElementById("dollArea");
+  area.querySelectorAll(".pin-on-doll").forEach(p => p.remove());
+  area.querySelectorAll(".speech-bubble").forEach(b => b.remove());
+  pinCount = 0; pinColorIdx = 0;
+  document.getElementById("pinCount").textContent = "0";
+  document.getElementById("escFill").style.width = "0%";
+  document.getElementById("escStatus").textContent = "Mild Annoyance";
+  const img = document.getElementById("dollImg");
+  img.style.filter = "drop-shadow(0 20px 56px rgba(60,35,10,0.42)) brightness(1.2)";
+  setTimeout(() => { img.style.filter = "drop-shadow(0 20px 56px rgba(60,35,10,0.42))"; }, 400);
+}
+
+// ── Fortunes ──────────────────────────────────────────────────────────────────
+let lastFortune = -1;
+function revealFortune() {
+  const roll = Math.random();
+  let pool = roll < 0.6 ? DOLL_CONFIG.fortunes.common
+           : roll < 0.9 ? DOLL_CONFIG.fortunes.uncommon
+           :               DOLL_CONFIG.fortunes.rare;
+  let idx; do { idx = Math.floor(Math.random()*pool.length); } while (pool.length>1 && idx===lastFortune);
+  lastFortune = idx;
+  const text = pool[idx];
+  const isRare = DOLL_CONFIG.fortunes.rare.includes(text);
+  const isUncommon = DOLL_CONFIG.fortunes.uncommon.includes(text);
+
+  fortuneCount++;
+  document.getElementById("fortuneCount").textContent = fortuneCount;
+  if (isRare) { rareCount++; document.getElementById("rareCount").textContent = rareCount; }
+
+  const card = document.getElementById("fortuneCard");
+  document.getElementById("fortuneText").textContent = text;
+  const rar = document.getElementById("fortuneRarity");
+  rar.textContent  = isRare ? "✦ Rare Fortune" : isUncommon ? "◈ Uncommon" : "";
+  rar.className    = "fortune-rarity " + (isRare ? "rare" : isUncommon ? "uncommon" : "common");
+  card.classList.remove("show"); void card.offsetWidth; card.classList.add("show");
+}
+
+// ── Notify ───────────────────────────────────────────────────────────────────
+function handleNotify() {
+  const input = document.getElementById("notifyEmail");
+  if (!input.value || !input.value.includes("@")) {
+    input.style.borderColor = "#b82a24";
+    setTimeout(() => input.style.borderColor = "", 1200);
+    return;
+  }
+  input.value = ""; input.placeholder = "✦ You're on the list."; input.disabled = true;
+}
+
+</script>
+</body>
+</html>
