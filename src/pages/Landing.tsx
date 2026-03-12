@@ -32,6 +32,7 @@ function FadeUp({ children, className = '' }: { children: React.ReactNode; class
 
 export default function Landing() {
   const [count, setCount] = useState(55000);
+  const [requestSent, setRequestSent] = useState(false);
 
   useEffect(() => {
     const today = new Date();
@@ -97,7 +98,7 @@ export default function Landing() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.8 }}
         >
-          <strong className="text-voodoo-gold text-lg">{count.toLocaleString()}</strong> souls served
+          <strong className="text-voodoo-gold text-lg">{count.toLocaleString()}</strong> people helped & healed
         </motion.div>
 
       </section>
@@ -204,6 +205,83 @@ export default function Landing() {
           </section>
         );
       })()}
+
+      {/* REQUEST A DOLL */}
+      <section className="bg-cream py-20 px-8">
+        <div className="max-w-[600px] mx-auto text-center">
+          <h2 className="font-display font-black leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}>
+            Request a Doll<br />for Your <em className="italic text-voodoo-red">Ex.</em>
+          </h2>
+          <p className="text-base text-ink-mid leading-relaxed mb-8">
+            No doll in the collection quite captures them? Send us a description and the things they actually say. We'll build something truly personal.
+          </p>
+          <form className="flex flex-col gap-4 text-left" onSubmit={(e) => { e.preventDefault(); setRequestSent(true); }}>
+            <input type="text" placeholder="Your name" maxLength={80}
+              className="font-body text-base bg-white border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-4 text-ink outline-none focus:border-ink transition-colors" />
+            <input type="email" placeholder="Your email" maxLength={120}
+              className="font-body text-base bg-white border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-4 text-ink outline-none focus:border-ink transition-colors" />
+            <textarea placeholder="Describe them. Appearance, personality, red flags…" maxLength={1000} rows={4}
+              className="font-body text-base bg-white border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-4 text-ink outline-none focus:border-ink transition-colors resize-none" />
+            <textarea placeholder="Things they say. The more specific, the better." maxLength={1000} rows={4}
+              className="font-body text-base bg-white border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-4 text-ink outline-none focus:border-ink transition-colors resize-none" />
+            <button type="submit"
+              className="font-body text-sm font-bold tracking-[0.12em] uppercase bg-ink text-cream border-none px-8 py-4 cursor-pointer hover:bg-voodoo-red transition-colors w-full">
+              {requestSent ? '✦ Request Sent!' : 'Send the Request'}
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* SUPPORT THE CREATOR */}
+      <section className="bg-ink py-20 px-8 text-center">
+        <div className="max-w-[700px] mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="w-10 h-px bg-voodoo-gold/40" />
+            <span className="font-body text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-gold">Support the Creator</span>
+            <span className="w-10 h-px bg-voodoo-gold/40" />
+          </div>
+          <h2 className="font-display font-black text-cream leading-tight mb-6" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}>
+            If this brought you joy,<br />support the <em className="italic text-voodoo-gold">revenge arc.</em>
+          </h2>
+          <p className="text-base text-cream/60 leading-relaxed mb-10 max-w-[520px] mx-auto">
+            One person made all {ALL_DOLLS.length} of these. If the pins landed, consider fuelling the next round.
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              className="no-underline bg-[#3b7bbf] text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:brightness-110 transition-all cursor-pointer min-w-[160px]">
+              PayPal
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              className="no-underline bg-[#6d9fd0] text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:brightness-110 transition-all cursor-pointer min-w-[160px]">
+              Venmo
+            </a>
+          </div>
+          <div className="flex justify-center mt-4">
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              className="no-underline bg-voodoo-gold text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:brightness-110 transition-all cursor-pointer min-w-[200px]">
+              Buy Me a Coffee
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* DISCLAIMER */}
+      <section className="bg-cream py-16 px-8 text-center">
+        <div className="max-w-[640px] mx-auto">
+          <p className="font-display font-bold text-ink text-base leading-relaxed mb-4">
+            No actual managers were harmed in the making of this experience.<br />
+            Any similarities to real people are purely coincidental… and deeply unfortunate for you.
+          </p>
+          <p className="text-sm text-ink-mid mb-6">
+            ⚠️ No real voodoo was used. Only wishful thinking. Maybe. 😉
+          </p>
+          <p className="text-sm text-ink-mid leading-relaxed">
+            Got a complaint? A suggestion? A deeply personal grievance? Want a custom corporate doll made in someone's exact likeness? <em>Oh, we can talk.</em> We hear you. We feel you. We are also underpaid.{' '}
+            <a href="#" className="text-voodoo-red font-bold underline hover:text-ink transition-colors">Send a small donation — help us stick it to them!</a>{' '}
+            We might fix it. Big might.
+          </p>
+        </div>
+      </section>
 
       {/* FOOTER */}
       <footer className="bg-ink py-12 px-8 text-center border-t border-voodoo-gold/20">
