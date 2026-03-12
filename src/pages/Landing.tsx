@@ -245,7 +245,7 @@ export default function Landing() {
         </div>
         <div className="text-xs tracking-[0.15em] uppercase text-voodoo-muted mb-8">Stick it to them. Virtually.</div>
         <div className="flex gap-8 justify-center mb-8 flex-wrap">
-          {['Corporate Pack', 'Relationships', 'Family', 'Friends', 'Mystery'].map(label => (
+          {['Corporate Pack', 'Relationships', 'Family', 'Friends', 'Bonus'].map(label => (
             <a key={label} href="#" className="text-xs text-voodoo-muted no-underline tracking-[0.1em] uppercase hover:text-voodoo-gold transition-colors">
               {label}
             </a>
