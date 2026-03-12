@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { getDollById, type DollConfig } from '@/data/dolls';
+import { getDollById, type DollConfig, type WishCategory } from '@/data/dolls';
 import { getDollImage } from '@/data/dollImages';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
