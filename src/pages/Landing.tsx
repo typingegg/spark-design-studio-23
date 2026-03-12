@@ -134,7 +134,7 @@ export default function Landing() {
               <h2 className="font-display font-bold leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
                 {intro?.title[0]}<br />{intro?.title[1]}
               </h2>
-              <p className="text-base text-ink-mid max-w-[520px] mx-auto leading-relaxed">{intro.subtitle}</p>
+              <p className="text-base text-ink-mid max-w-[520px] mx-auto leading-relaxed">{intro?.subtitle}</p>
             </FadeUp>
 
             <div className="max-w-[1400px] mx-auto px-8 pb-16">
