@@ -178,38 +178,45 @@ export default function Landing() {
         );
       })}
 
-      {/* MYSTERY DOLL */}
-      <section id="mystery" className="bg-mystery py-20 px-8 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(184,42,36,0.15)_0%,transparent_70%)]" />
-        <div className="relative z-10">
-          <FadeUp>
-            <div className="text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-gold/60 mb-6 font-body">Pack 6 · Bonus</div>
-          </FadeUp>
-          <FadeUp>
-            <div className="w-[140px] h-[180px] bg-cream/[0.03] border-2 border-dashed border-voodoo-gold/25 rounded-md mx-auto mb-8 flex flex-col items-center justify-center gap-2">
-              <span className="text-6xl text-voodoo-gold/25">?</span>
-              <span className="text-[0.6rem] tracking-[0.25em] uppercase text-cream/20 font-body">Identity hidden</span>
+      {/* BONUS DOLL — The Inner You */}
+      {(() => {
+        const bonusDoll = ALL_DOLLS.find(d => d.category === 'bonus');
+        if (!bonusDoll) return null;
+        return (
+          <section id="bonus" className="bg-mystery py-20 px-8 text-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(192,57,74,0.15)_0%,transparent_70%)]" />
+            <div className="relative z-10">
+              <FadeUp>
+                <div className="text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-gold/60 mb-6 font-body">Bonus Doll</div>
+              </FadeUp>
+              <FadeUp>
+                <Link to={`/doll/${bonusDoll.id}`} className="no-underline">
+                  <div className="w-[140px] h-[180px] bg-cream/[0.06] border-2 border-voodoo-gold/30 rounded-md mx-auto mb-8 flex flex-col items-center justify-center gap-2 hover:-translate-y-2 hover:border-voodoo-gold transition-all duration-300">
+                    <span className="text-6xl">{bonusDoll.emoji}</span>
+                  </div>
+                </Link>
+              </FadeUp>
+              <FadeUp>
+                <h2 className="font-display font-black italic text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
+                  The <span className="text-voodoo-red">Inner</span><br />You.
+                </h2>
+              </FadeUp>
+              <FadeUp>
+                <p className="font-handwritten text-base text-cream/50 max-w-[440px] mx-auto mb-12 leading-loose">
+                  This one is different. No pins. No curses.<br />
+                  Just wishes, fortunes, and a reminder<br />
+                  that you were never the problem.
+                </p>
+              </FadeUp>
+              <FadeUp>
+                <Link to={`/doll/${bonusDoll.id}`} className="bg-transparent text-cream border border-cream/40 px-8 py-3 rounded-sm text-sm tracking-[0.12em] uppercase font-medium hover:border-cream hover:-translate-y-0.5 transition-all no-underline">
+                  Meet The Inner You ✦
+                </Link>
+              </FadeUp>
             </div>
-          </FadeUp>
-          <FadeUp>
-            <h2 className="font-display font-black italic text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
-              The <span className="text-voodoo-red">Mystery</span><br />Doll.
-            </h2>
-          </FadeUp>
-          <FadeUp>
-            <p className="font-handwritten text-base text-cream/50 max-w-[440px] mx-auto mb-12 leading-loose">
-              One doll. No name. No category. No spoilers.<br />
-              Someone is coming that you didn't expect.<br />
-              You'll know them when you see them.
-            </p>
-          </FadeUp>
-          <FadeUp>
-            <button className="bg-transparent text-cream border border-cream/40 px-8 py-3 rounded-sm text-sm tracking-[0.12em] uppercase font-medium hover:border-cream hover:-translate-y-0.5 transition-all">
-              Notify Me When It Drops
-            </button>
-          </FadeUp>
-        </div>
-      </section>
+          </section>
+        );
+      })()}
 
       {/* CTA */}
       <section className="bg-voodoo-red py-16 px-8 text-center">
