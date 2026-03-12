@@ -107,7 +107,7 @@ export default function Landing() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
         >
-          {ALL_DOLLS.slice(0, 5).map((doll, i) => {
+          {ALL_DOLLS.filter(d => d.category !== 'bonus').slice(0, 5).map((doll, i) => {
             const img = getDollImage(doll.id);
             return (
               <Link key={doll.id} to={`/doll/${doll.id}`}
@@ -232,26 +232,6 @@ export default function Landing() {
           </section>
         );
       })()}
-
-      {/* CTA */}
-      <section className="bg-voodoo-red py-16 px-8 text-center">
-        <FadeUp>
-          <h2 className="font-display font-bold text-cream mb-3" style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>
-            Start with the Corporate Pack.
-          </h2>
-        </FadeUp>
-        <FadeUp>
-          <p className="font-body text-cream/75 mb-8">Five dolls. Fully playable. Completely free. Your inbox has never needed this more.</p>
-        </FadeUp>
-        <FadeUp className="flex gap-4 justify-center flex-wrap">
-          <Link to="/doll/micromanager" className="bg-cream text-voodoo-red px-8 py-3 rounded-sm text-sm tracking-[0.12em] uppercase font-medium hover:bg-white hover:-translate-y-0.5 transition-all no-underline">
-            Play The Micromanager ✦
-          </Link>
-          <a href="#corporate" className="bg-transparent text-cream border border-cream/40 px-8 py-3 rounded-sm text-sm tracking-[0.12em] uppercase font-medium hover:border-cream hover:-translate-y-0.5 transition-all no-underline">
-            Browse All Corporate Dolls
-          </a>
-        </FadeUp>
-      </section>
 
       {/* FOOTER */}
       <footer className="bg-ink py-12 px-8 text-center border-t border-voodoo-gold/20">

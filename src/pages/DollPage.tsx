@@ -89,6 +89,7 @@ function WishesSection({ wishes, showToast }: { wishes: WishCategory[]; showToas
 export default function DollPage() {
   const { dollId } = useParams<{ dollId: string }>();
   const doll = getDollById(dollId || '');
+  const isBonus = doll?.category === 'bonus';
 
   const [pinCount, setPinCount] = useState(0);
   const [escPct, setEscPct] = useState(2);
@@ -257,6 +258,28 @@ export default function DollPage() {
     area.appendChild(svg);
   }
 
+  const HEART_GLYPHS = ["♥","❤","♡","❥","💕","💗","💓","💞","✨","✦"];
+  const HEART_COLORS = ["#c8a030","#e8c060","#c0394a","#e07080","#e8a0b0","#d4a000","#f0d060","#b02040"];
+
+  function spawnHearts(area: HTMLElement, x: number, y: number) {
+    const count = 10 + Math.floor(Math.random() * 6);
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement("span");
+      el.className = "sparkle";
+      el.textContent = pick(HEART_GLYPHS);
+      el.style.color = pick(HEART_COLORS);
+      el.style.fontSize = (0.8 + Math.random() * 1.2) + "rem";
+      el.style.left = x + "px";
+      el.style.top = y + "px";
+      const angle = Math.random() * Math.PI * 2;
+      const dist = 40 + Math.random() * 80;
+      el.style.setProperty("--tx", Math.cos(angle) * dist + "px");
+      el.style.setProperty("--ty", (Math.sin(angle) * dist - 30) + "px");
+      area.appendChild(el);
+      setTimeout(() => el.remove(), 1200);
+    }
+  }
+
   const handleDollClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!doll || !dollAreaRef.current) return;
     const area = dollAreaRef.current;
@@ -275,8 +298,13 @@ export default function DollPage() {
     setTimeout(() => setStabbed(false), 320);
 
     spawnSparkles(area, x, y);
-    spawnOuch(area, x, y);
-    spawnPin(area, x, y);
+
+    if (isBonus) {
+      spawnHearts(area, x, y);
+    } else {
+      spawnOuch(area, x, y);
+      spawnPin(area, x, y);
+    }
 
     // Get zone from click position
     const areaHeight = rect.height;
@@ -292,7 +320,7 @@ export default function DollPage() {
     } else {
       showBoss(pick(doll.escLines[esc.tier] || doll.escLines.mild));
     }
-  }, [doll, pinCount]);
+  }, [doll, pinCount, isBonus]);
 
   function resetPins() {
     setPinCount(0);
