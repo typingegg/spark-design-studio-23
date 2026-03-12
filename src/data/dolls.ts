@@ -2934,6 +2934,92 @@ const INNER_YOU: DollConfig = {
   curseSectionTitle: ['Send a Wish', 'Into the World.'], vibesSectionTitle: ['The Seven', 'Wishes.'],
   footerTagline: 'For the one who kept going. You found the right doll.',
   footerDisclaimer: 'The spirits have seen what you\'ve been carrying and they would like you to put some of it down.',
+  wishes: [
+    {
+      icon: '🌿', category: 'Health', color: '#2e7d32',
+      pool: [
+        "May your body be strong, your sleep be deep, and your energy return to you in full. You deserve to feel well.",
+        "May every ache know it is temporary. May rest find you before exhaustion does.",
+        "May your body stop being something you fight. May it become something you live in, gently.",
+        "May your immune system be dramatic in all the right ways — demolishing everything that doesn't belong.",
+        "May you drink enough water. (This is the witch's most earnest and boring spell. It works.)",
+        "May your doctor's appointments be boring. May your test results be so clean they make your physician slightly jealous.",
+        "May you get 8 hours of sleep at least once this week. The universe is rooting for you. Please just put the phone down.",
+      ]
+    },
+    {
+      icon: '✦', category: 'Wealth', color: '#c8a030',
+      pool: [
+        "May what you need arrive, may what you've worked for multiply, and may money stop being the thing that keeps you awake.",
+        "May unexpected money find you — a refund, a gift, a side hustle that actually works.",
+        "May your budget bend in your favor. May something be cheaper than expected, for once.",
+        "May you be paid what you're worth. And may what you're worth be finally, embarrassingly obvious to everyone involved.",
+        "May your savings account grow and may you never have to check it with your eyes half-closed again.",
+        "May the vending machine give you two things. It's a small miracle. It counts.",
+        "May at least one of your past financial decisions turn out to have been genius in hindsight.",
+      ]
+    },
+    {
+      icon: '☀', category: 'Happiness', color: '#e07030',
+      pool: [
+        "May something make you laugh without warning. May joy find you on an ordinary Tuesday. May you stop waiting to be happy.",
+        "May delight ambush you in a grocery store. May a stranger say exactly the right thing. May today be unexpectedly good.",
+        "May you find something to look forward to. Even something small. Even something silly. Even something just for you.",
+        "May your playlist hit different today. May the light through the window do that golden thing it does sometimes.",
+        "May something go so perfectly, so inexplicably right, that you feel like the universe winked at you.",
+        "May you laugh until it's slightly embarrassing. The kind of laugh that makes other people laugh just by watching.",
+        "May joy stop feeling like a reward you have to earn and start feeling like the baseline you deserve.",
+      ]
+    },
+    {
+      icon: '♥', category: 'Love', color: '#c0394a',
+      pool: [
+        "May you be loved in a way that feels easy. May you love yourself first, simply, without conditions attached.",
+        "May someone look at you the way you look at your favorite person when they don't notice.",
+        "May you stop apologizing for taking up space. You are allowed to be here. All of you.",
+        "May love arrive in a form you recognize. And may you be ready to let it in.",
+        "May you text the person first. May they respond immediately. May it go well. This is the spell.",
+        "May someone remember your coffee order without being asked. May that feel like exactly what it is: love.",
+        "May you fall in love with your own company, just a little. Enough to stop dreading being alone.",
+      ]
+    },
+    {
+      icon: '🛡', category: 'Safety', color: '#1565c0',
+      pool: [
+        "May you always find your way home. May the people around you be kind. May you always feel safe inside your own skin.",
+        "May nothing bad happen today. And if something tries, may it be small and manageable and over quickly.",
+        "May every door lock behind you. May every light be on when you arrive. May you never feel alone in the dark.",
+        "May your nervous system get a day off. May your body stop scanning for danger that isn't there.",
+        "May someone check in on you just when you needed it. May you not have to ask for it.",
+        "May your gut instinct be loud and correct and may you always listen to it.",
+        "May wherever you sleep feel safe. May you wake up rested, not startled.",
+      ]
+    },
+    {
+      icon: '◆', category: 'Work', color: '#4a1a6a',
+      pool: [
+        "May your efforts be seen. May your work feel meaningful. May you be paid what you're worth and treated how you deserve.",
+        "May the meeting be canceled. All of them. Especially that one.",
+        "May your ideas be received well. May no one steal them and present them as their own. May you say something if they do.",
+        "May your inbox reach zero, just once, for five full minutes. May you screenshot it.",
+        "May the difficult colleague be out sick on the exact days you need peace most.",
+        "May your work feel like something, not just something to get through. May Monday lose its power over you.",
+        "May your next performance review be embarrassingly good. The kind that makes HR send a follow-up email.",
+      ]
+    },
+    {
+      icon: '✨', category: 'Family', color: '#c04070',
+      pool: [
+        "May the ones who matter stay close. May distance not mean absence. May the people who share your blood also share your care.",
+        "May your family group chat be quiet on the days you can't handle it, and warm on the days you can.",
+        "May the difficult relative be seated at the far end of the table. May someone else handle them this year.",
+        "May you make peace with something old. May that peace feel like space, not defeat.",
+        "May the people who love you say it out loud. May you believe them when they do.",
+        "May you call the person you've been meaning to call. May the conversation go better than you feared.",
+        "May chosen family count, and count fully. Blood is not the only spell that binds.",
+      ]
+    },
+  ],
 };
 
 export const ALL_DOLLS: DollConfig[] = [
