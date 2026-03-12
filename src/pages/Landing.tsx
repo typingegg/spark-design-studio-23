@@ -57,7 +57,7 @@ export default function Landing() {
               {cat === 'friendship' ? 'Friends' : cat.charAt(0).toUpperCase() + cat.slice(1)}
             </a>
           ))}
-          <a href="#mystery" className="font-body text-voodoo-muted text-xs tracking-[0.12em] uppercase hover:text-voodoo-gold transition-colors no-underline">Mystery</a>
+          <a href="#bonus" className="font-body text-voodoo-muted text-xs tracking-[0.12em] uppercase hover:text-voodoo-gold transition-colors no-underline">Bonus</a>
           <Link to="/doll/micromanager" className="bg-voodoo-red text-cream px-4 py-1.5 text-xs tracking-[0.1em] uppercase font-medium rounded-sm hover:brightness-90 transition no-underline">
             Play Now ✦
           </Link>
