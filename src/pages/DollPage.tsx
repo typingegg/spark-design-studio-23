@@ -79,7 +79,7 @@ export default function DollPage() {
   }
 
   function shuffleCurse() {
-    if (!doll) return;
+    if (!doll || doll.annoyances.length === 0) return;
     const template = pick(doll.annoyances);
     curAnnoyance.current = template;
     const name = (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR BOSS';
