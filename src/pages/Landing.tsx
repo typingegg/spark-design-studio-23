@@ -100,34 +100,6 @@ export default function Landing() {
           <strong className="text-voodoo-gold text-lg">{count.toLocaleString()}</strong> souls served
         </motion.div>
 
-        {/* Hero doll preview */}
-        <motion.div
-          className="flex gap-3 items-end justify-center flex-wrap"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.6 }}
-        >
-          {ALL_DOLLS.filter(d => d.category !== 'bonus').slice(0, 5).map((doll, i) => {
-            const img = getDollImage(doll.id);
-            return (
-              <Link key={doll.id} to={`/doll/${doll.id}`}
-                className={`rounded border-2 border-voodoo-gold/25 overflow-hidden bg-ink/80 flex items-center justify-center hover:-translate-y-2 hover:rotate-[-2deg] hover:border-voodoo-gold transition-all duration-300 ${
-                  i === 2 ? 'w-[110px] h-[140px]' : i === 1 || i === 3 ? 'w-[100px] h-[125px]' : 'w-[90px] h-[110px]'
-                }`}
-              >
-                {img ? (
-                  <img src={img} alt={doll.name} className="w-full h-full object-cover object-top" />
-                ) : (
-                  <span className="text-4xl">{doll.emoji}</span>
-                )}
-              </Link>
-            );
-          })}
-          <div className="w-[90px] h-[110px] rounded border-2 border-dashed border-voodoo-gold/30 flex flex-col items-center justify-center text-voodoo-muted text-[0.65rem] tracking-[0.15em] uppercase gap-1">
-            <span className="text-2xl text-voodoo-gold">+</span>
-            More
-          </div>
-        </motion.div>
       </section>
 
       {/* CATEGORY SECTIONS */}
