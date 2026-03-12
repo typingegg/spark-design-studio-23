@@ -38,7 +38,7 @@ export const CATEGORY_META: Record<DollCategory, { label: string; tagClass: stri
   relationship: { label: 'Relationship Voodoo™', tagClass: 'bg-love', packTitle: 'The Romantic Disasters' },
   family: { label: 'Family Matters™', tagClass: 'bg-fam', packTitle: 'The Relatives' },
   friendship: { label: 'With Friends Like These™', tagClass: 'bg-friend', packTitle: 'The Social Archetypes' },
-  neighborhood: { label: 'Neighborhood Watch™', tagClass: 'bg-neighbor', packTitle: 'The Local Menaces' },
+  bonus: { label: 'Bonus Doll', tagClass: 'bg-friend', packTitle: 'The Mystery Within' },
 };
 
 // ═══════════════════════════════════════════════════════════════
