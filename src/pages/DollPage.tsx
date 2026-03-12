@@ -24,7 +24,69 @@ function getEsc(pinCount: number, labels: string[]) {
   return { ...ESCALATIONS[idx], label: labels[idx] || labels[0] };
 }
 
-export default function DollPage() {
+function WishesSection({ wishes, showToast }: { wishes: WishCategory[]; showToast: (msg: string) => void }) {
+  const [wishTexts, setWishTexts] = useState<string[]>(() => wishes.map(w => w.pool[Math.floor(Math.random() * w.pool.length)]));
+  const [sentWishes, setSentWishes] = useState<Set<number>>(new Set());
+
+  function shuffleWish(idx: number) {
+    setWishTexts(prev => {
+      const next = [...prev];
+      let newText: string;
+      do {
+        newText = wishes[idx].pool[Math.floor(Math.random() * wishes[idx].pool.length)];
+      } while (newText === prev[idx] && wishes[idx].pool.length > 1);
+      next[idx] = newText;
+      return next;
+    });
+    setSentWishes(prev => { const n = new Set(prev); n.delete(idx); return n; });
+  }
+
+  function sendWish(idx: number) {
+    if (sentWishes.has(idx)) return;
+    setSentWishes(prev => new Set(prev).add(idx));
+    showToast(`♥ ${wishes[idx].category} wish sent. The universe received it.`);
+  }
+
+  return (
+    <section id="wishes" className="px-8 py-16">
+      <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
+        <span className="w-8 h-px bg-voodoo-muted" />The Seven Wishes
+      </div>
+      <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
+        Send a Wish<br /><em className="italic" style={{ color: '#c0394a' }}>Into the World.</em>
+      </h2>
+      <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px] mb-8">
+        No curses here. No revenge. Just seven wishes you can send into the universe — for yourself, or for someone who needs them.
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {wishes.map((w, i) => (
+          <div key={w.category}
+            className={`border-[1.5px] rounded-sm p-5 transition-all ${sentWishes.has(i) ? 'opacity-70 border-foreground/10' : 'border-foreground/[0.14] hover:border-ink hover:-translate-y-0.5 hover:shadow-[3px_3px_0_hsl(var(--ink))]'}`}>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-xl">{w.icon}</span>
+              <span className="font-mono text-[0.6rem] tracking-[0.14em] uppercase font-bold" style={{ color: w.color }}>{w.category}</span>
+            </div>
+            <p className="font-handwritten text-[0.9rem] leading-relaxed text-ink mb-3 min-h-[60px]">{wishTexts[i]}</p>
+            <div className="flex gap-2 items-center">
+              <button onClick={() => shuffleWish(i)}
+                className="font-mono text-[0.55rem] tracking-[0.1em] uppercase bg-transparent text-voodoo-muted border-[1px] border-foreground/[0.14] px-3 py-2 cursor-pointer hover:text-ink hover:border-ink transition-all">
+                ↻ Another
+              </button>
+              <button onClick={() => sendWish(i)}
+                className={`font-mono text-[0.55rem] tracking-[0.1em] uppercase px-3 py-2 cursor-pointer transition-all ${sentWishes.has(i) ? 'bg-transparent text-voodoo-muted border-[1px] border-foreground/10' : 'text-white border-none'}`}
+                style={!sentWishes.has(i) ? { background: w.color } : {}}
+                disabled={sentWishes.has(i)}>
+                {sentWishes.has(i) ? '♥ Sent' : '♥ Send This Wish'}
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+
   const { dollId } = useParams<{ dollId: string }>();
   const doll = getDollById(dollId || '');
 
