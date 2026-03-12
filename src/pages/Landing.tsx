@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { ALL_DOLLS, CATEGORY_META, type DollCategory } from '@/data/dolls';
-import { getDollImage } from '@/data/dollImages';
+import { getDollImage, BONUS_PLACEHOLDER } from '@/data/dollImages';
 import { motion } from 'framer-motion';
 
 const CATEGORY_ORDER: DollCategory[] = ['corporate', 'relationship', 'family', 'friendship'];
@@ -178,8 +178,8 @@ export default function Landing() {
               </FadeUp>
               <FadeUp>
                 <Link to={`/doll/${bonusDoll.id}`} className="no-underline">
-                  <div className="w-[140px] h-[180px] bg-cream/[0.06] border-2 border-voodoo-gold/30 rounded-md mx-auto mb-8 flex flex-col items-center justify-center gap-2 hover:-translate-y-2 hover:border-voodoo-gold transition-all duration-300">
-                    <span className="text-6xl">{bonusDoll.emoji}</span>
+                  <div className="w-[140px] h-[180px] rounded-md mx-auto mb-8 overflow-hidden hover:-translate-y-2 hover:border-voodoo-gold transition-all duration-300 border-2 border-voodoo-gold/30">
+                    <img src={BONUS_PLACEHOLDER} alt="Bonus Doll" className="w-full h-full object-cover" />
                   </div>
                 </Link>
               </FadeUp>

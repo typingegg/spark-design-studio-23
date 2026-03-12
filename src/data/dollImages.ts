@@ -28,17 +28,18 @@ import badInfluence from '@/assets/dolls/bad-influence.jpeg';
 
 // Bonus
 import innerYou from '@/assets/dolls/inner-you.jpeg';
+import bonusPlaceholder from '@/assets/dolls/bonus-placeholder.jpeg';
 
 export const DOLL_IMAGES: Record<string, string> = {
   'micromanager': micromanager,
   'credit-grabber': creditGrabber,
   'gaslighter': gaslighter,
-  'clown': exploiter,
-  'exploiter': clown,
+  'clown': commitmentPhobe,
+  'exploiter': exploiter,
   'ghoster': ghoster,
   'love-bomber': loveBomber,
   'clingy-one': clingyOne,
-  'commitment-phobe': commitmentPhobe,
+  'commitment-phobe': clown,
   'gold-digger': goldDigger,
   'mother': mother,
   'judgmental-aunt': judgmentalAunt,
@@ -52,6 +53,8 @@ export const DOLL_IMAGES: Record<string, string> = {
   'bad-influence': badInfluence,
   'inner-you': innerYou,
 };
+
+export const BONUS_PLACEHOLDER = bonusPlaceholder;
 
 export function getDollImage(dollId: string): string | undefined {
   return DOLL_IMAGES[dollId];

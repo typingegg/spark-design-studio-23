@@ -3034,8 +3034,8 @@ export const ALL_DOLLS: DollConfig[] = [
   GHOSTER,
   LOVE_BOMBER,
   CLINGY_ONE,
-  COMMITMENT_PHOBE,
   GOLD_DIGGER,
+  COMMITMENT_PHOBE,
 
   // ── FAMILY (5) ──
   MOTHER,
