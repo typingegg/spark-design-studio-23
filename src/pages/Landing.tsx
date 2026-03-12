@@ -97,7 +97,7 @@ export default function Landing() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.8 }}
         >
-          <strong className="text-voodoo-gold text-lg">{count.toLocaleString()}</strong> souls served
+          <strong className="text-voodoo-gold text-lg">{count.toLocaleString()}</strong> people helped & healed
         </motion.div>
 
       </section>
