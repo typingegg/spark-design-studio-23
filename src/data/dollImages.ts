@@ -34,7 +34,7 @@ export const DOLL_IMAGES: Record<string, string> = {
   'micromanager': micromanager,
   'credit-grabber': creditGrabber,
   'gaslighter': gaslighter,
-  'clown': clown,
+  'clown': commitmentPhobe,
   'exploiter': exploiter,
   'ghoster': ghoster,
   'love-bomber': loveBomber,
