@@ -107,7 +107,7 @@ export default function Landing() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
         >
-          {ALL_DOLLS.slice(0, 5).map((doll, i) => {
+          {ALL_DOLLS.filter(d => d.category !== 'bonus').slice(0, 5).map((doll, i) => {
             const img = getDollImage(doll.id);
             return (
               <Link key={doll.id} to={`/doll/${doll.id}`}
