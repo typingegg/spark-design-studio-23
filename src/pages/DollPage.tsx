@@ -353,10 +353,20 @@ export default function DollPage() {
               aspectRatio: '1/1',
               boxShadow: 'inset 0 0 0 5px rgba(255,255,255,0.32), inset 0 0 0 7px rgba(26,20,16,0.07), 0 32px 80px rgba(40,24,8,0.32), 0 6px 18px rgba(40,24,8,0.14)',
             }}>
-            <div className={`text-[12rem] select-none pointer-events-none transition-transform ${stabbed ? 'animate-[stab_0.32s_ease]' : ''}`}
-              style={{ filter: 'drop-shadow(0 20px 56px rgba(60,35,10,0.42)) drop-shadow(0 4px 14px rgba(60,35,10,0.22))' }}>
-              {doll.emoji}
-            </div>
+            {(() => {
+              const img = getDollImage(doll.id);
+              return img ? (
+                <img src={img} alt={doll.name}
+                  className={`w-full h-full object-cover object-[center_10%] select-none pointer-events-none transition-transform ${stabbed ? 'animate-[stab_0.32s_ease]' : ''}`}
+                  style={{ filter: 'drop-shadow(0 20px 56px rgba(60,35,10,0.42)) drop-shadow(0 4px 14px rgba(60,35,10,0.22))' }}
+                />
+              ) : (
+                <div className={`text-[12rem] select-none pointer-events-none transition-transform ${stabbed ? 'animate-[stab_0.32s_ease]' : ''}`}
+                  style={{ filter: 'drop-shadow(0 20px 56px rgba(60,35,10,0.42)) drop-shadow(0 4px 14px rgba(60,35,10,0.22))' }}>
+                  {doll.emoji}
+                </div>
+              );
+            })()}
           </div>
         </div>
       </section>
