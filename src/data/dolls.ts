@@ -1,4 +1,4 @@
-export type DollCategory = 'corporate' | 'relationship' | 'family' | 'friendship' | 'neighborhood';
+export type DollCategory = 'corporate' | 'relationship' | 'family' | 'friendship' | 'bonus';
 
 export interface DollConfig {
   id: string;
