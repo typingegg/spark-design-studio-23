@@ -39,7 +39,7 @@ export const DOLL_IMAGES: Record<string, string> = {
   'ghoster': ghoster,
   'love-bomber': loveBomber,
   'clingy-one': clingyOne,
-  'commitment-phobe': clown,
+  'commitment-phobe': exploiter,
   'gold-digger': goldDigger,
   'mother': mother,
   'judgmental-aunt': judgmentalAunt,
