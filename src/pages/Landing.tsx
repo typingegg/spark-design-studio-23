@@ -7,7 +7,7 @@ const CATEGORY_ORDER: DollCategory[] = ['corporate', 'relationship', 'family', '
 
 const CATEGORY_INTROS: Record<DollCategory, { packNum: string; title: string[]; subtitle: string }> = {
   corporate: { packNum: 'Pack 1 of 5', title: ['Corporate', 'Voodoo™'], subtitle: 'The boardroom. The synergy. The reply-all incident of 2024.' },
-  relationship: { packNum: 'Pack 2 of 5', title: ['Relationship', 'Voodoo™'], subtitle: 'The text at 2am. The "it's complicated." The read receipts.' },
+  relationship: { packNum: 'Pack 2 of 5', title: ['Relationship', 'Voodoo™'], subtitle: "The text at 2am. The \"it's complicated.\" The read receipts." },
   family: { packNum: 'Pack 3 of 5', title: ['Family', 'Matters™'], subtitle: 'The holidays. The group chat. The unsolicited advice.' },
   friendship: { packNum: 'Pack 4 of 5', title: ['With Friends', 'Like These™'], subtitle: 'The group chat. The brunch. The "I\'m almost there" text sent from home.' },
   neighborhood: { packNum: 'New · Standalone', title: ['Neighborhood', 'Watch™'], subtitle: 'He\'s not a friend. He\'s not a colleague. He lives twelve feet away.' },
