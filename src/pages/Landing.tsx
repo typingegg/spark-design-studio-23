@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const CATEGORY_ORDER: DollCategory[] = ['corporate', 'relationship', 'family', 'friendship'];
 
-const CATEGORY_INTROS: Record<typeof CATEGORY_ORDER[number], { packNum: string; title: string[]; subtitle: string }> = {
+const CATEGORY_INTROS: Partial<Record<DollCategory, { packNum: string; title: string[]; subtitle: string }>> = {
   corporate: { packNum: 'Pack 1 of 4', title: ['Corporate', 'Voodoo™'], subtitle: 'The boardroom. The synergy. The reply-all incident of 2024.' },
   relationship: { packNum: 'Pack 2 of 4', title: ['Relationship', 'Voodoo™'], subtitle: "The text at 2am. The \"it's complicated.\" The read receipts." },
   family: { packNum: 'Pack 3 of 4', title: ['Family', 'Matters™'], subtitle: 'The holidays. The group chat. The unsolicited advice.' },
