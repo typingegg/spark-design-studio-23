@@ -220,7 +220,8 @@ export default function Landing() {
             const desc = (form.elements.namedItem('description') as HTMLTextAreaElement).value;
             const quotes = (form.elements.namedItem('quotes') as HTMLTextAreaElement).value;
             const body = `Name: ${name}%0AEmail: ${email}%0A%0ADescription:%0A${encodeURIComponent(desc)}%0A%0AThings they say:%0A${encodeURIComponent(quotes)}`;
-            window.location.href = `mailto:virtualvoodoodolls@gmail.com?subject=${encodeURIComponent('Custom Ex Doll Request from ' + name)}&body=${body}`;
+            const mailtoUrl = `mailto:virtualvoodoodolls@gmail.com?subject=${encodeURIComponent('Custom Ex Doll Request from ' + name)}&body=${body}`;
+            window.open(mailtoUrl, '_blank');
             setRequestSent(true);
           }}>
             <input name="name" type="text" placeholder="Your name" maxLength={80} required
