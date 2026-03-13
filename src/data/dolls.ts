@@ -2615,7 +2615,7 @@ const MESSY_ROOMMATE: DollConfig = {
       { text: "She will use the last of your shampoo. She will replace it with a different brand. She will not mention this.", rarity: "Common" },
       { text: "The passive-aggressive sticky note you left on the fridge will be read, processed, and completely ignored.", rarity: "Common" },
       { text: "She will do one chore unprompted. She will mention it for four days.", rarity: "Common" },
-      { text: "Your Netflix profile will have recommendations you don't recognise. You will know who is responsible.", rarity: "Common" },
+      { text: "Your Netflix profile will have recommendations you don't recognize. You will know who is responsible.", rarity: "Common" },
     ],
     uncommon: [
       { text: "She will clean the entire flat before you get home. This will happen twice a year. She will expect it to cancel out everything else.", rarity: "Uncommon" },
