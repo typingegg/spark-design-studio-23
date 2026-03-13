@@ -3229,7 +3229,126 @@ const INNER_YOU: DollConfig = {
   ],
 };
 
-export const ALL_DOLLS: DollConfig[] = [
+// ═══════════════════════════════════════════════════════════════
+// THE GENERIC DOLL — Pin-only with generic reactions
+// ═══════════════════════════════════════════════════════════════
+const GENERIC_DOLL: DollConfig = {
+  id: 'generic-doll',
+  name: 'The Doll',
+  archetype: 'Universal Stress Relief',
+  tagline: 'No backstory. No judgment. Just pins.',
+  emoji: '🪡',
+  category: 'bonus',
+  categoryLabel: 'Virtual Voodoo™',
+  navTagText: 'Generic Edition',
+  accentColor: '#b82a24',
+  heroTitle: ['Stick It To', 'Whatever\'s'],
+  heroItalicWord: 'Bothering You.',
+  heroDescription: 'No specific person. No elaborate backstory.\nJust a doll, some pins, and whatever you need to get out of your system.\nClick. Stick. Breathe.',
+  escLabels: ["Warming Up", "Getting Into It", "Committed", "Fully Invested", "⚡ Maximum Chaos ⚡"],
+  bossLines: [
+    "Oh great. Violence. Classic.",
+    "Wow. Big feelings today, huh?",
+    "Easy there, gladiator.",
+    "Relax, I'm already cursed enough.",
+  ],
+  ouchLines: [
+    "Oh great. Violence. Classic.",
+    "Wow. Big feelings today, huh?",
+    "Ouch! Therapy was cheaper, you know.",
+    "Hey! I'm stuffed, not invincible.",
+    "Wow. You showed me.",
+    "Bleep! That one had commitment.",
+    "Really? Right in the fluff?",
+    "Ow! My imaginary spine!",
+    "Easy there, gladiator.",
+    "Bleepity bleep! That stung!",
+    "Ah yes, healthy emotional processing.",
+    "Wow. Someone skipped their nap.",
+    "Ow! That was unnecessarily personal.",
+    "Bleep! You're getting good at this.",
+    "Oh sure, blame the doll.",
+    "Great. Now my stuffing has trust issues.",
+    "Wow, okay. Choose violence then.",
+    "Bleep! Not the face!",
+    "I'm telling HR about this.",
+    "Relax, I'm already cursed enough.",
+    "Ow! That was a low fluff blow.",
+    "Bleeping unbelievable.",
+    "Congratulations. You bullied a doll.",
+    "Alright alright! Message received!",
+  ],
+  zoneLines: {
+    head: [
+      "Right in the brain stuffing!",
+      "That's where my one thought lives!",
+      "My button eyes felt that.",
+      "Ouch — that's my thinking fluff!",
+    ],
+    shoulders: [
+      "That's where I carry all the emotional baggage.",
+      "My stitching is right there!",
+      "These shoulders have seen things.",
+      "Right on the seam!",
+    ],
+    torso: [
+      "Right in the core stuffing!",
+      "That's where the feelings are stored!",
+      "My center of fluff gravity!",
+      "The stuffing shifted on that one.",
+    ],
+    hands: [
+      "I was using that!",
+      "These hands do nothing and you still came for them.",
+      "My gesturing hand!",
+      "That's my pointing finger!",
+    ],
+    feet: [
+      "I was going somewhere with those!",
+      "Right in the foot stuffing.",
+      "These feet were minding their business.",
+      "Caught me mid-waddle!",
+    ],
+  },
+  escLines: {
+    mild: [
+      "Oh great. Violence. Classic.",
+      "Wow. Big feelings today, huh?",
+      "Easy there, gladiator.",
+      "Relax, I'm already cursed enough.",
+      "Alright alright! Message received!",
+    ],
+    moderate: [
+      "Ouch! Therapy was cheaper, you know.",
+      "Great. Now my stuffing has trust issues.",
+      "Congratulations. You bullied a doll.",
+      "Bleeping unbelievable.",
+      "Bleep! You're getting good at this.",
+    ],
+    intense: [
+      "Bleep! Not the face!",
+      "I'm telling HR about this.",
+      "Ow! That was a low fluff blow.",
+      "Wow, okay. Choose violence then.",
+      "Hey! I'm stuffed, not invincible.",
+    ],
+  },
+  fortunes: {
+    common: [],
+    uncommon: [],
+    rare: [],
+  },
+  annoyances: [],
+  goodVibes: [],
+  curseLabel: '',
+  vibesLabel: '',
+  curseSectionTitle: ['', ''],
+  vibesSectionTitle: ['', ''],
+  footerTagline: 'No actual dolls were harmed in the making of this experience.',
+  footerDisclaimer: 'This doll represents no one in particular. It is simply here to absorb your feelings.',
+};
+
+
   // ── CORPORATE (5) ──
   MICROMANAGER,
   CREDIT_GRABBER,
