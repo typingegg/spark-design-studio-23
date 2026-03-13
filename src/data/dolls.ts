@@ -1594,7 +1594,7 @@ const GOLDEN_CHILD: DollConfig = {
     uncommon: [
       { text: "He was never taught that love is not performance. He was loved for outcomes.", rarity: "Uncommon" },
       { text: "The charm is genuine. That's what makes it complicated.", rarity: "Uncommon" },
-      { text: "He needs to be the favourite because the alternative has never been modelled as acceptable.", rarity: "Uncommon" },
+      { text: "He needs to be the favorite because the alternative has never been modeled as acceptable.", rarity: "Uncommon" },
       { text: "Every sibling of a golden child spends years wondering if they imagined it. They did not imagine it.", rarity: "Uncommon" },
       { text: "He will eventually encounter someone who is entirely unimpressed by him. It will be one of the more useful experiences of his adult life.", rarity: "Uncommon" },
       { text: "The finance career made sense. Structure, hierarchy, clear metrics, winners and losers. He found the one arena where the rules of his childhood still apply.", rarity: "Uncommon" },
