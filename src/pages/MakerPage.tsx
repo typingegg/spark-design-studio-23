@@ -236,8 +236,23 @@ export default function MakerPage() {
             <h1 className="font-display font-black text-ink leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
               Meet the <em className="italic text-voodoo-gold">Doll Maker.</em>
             </h1>
+            <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
+              I made a website where you stab representations of people you might know with pins. Then I made one where you show yourself some love. This is character development.
+            </p>
+            <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
+              I'm a one-person operation fuelled by iced coffee, unresolved feelings, and the deeply human need to process things through jokes. This project was born out of being laid off — a casualty of failed leadership elegantly rebranded as reorganisation. Instead of being destructive about it, I made dolls. Tiny, clickable, deeply cathartic dolls. Consider it group therapy for people who'd rather laugh than cry. Or people who want to do both at the same time. The spirits don't judge.
+            </p>
+            <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
+              All dolls are free. All dolls will remain free. The donation button exists for people who feel called. The universe will note your generosity either way.
+            </p>
+            <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
+              No pressure. The Inner You wouldn't want you to feel guilty about it.
+            </p>
+            <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
+              If you'd like to support the craft: there's a button. If you'd like to just enjoy the dolls and move on with your life: also valid. Genuinely.
+            </p>
             <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-6">
-              One person made all of these. Every pin. Every curse. Every passive-aggressive fortune. If the pins landed, consider fuelling the next round.
+              Thanks for being here. Go give yourself a treat. Or click a heart. Same thing, really.
             </p>
           </div>
         </div>
