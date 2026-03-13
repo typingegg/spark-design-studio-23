@@ -2598,8 +2598,8 @@ const MESSY_ROOMMATE: DollConfig = {
     ],
     intense: [
       "I feel like you're making this a whole thing when it really isn't.",
-      "I said I was sorry about the yoghurt. Multiple times.",
-      "The music was not that loud. The neighbours are just sensitive.",
+      "I said I was sorry about the yogurt. Multiple times.",
+      "The music was not that loud. The neighbors are just sensitive.",
       "I don't think a chore chart is going to fix whatever is actually happening here.",
       "I have been a great roommate in lots of ways that aren't being acknowledged right now.",
     ],
