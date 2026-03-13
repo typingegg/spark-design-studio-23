@@ -456,7 +456,7 @@ export default function DollPage() {
                   style={{ filter: 'drop-shadow(0 20px 56px rgba(60,35,10,0.42)) drop-shadow(0 4px 14px rgba(60,35,10,0.22))' }}
                 />
               ) : (
-                <div className={`text-[12rem] select-none pointer-events-none transition-transform ${stabbed ? 'animate-[stab_0.32s_ease]' : ''}`}
+                <div className="text-[12rem] select-none pointer-events-none doll-emoji"
                   style={{ filter: 'drop-shadow(0 20px 56px rgba(60,35,10,0.42)) drop-shadow(0 4px 14px rgba(60,35,10,0.22))' }}>
                   {doll.emoji}
                 </div>
