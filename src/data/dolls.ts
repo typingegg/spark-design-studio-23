@@ -2574,11 +2574,11 @@ const MESSY_ROOMMATE: DollConfig = {
       "The package said her name on it. I thought it might also partially be mine.",
     ],
     feet: [
-      "I have not left the flat in three days. I am still everywhere.",
+      "I have not left the apartment in three days. I am still everywhere.",
       "I go to the shops for myself and come back with her things on my feet somehow.",
       "I walked past the dishes four times today. Something stopped me each time. I'm looking into it.",
-      "I am physically present in this flat far more than either of us anticipated.",
-      "These feet have walked every inch of this flat and not once found the cleaning supplies. Strange.",
+      "I am physically present in this apartment far more than either of us anticipated.",
+      "These feet have walked every inch of this apartment and not once found the cleaning supplies. Strange.",
     ],
   },
   escLines: {
