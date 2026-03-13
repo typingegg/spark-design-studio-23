@@ -2519,7 +2519,7 @@ const MESSY_ROOMMATE: DollConfig = {
   tagline: 'The dishes. The rent. Your clothes. Everything.', emoji: '🧹',
   category: 'friendship', categoryLabel: 'Friendship Voodoo™', navTagText: 'Roommate Edition', accentColor: '#4a8c3f',
   heroTitle: ['Stick It To', 'The'], heroItalicWord: 'Roommate.',
-  heroDescription: 'Know someone who treats the flat like a hotel?\nThe dishes. The rent. Your Netflix. Your sanity.\nStick pins. Change the WiFi password.',
+  heroDescription: 'Know someone who treats the apartment like a hotel?\nThe dishes. The rent. Your Netflix. Your sanity.\nStick pins. Change the WiFi password.',
   escLabels: ["Politely Mentioned It", "Left a Note on the Fridge", "Had a House Meeting (She Forgot)", "Changed the WiFi Password", "⚡ Looking at Studio Apartments ⚡"],
   bossLines: [
     "I was literally just about to do that.",
