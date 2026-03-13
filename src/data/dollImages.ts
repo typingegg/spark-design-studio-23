@@ -30,6 +30,9 @@ import badInfluence from '@/assets/dolls/bad-influence.jpeg';
 import innerYou from '@/assets/dolls/inner-you.jpeg';
 import bonusPlaceholder from '@/assets/dolls/bonus-placeholder.jpeg';
 
+// Generic
+import genericDoll from '@/assets/dolls/generic-doll.png';
+
 export const DOLL_IMAGES: Record<string, string> = {
   'micromanager': micromanager,
   'credit-grabber': creditGrabber,
