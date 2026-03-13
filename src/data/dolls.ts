@@ -1856,7 +1856,7 @@ const SISTER: DollConfig = {
     "__NAME__ will try the influencer drawl in a professional setting. The room will go quiet.",
     "__NAME__'s ring light will blow a fuse. The content will have to wait.",
     "A family photo will be taken. __NAME__ will be cropped out of the version everyone shares.",
-    "__NAME__'s most-liked post will be accidentally liked by her least favourite person.",
+    "__NAME__'s most-liked post will be accidentally liked by her least favorite person.",
     "Someone will meet __NAME__'s ex-friends. They will all tell the same story. Separately.",
     "__NAME__'s dad's card will be declined. In a restaurant. With an audience.",
     "The house photo wall will be quietly rearranged while __NAME__ is out.",
