@@ -272,9 +272,8 @@ export default function Landing() {
                 </h2>
               </FadeUp>
               <FadeUp>
-                <p className="font-handwritten text-base text-ink-mid max-w-[440px] mx-auto mb-8 leading-loose">
-                  Just a doll, some pins, and whatever<br />
-                  you need to get out of your system.
+                <p className="font-handwritten text-base text-ink-mid max-w-[440px] mx-auto mb-8 leading-loose" style={{ textWrap: 'balance' }}>
+                  Just a doll, some pins, and whatever you need to get out of your system.
                 </p>
               </FadeUp>
               <FadeUp>
