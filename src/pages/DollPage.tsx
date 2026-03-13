@@ -124,6 +124,7 @@ export default function DollPage() {
   const [toastMsg, setToastMsg] = useState('');
   const [toastShow, setToastShow] = useState(false);
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dollAreaRef = useRef<HTMLDivElement>(null);
   const pinColorIdx = useRef(0);
   const curAnnoyance = useRef('');
