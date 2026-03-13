@@ -1614,7 +1614,7 @@ const GOLDEN_CHILD: DollConfig = {
     "__NAME__'s LinkedIn post will receive fewer likes than last time. He will refresh it fourteen times.",
     "Someone will beat __NAME__'s salary and mention it casually. __NAME__ will not sleep that night.",
     "__NAME__ will give someone unsolicited financial advice. That person will be significantly wealthier than him.",
-    "The flowers __NAME__ brings to mum will be store-bought. This will be noticed.",
+    "The flowers __NAME__ brings to mom will be store-bought. This will be noticed.",
     "__NAME__ will describe a colleague as 'not a team player.' That colleague will be universally liked.",
     "A family member will achieve something publicly. __NAME__ will congratulate them in a way that makes it about himself.",
     "__NAME__'s car will have a minor, visible fault on the one occasion he parks it in front of people.",
