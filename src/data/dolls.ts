@@ -1558,7 +1558,7 @@ const JUDGMENTAL_AUNT: DollConfig = {
 // THE GOLDEN CHILD — Fully configured
 // ═══════════════════════════════════════════════════════════════
 const GOLDEN_CHILD: DollConfig = {
-  id: 'golden-child', name: 'The Golden Child', archetype: 'Family Favourite',
+  id: 'golden-child', name: 'The Golden Child', archetype: 'Family Favorite',
   tagline: 'Perfect grades. Perfect job. Perfect at ruining holidays.', emoji: '⭐',
   category: 'family', categoryLabel: 'Family Matters™', navTagText: 'Golden Child Edition', accentColor: '#3a5a8c',
   heroTitle: ['Stick It To', 'The'], heroItalicWord: 'Golden Child.',
