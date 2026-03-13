@@ -104,7 +104,7 @@ export default function Landing() {
       <section className="mt-[58px] min-h-[92vh] bg-ink flex flex-col items-center justify-center text-center px-8 py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_60%,rgba(200,160,48,0.08)_0%,transparent_70%)] pointer-events-none" />
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          <div className="font-body text-[0.72rem] tracking-[0.3em] uppercase text-voodoo-gold mb-6">
+          <div className="font-body text-[0.72rem] tracking-[0.3em] uppercase text-voodoo-gold mb-6 px-4" style={{ textWrap: 'balance' }}>
             The Complete Collection — {ALL_DOLLS.length} Dolls & Counting
           </div>
         </motion.div>
@@ -127,12 +127,12 @@ export default function Landing() {
           Virtual voodoo for every toxic person in your life.
         </motion.p>
         <motion.div
-          className="inline-flex items-center gap-3 bg-cream/5 border border-voodoo-gold/30 rounded-full px-7 py-2.5 text-[0.8rem] tracking-[0.15em] uppercase text-cream mb-14"
+          className="inline-flex items-center gap-3 bg-cream/5 border border-voodoo-gold/30 rounded-full px-5 sm:px-7 py-2.5 text-[0.7rem] sm:text-[0.8rem] tracking-[0.15em] uppercase text-cream mb-14"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.8 }}
         >
-          <strong className="text-voodoo-gold text-lg">{count.toLocaleString()}</strong> people helped & healed
+          <strong className="text-voodoo-gold text-base sm:text-lg">{count.toLocaleString()}</strong> people helped &amp; healed
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -155,8 +155,8 @@ export default function Landing() {
           <section key={cat} id={cat} className={catIdx % 2 === 1 ? 'bg-[#f0ebe0]' : 'bg-cream'}>
             <FadeUp className="text-center py-16 px-8">
               <div className="font-body text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-muted mb-4">{intro?.packNum}</div>
-              <h2 className="font-display font-bold leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
-                {intro?.title[0]}<br />{intro?.title[1]}
+              <h2 className="font-display font-bold leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', textWrap: 'balance' }}>
+                {intro?.title[0]} {intro?.title[1]}
               </h2>
               <p className="text-base text-ink-mid max-w-[520px] mx-auto leading-relaxed">{intro?.subtitle}</p>
             </FadeUp>
@@ -229,14 +229,13 @@ export default function Landing() {
                 </Link>
               </FadeUp>
               <FadeUp>
-                <h2 className="font-display font-black italic text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
-                  The <span className="text-voodoo-red">Mystery</span><br />Doll.
+                <h2 className="font-display font-black italic text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', textWrap: 'balance' }}>
+                  The <span className="text-voodoo-red">Mystery</span> Doll.
                 </h2>
               </FadeUp>
               <FadeUp>
-                <p className="font-handwritten text-base text-cream/50 max-w-[440px] mx-auto mb-12 leading-loose">
-                  One doll. No name. No category.<br />
-                  No spoilers.
+                <p className="font-handwritten text-base text-cream/50 max-w-[440px] mx-auto mb-12 leading-loose" style={{ textWrap: 'balance' }}>
+                  One doll. No name. No category. No spoilers.
                 </p>
               </FadeUp>
             </div>
@@ -268,14 +267,13 @@ export default function Landing() {
                 </Link>
               </FadeUp>
               <FadeUp>
-                <h2 className="font-display font-black italic text-ink mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
-                  No Name.<br /><span className="text-voodoo-red">No Backstory.</span>
+                <h2 className="font-display font-black italic text-ink mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', textWrap: 'balance' }}>
+                  No Name. <span className="text-voodoo-red">No Backstory.</span>
                 </h2>
               </FadeUp>
               <FadeUp>
-                <p className="font-handwritten text-base text-ink-mid max-w-[440px] mx-auto mb-8 leading-loose">
-                  Just a doll, some pins, and whatever<br />
-                  you need to get out of your system.
+                <p className="font-handwritten text-base text-ink-mid max-w-[440px] mx-auto mb-8 leading-loose" style={{ textWrap: 'balance' }}>
+                  Just a doll, some pins, and whatever you need to get out of your system.
                 </p>
               </FadeUp>
               <FadeUp>
@@ -292,8 +290,8 @@ export default function Landing() {
       {/* REQUEST A DOLL */}
       <section className="bg-cream py-20 px-8">
         <div className="max-w-[600px] mx-auto text-center">
-          <h2 className="font-display font-black leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}>
-            Request a Doll<br />for Your <em className="italic text-voodoo-red">Ex.</em>
+          <h2 className="font-display font-black leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', textWrap: 'balance' }}>
+            Request a Doll for Your <em className="italic text-voodoo-red">Ex.</em>
           </h2>
           <p className="text-base text-ink-mid leading-relaxed mb-8">
             No doll in the collection quite captures them? Send us a description and the things they actually say. We'll build something truly personal.
@@ -334,8 +332,8 @@ export default function Landing() {
             <span className="font-body text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-gold">Support the Creator</span>
             <span className="w-10 h-px bg-voodoo-gold/40" />
           </div>
-          <h2 className="font-display font-black text-cream leading-tight mb-6" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}>
-            If this brought you joy,<br />support the <em className="italic text-voodoo-gold">revenge arc.</em>
+          <h2 className="font-display font-black text-cream leading-tight mb-6" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', textWrap: 'balance' }}>
+            If this brought you joy, support the <em className="italic text-voodoo-gold">revenge arc.</em>
           </h2>
           <p className="text-base text-cream/60 leading-relaxed mb-10 max-w-[520px] mx-auto">
             One person made all {ALL_DOLLS.length} of these. If the pins landed, consider fuelling the next round.
@@ -347,9 +345,8 @@ export default function Landing() {
       {/* DISCLAIMER */}
       <section className="bg-cream py-16 px-8 text-center">
         <div className="max-w-[640px] mx-auto">
-          <p className="font-display font-bold text-ink text-base leading-relaxed mb-4">
-            No actual dolls were harmed in the making of this experience.<br />
-            Any similarities to real people are purely coincidental… and deeply unfortunate for you.
+          <p className="font-display font-bold text-ink text-base leading-relaxed mb-4" style={{ textWrap: 'balance' }}>
+            No actual dolls were harmed in the making of this experience. Any similarities to real people are purely coincidental… and deeply unfortunate for you.
           </p>
           <p className="text-sm text-ink-mid mb-6">
             ⚠️ No real voodoo was used. Only wishful thinking. Maybe. 😉
