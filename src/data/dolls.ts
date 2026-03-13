@@ -2317,7 +2317,7 @@ const KAREN: DollConfig = {
   curseSectionBody: "Not a real curse. Just a harmless little cosmic escalation, dispatched to the person who has been escalating since birth.",
   curseSectionNote: '❆ No managers were actually summoned. Allegedly.',
   curseSectionPrompt: '❆ Read this out loud for maximum effect ❆',
-  cursePlaceholder: 'Enter their name to personalise the experience…',
+  cursePlaceholder: 'Enter their name to personalize…',
   vibesSectionBody: 'You absorbed her complaints. You nodded along. You said "I\'m so sorry that happened to you" while internally screaming. These are yours now. Read one. Mean it.',
   vibesSectionNote: '❆ The universe takes these seriously. Unlike her feedback form.',
   vibesSectionPrompt: '❆ Say it out loud — you deserve customer service too ❆',
