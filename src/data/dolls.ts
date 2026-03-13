@@ -1846,7 +1846,7 @@ const SISTER: DollConfig = {
     rare: [
       { text: "The influencer dream isn't really about followers. It's about control — over how she's seen, how she's received, how the story gets told.", rarity: "Rare ✦" },
       { text: "One day she will put down the phone mid-take and not pick it up again. Not because she's changed but because she'll have found something that doesn't require the performance.", rarity: "Rare ✦" },
-      { text: "She is the favourite. She has always been the favourite. She was given everything and told it was love. What nobody told her is that being the favourite is its own kind of trap.", rarity: "Rare ✦" },
+      { text: "She is the favorite. She has always been the favorite. She was given everything and told it was love. What nobody told her is that being the favorite is its own kind of trap.", rarity: "Rare ✦" },
     ],
   },
   annoyances: [
