@@ -1625,7 +1625,7 @@ const GOLDEN_CHILD: DollConfig = {
     "Someone will describe __NAME__ as 'a lot' to someone who hasn't met him.",
     "__NAME__ will be the smartest person in a room he chose specifically because of this.",
     "A performance review will include the phrase 'interpersonal feedback.' __NAME__ will ask who said it.",
-    "__NAME__ will attempt a joke that lands badly. Mum will laugh. Everyone else will check their phones.",
+    "__NAME__ will attempt a joke that lands badly. Mom will laugh. Everyone else will check their phones.",
     "Someone from school will be more successful than __NAME__ by every metric __NAME__ uses.",
     "__NAME__ will be described in someone's group chat in a single word. The word will be accurate.",
     "Something __NAME__ said confidently and publicly will turn out to be wrong.",
