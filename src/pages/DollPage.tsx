@@ -338,9 +338,9 @@ export default function DollPage() {
     else if (yPct < 0.88) zone = 'hands';
 
     if (newCount % 3 === 0) {
-      showBoss(pick(doll.zoneLines[zone] || doll.zoneLines.torso));
+      showBoss(pickNoRepeat(doll.zoneLines[zone] || doll.zoneLines.torso, 'zone'));
     } else {
-      showBoss(pick(doll.escLines[esc.tier] || doll.escLines.mild));
+      showBoss(pickNoRepeat(doll.escLines[esc.tier] || doll.escLines.mild, 'esc'));
     }
   }, [doll, pinCount, isBonus]);
 
