@@ -524,7 +524,7 @@ export default function DollPage() {
               {doll.fortuneTitle ? (
                 <>{doll.fortuneTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>{doll.fortuneTitle[1]}</em></>
               ) : (
-                <>Your Corporate<br /><em className="italic" style={{ color: doll.accentColor }}>Fortune.</em></>
+                <>Your Corporate<br /><em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>Fortune.</em></>
               )}
             </h2>
             <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
