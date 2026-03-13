@@ -2247,7 +2247,7 @@ const KAREN: DollConfig = {
       { text: "She will return something that has been used. Extensively. She will say it was 'barely touched.'", rarity: "Common" },
       { text: "She will send a complaint email that contains the phrase 'in all my years.' The years are significant.", rarity: "Common" },
       { text: "She will be right about one small thing and use it as leverage for seventeen larger things.", rarity: "Common" },
-      { text: "She will inform a teenager earning minimum wage about her legal rights. The teenager will apologise. She will not feel better.", rarity: "Common" },
+      { text: "She will inform a teenager earning minimum wage about her legal rights. The teenager will apologize. She will not feel better.", rarity: "Common" },
       { text: "She will dispute a charge that she agreed to. The evidence will be in writing. She will continue disputing.", rarity: "Common" },
       { text: "The coupons she presents are from 2019. She will not see why this matters.", rarity: "Common" },
       { text: "She will demand a discount for a problem that does not exist. She will receive an apology. She will demand a second apology.", rarity: "Common" },
