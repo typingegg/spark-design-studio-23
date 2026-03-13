@@ -149,7 +149,7 @@ function makeDefaultVibes() {
     "May every green light turn for __NAME__ today.",
     "May __NAME__'s coffee be the perfect temperature every time.",
     "May someone notice __NAME__'s hard work and actually say something.",
-    "May __NAME__'s 4pm meeting get cancelled and never rescheduled.",
+    "May __NAME__'s 4pm meeting get canceled and never rescheduled.",
     "May __NAME__ leave work on time today. And tomorrow.",
   ];
 }
