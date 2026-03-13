@@ -1337,7 +1337,7 @@ const MOTHER: DollConfig = {
   fortunes: {
     common: [
       { text: "She has an opinion about what you're eating right now. She is forming it as you read this.", rarity: "Common" },
-      { text: "There is a parcel in transit. There is always a parcel in transit.", rarity: "Common" },
+      { text: "There is a package in transit. There is always a package in transit.", rarity: "Common" },
       { text: "She will bring up a sacrifice she made in 2003 before the end of this month.", rarity: "Common" },
       { text: "She started the drama. She is now watching from another room with a cup of tea, concerned.", rarity: "Common" },
       { text: "She genuinely believes she is the most misunderstood person in this family. She is, in fact, the most legible.", rarity: "Common" },
