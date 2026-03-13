@@ -140,6 +140,8 @@ export default function DollPage() {
     if (dollAreaRef.current) {
       dollAreaRef.current.querySelectorAll('.doll-pin, .ouch-pop, .sparkle').forEach(el => el.remove());
     }
+    // Scroll to top on doll change
+    window.scrollTo(0, 0);
   }, [dollId]);
 
   if (!doll) return <div className="min-h-screen bg-cream flex items-center justify-center font-display text-2xl text-ink">Doll not found</div>;
