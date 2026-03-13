@@ -692,8 +692,6 @@ export default function DollPage() {
         <div className="flex gap-3 justify-center flex-wrap">
           {[
             { title: 'PayPal', icon: '💛', href: 'https://www.paypal.com/donate/?hosted_button_id=8RQANKNH3TUXQ' },
-            { title: 'Ko-Fi', icon: '☕', href: 'https://ko-fi.com/virtualvoodoodolls' },
-            { title: 'Buy Me a Coffee', icon: '☕', href: '#' },
           ].map(item => (
             <a key={item.title} href={item.href} target="_blank" rel="noopener noreferrer"
               className="no-underline border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-3 hover:border-ink hover:-translate-y-0.5 hover:shadow-[3px_3px_0_hsl(var(--ink))] transition-all cursor-pointer flex items-center gap-2">
