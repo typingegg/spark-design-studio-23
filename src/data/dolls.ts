@@ -2531,7 +2531,7 @@ const MESSY_ROOMMATE: DollConfig = {
     "I was literally about to do that.",
     "I didn't know those were yours.",
     "I thought it was communal.",
-    "Oh is that your yoghurt? Sorry.",
+    "Oh is that your yogurt? Sorry.",
     "I'll clean it later, I promise.",
     "The package looked like mine.",
     "I forgot to Venmo you, sorry.",
