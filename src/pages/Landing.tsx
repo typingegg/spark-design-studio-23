@@ -144,7 +144,7 @@ export default function Landing() {
                       <Link key={doll.id} to={`/doll/${doll.id}`} className="no-underline">
                         <div className="relative rounded-md overflow-hidden aspect-[3/4] bg-ink cursor-pointer hover:-translate-y-1.5 hover:rotate-[-1deg] transition-all duration-300 group">
                           {img ? (
-                            <img src={img} alt={doll.name} className="w-full h-full object-cover object-top" />
+                            <img src={img} alt={doll.name} loading="lazy" className="w-full h-full object-cover object-top" />
                           ) : (
                             <div className="w-full h-full flex flex-col items-center justify-center gap-2"
                               style={{ background: `linear-gradient(135deg, ${doll.accentColor}22, ${doll.accentColor}08)` }}>

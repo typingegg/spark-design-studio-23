@@ -518,7 +518,7 @@ export default function DollPage() {
             {(() => {
               const img = getDollImage(doll.id);
               return img ? (
-                <img src={img} alt={doll.name}
+              <img src={img} alt={doll.name} loading="lazy"
                   className="w-full h-full object-cover object-[center_10%] select-none pointer-events-none"
                   style={{ filter: 'drop-shadow(0 20px 56px rgba(60,35,10,0.42)) drop-shadow(0 4px 14px rgba(60,35,10,0.22))' }}
                 />
