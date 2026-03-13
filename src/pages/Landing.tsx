@@ -229,8 +229,8 @@ export default function Landing() {
                 </Link>
               </FadeUp>
               <FadeUp>
-                <h2 className="font-display font-black italic text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
-                  The <span className="text-voodoo-red">Mystery</span><br />Doll.
+                <h2 className="font-display font-black italic text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', textWrap: 'balance' }}>
+                  The <span className="text-voodoo-red">Mystery</span> Doll.
                 </h2>
               </FadeUp>
               <FadeUp>
