@@ -257,9 +257,9 @@ export default function Landing() {
               className="no-underline bg-[#3b7bbf] text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:brightness-110 transition-all cursor-pointer min-w-[160px]">
               PayPal
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer"
-              className="no-underline bg-[#6d9fd0] text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:brightness-110 transition-all cursor-pointer min-w-[160px]">
-              Venmo
+            <a href="https://ko-fi.com/virtualvoodoodolls" target="_blank" rel="noopener noreferrer"
+              className="no-underline bg-[#ff5e5b] text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:brightness-110 transition-all cursor-pointer min-w-[160px]">
+              Ko-Fi
             </a>
           </div>
           <div className="flex justify-center mt-4">

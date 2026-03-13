@@ -692,7 +692,7 @@ export default function DollPage() {
         <div className="flex gap-3 justify-center flex-wrap">
           {[
             { title: 'PayPal', icon: '💛', href: '#' },
-            { title: 'Venmo', icon: '💙', href: '#' },
+            { title: 'Ko-Fi', icon: '☕', href: 'https://ko-fi.com/virtualvoodoodolls' },
             { title: 'Buy Me a Coffee', icon: '☕', href: '#' },
           ].map(item => (
             <a key={item.title} href={item.href} target="_blank" rel="noopener noreferrer"
