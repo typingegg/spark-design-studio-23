@@ -494,14 +494,21 @@ export default function DollPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-8 py-16">
           <div>
             <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
-              <span className="w-8 h-px bg-voodoo-muted" />Office Oracle
+              <span className="w-8 h-px bg-voodoo-muted" />{doll.fortuneEyebrow || 'Office Oracle'}
             </div>
             <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
-              Your Corporate<br /><em className="italic" style={{ color: doll.accentColor }}>Fortune.</em>
+              {doll.fortuneTitle ? (
+                <>{doll.fortuneTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor }}>{doll.fortuneTitle[1]}</em></>
+              ) : (
+                <>Your Corporate<br /><em className="italic" style={{ color: doll.accentColor }}>Fortune.</em></>
+              )}
             </h2>
             <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
-              The Office Spirits have a message for you. It may be vaguely prophetic. It may be deeply uncomfortable. Either way — you asked.
+              {doll.fortuneBody || 'The Office Spirits have a message for you. It may be vaguely prophetic. It may be deeply uncomfortable. Either way — you asked.'}
             </p>
+            {doll.fortuneNote && (
+              <p className="text-[0.78rem] text-voodoo-muted font-light mb-4">{doll.fortuneNote}</p>
+            )}
             <button onClick={revealFortune}
               className="font-mono text-[0.64rem] tracking-[0.14em] uppercase bg-transparent text-ink border-[1.5px] border-ink px-8 py-3.5 cursor-pointer hover:bg-ink hover:text-cream transition-all inline-flex items-center gap-2 mb-3">
               🔮 Reveal Fortune
