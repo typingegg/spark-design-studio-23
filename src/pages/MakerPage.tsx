@@ -53,9 +53,27 @@ const ZONE_LINES: Record<string, string[]> = {
 };
 
 const ESC_LINES: Record<string, string[]> = {
-  mild: ["Do you want a custom doll?"],
-  moderate: ["Do you want a custom doll?"],
-  intense: ["Do you want a custom doll?"],
+  mild: [
+    "Hi! I made all of this. Please don't tell anyone how long it took.",
+    "Just a person with too many feelings and barely enough code.",
+    "Yes I'm real. No I don't have my life together. Yes the dolls still work.",
+    "Working on something new. Fuelled entirely by iced coffee and encouragement.",
+    "I made voodoo dolls of everyone you know. It's fine. I'm fine.",
+  ],
+  moderate: [
+    "Every click genuinely makes my day. I wish I were joking.",
+    "You're keeping the candles lit. And the servers. And my will to create.",
+    "I started this as a joke and now it's a whole thing. Classic me.",
+    "If you've donated: I love you specifically. The universe has your name.",
+    "This is what happens when a designer has feelings and too much free time.",
+  ],
+  intense: [
+    "Okay I'm actually tearing up a little. Don't tell anyone.",
+    "You believed in a website about voodoo dolls. You're the real magic.",
+    "I made this at 2am wondering if anyone would care. Apparently you do. Hi.",
+    "Fully, completely overwhelmed by the support. Back to making more dolls now.",
+    "You funded the craft. The craft thanks you. I thank you. The spirits thank you.",
+  ],
 };
 
 const MONEY_GLYPHS = ["💰", "💵", "💲", "🍀", "☘️", "🪙", "💎", "✨", "🤑", "🪴"];
