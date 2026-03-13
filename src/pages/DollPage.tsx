@@ -222,11 +222,11 @@ export default function DollPage() {
   function spawnOuch(area: HTMLElement, x: number, y: number) {
     const el = document.createElement("span");
     el.className = "ouch-pop";
-    el.textContent = pick(doll!.ouchLines);
+    el.textContent = pickNoRepeat(doll!.ouchLines, 'ouch');
     el.style.left = (x - 32) + "px";
     el.style.top = (y - 22) + "px";
     area.appendChild(el);
-    setTimeout(() => el.remove(), 1200);
+    setTimeout(() => el.remove(), 2400);
   }
 
   function spawnPin(area: HTMLElement, x: number, y: number) {
