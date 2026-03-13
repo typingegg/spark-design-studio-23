@@ -60,6 +60,7 @@ export const CATEGORY_META: Record<DollCategory, { label: string; tagClass: stri
   family: { label: 'Family Matters™', tagClass: 'bg-fam', packTitle: 'The Relatives' },
   friendship: { label: 'With Friends Like These™', tagClass: 'bg-friend', packTitle: 'The Social Archetypes' },
   bonus: { label: 'Bonus Doll', tagClass: 'bg-friend', packTitle: 'The Mystery Within' },
+  generic: { label: 'Virtual Voodoo™', tagClass: 'bg-voodoo-red', packTitle: 'The Generic Doll' },
 };
 
 // ═══════════════════════════════════════════════════════════════
