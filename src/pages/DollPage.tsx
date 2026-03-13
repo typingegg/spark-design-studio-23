@@ -405,7 +405,7 @@ export default function DollPage() {
           </div>
           <h1 className="font-display font-black leading-none text-ink mb-4" style={{ fontSize: 'clamp(2.6rem, 4.8vw, 4.2rem)' }}>
             {doll.heroTitle.map((line, i) => <span key={i}>{line}<br /></span>)}
-            <span className="italic" style={{ color: doll.accentColor }}>{doll.heroItalicWord}</span>
+            <span className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>{doll.heroItalicWord}</span>
           </h1>
           <p className="text-base leading-relaxed text-ink-mid font-light max-w-[460px] mb-6 whitespace-pre-line">
             {doll.heroDescription}
@@ -522,9 +522,9 @@ export default function DollPage() {
             </div>
             <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
               {doll.fortuneTitle ? (
-                <>{doll.fortuneTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor }}>{doll.fortuneTitle[1]}</em></>
+                <>{doll.fortuneTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>{doll.fortuneTitle[1]}</em></>
               ) : (
-                <>Your Corporate<br /><em className="italic" style={{ color: doll.accentColor }}>Fortune.</em></>
+                <>Your Corporate<br /><em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>Fortune.</em></>
               )}
             </h2>
             <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
@@ -567,7 +567,7 @@ export default function DollPage() {
                   <span className="w-8 h-px bg-voodoo-muted" />{doll.curseLabel}
                 </div>
                 <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
-                  {doll.curseSectionTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor }}>{doll.curseSectionTitle[1]}</em>
+                  {doll.curseSectionTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>{doll.curseSectionTitle[1]}</em>
                 </h2>
                 <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px]">
                   {doll.curseSectionBody || 'Not a curse. An annoyance. A minor inconvenience with impeccable aim. Think of someone who deserves a little cosmic nudge today.'}
@@ -674,7 +674,7 @@ export default function DollPage() {
           <span className="w-8 h-px bg-voodoo-muted" />Support the Craft<span className="w-8 h-px bg-voodoo-muted" />
         </div>
         <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>
-          Keep the <em className="italic" style={{ color: doll.accentColor }}>Spirits Funded.</em>
+          Keep the <em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>Spirits Funded.</em>
         </h2>
         <p className="text-[0.85rem] leading-relaxed text-ink-mid font-light mb-8 max-w-[460px] mx-auto">
           If this brought you even a moment of relief — consider throwing the spirits a coin.

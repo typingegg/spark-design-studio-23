@@ -3073,7 +3073,7 @@ const BAD_INFLUENCE: DollConfig = {
 const INNER_YOU: DollConfig = {
   id: 'inner-you', name: 'The Inner You', archetype: 'The Hidden One',
   tagline: 'The one that was always here. No pins. Just wishes.', emoji: '❤️',
-  category: 'bonus', categoryLabel: 'Bonus Doll', navTagText: 'Inner You Edition', accentColor: '#c0394a',
+  category: 'bonus', categoryLabel: 'Bonus Doll', navTagText: 'Inner You Edition', accentColor: 'hsl(43, 60%, 49%)',
   heroTitle: ['This One Is', 'For'], heroItalicWord: 'You.',
   heroDescription: 'This doll is different.\nNo pins. No curses. No revenge.\nJust wishes, fortunes, and a reminder\nthat you were never the problem.',
   escLabels: ["You are enough.", "You are doing better than you think.", "You are seen. Quietly but completely.", "You deserve the softness you give others.", "You are more loved than you have been told.", "♥ You were always worth it. Every bit. ♥"],
