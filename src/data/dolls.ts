@@ -1142,7 +1142,7 @@ const CLINGY_ONE: DollConfig = {
     "The next relationship will have room for two full people in it. Both of them will breathe.",
     "I stop tracking someone's location and call it by its real name. Then I stop doing it.",
     "Something better is coming. It will feel suspiciously calm. That's what safe feels like.",
-    "Every time __NAME__ didn't send the message they drafted at 2am, ten pounds of dignity was preserved.",
+    "Every time __NAME__ didn't send the message they drafted at 2am, ten dollars of dignity was preserved.",
     "I will have a hobby by the end of this month. Something that isn't waiting.",
     "Today I am the only one overthinking this. I am also the only one who cares this much. Those facts are related.",
     "I am not broken. I am just wired for closeness in a world that keeps telling me that's a problem.",
