@@ -2476,7 +2476,7 @@ const BRIDEZILLA: DollConfig = {
     "I am allowed to have been tired. That was a lot. That was genuinely a lot.",
     "Every 'does this look blush to you' text I replied to with kindness has been noted by the cosmos.",
     "I showed up. I smiled in every photo. I lifted the dress for the photos on the stairs. I am a hero.",
-    "The friendship I have with her is worth more than the year she spent being someone I didn't recognise.",
+    "The friendship I have with her is worth more than the year she spent being someone I didn't recognize.",
     "I deserve friends who remember I also exist when they're not planning a wedding.",
     "I am going to stop measuring my importance by how often I was included in the decision-making process. The answer was: not enough.",
     "I deserve a celebration where someone asks me what I want. Even if it's just where to eat lunch.",
