@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { getDollById, ALL_DOLLS, type DollConfig, type WishCategory } from '@/data/dolls';
 import { getDollImage } from '@/data/dollImages';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import DonationButtons from '@/components/DonationButtons';
 
 function pick<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -689,17 +690,7 @@ export default function DollPage() {
         <p className="text-[0.85rem] leading-relaxed text-ink-mid font-light mb-8 max-w-[460px] mx-auto">
           If this brought you even a moment of relief — consider throwing the spirits a coin.
         </p>
-        <div className="flex gap-3 justify-center flex-wrap">
-          {[
-            { title: 'PayPal', icon: '💛', href: 'https://www.paypal.com/donate/?hosted_button_id=8RQANKNH3TUXQ' },
-          ].map(item => (
-            <a key={item.title} href={item.href} target="_blank" rel="noopener noreferrer"
-              className="no-underline border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-3 hover:border-ink hover:-translate-y-0.5 hover:shadow-[3px_3px_0_hsl(var(--ink))] transition-all cursor-pointer flex items-center gap-2">
-              <span className="text-lg">{item.icon}</span>
-              <span className="font-body text-sm font-bold text-ink">{item.title}</span>
-            </a>
-          ))}
-        </div>
+        <DonationButtons variant="light" />
       </section>
 
       {/* FOOTER */}
