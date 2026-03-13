@@ -1638,7 +1638,7 @@ const GOLDEN_CHILD: DollConfig = {
     "The family sees what they want to see. The right people see what's actually there.",
     "Every achievement I've had that went unmentioned at the dinner table has been logged elsewhere.",
     "I stop needing the acknowledgement from the person who was never going to give it.",
-    "Good things are coming. They don't require charm or a good relationship with mum. Just merit.",
+    "Good things are coming. They don't require charm or a good relationship with mom. Just merit.",
     "Every time I came second in this family, I was being graded on a rigged scale.",
     "I am not the difficult one. I am the one who asked questions nobody wanted to answer.",
     "Today I stop trying to make sense of a dynamic that was never designed to be fair.",
