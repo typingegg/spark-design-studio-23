@@ -356,7 +356,7 @@ export default function DollPage() {
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-[300] h-[58px] flex items-center justify-between px-8 bg-cream/95 backdrop-blur-[18px] border-b border-foreground/[0.14]">
         <Link to="/" className="font-display font-black text-base text-ink no-underline tracking-tight">
-          {doll.categoryLabel.split('™')[0]} <span style={{ color: doll.accentColor }}>Voodoo</span>™
+          {doll.categoryLabel}
         </Link>
         <div className="hidden md:flex gap-6 items-center">
           <a href="#fortune" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Fortune</a>
