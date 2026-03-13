@@ -561,7 +561,7 @@ export default function DollPage() {
 
           {/* FORTUNE */}
           <section id="fortune">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-8 py-16">
+            <div className="flex flex-col gap-10 px-8 py-16 max-w-[720px] mx-auto">
               <div>
                 <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
                   <span className="w-8 h-px bg-voodoo-muted" />{doll.fortuneEyebrow || 'Office Oracle'}
