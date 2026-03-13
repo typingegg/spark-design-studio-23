@@ -691,7 +691,7 @@ export default function DollPage() {
         </p>
         <div className="flex gap-3 justify-center flex-wrap">
           {[
-            { title: 'PayPal', icon: '💛', href: '#' },
+            { title: 'PayPal', icon: '💛', href: 'https://www.paypal.com/donate/?hosted_button_id=8RQANKNH3TUXQ' },
             { title: 'Ko-Fi', icon: '☕', href: 'https://ko-fi.com/virtualvoodoodolls' },
             { title: 'Buy Me a Coffee', icon: '☕', href: '#' },
           ].map(item => (
