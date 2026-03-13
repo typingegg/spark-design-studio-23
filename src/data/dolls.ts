@@ -1314,7 +1314,7 @@ const MOTHER: DollConfig = {
     "That's for every comment about my body at the dinner table.", "For 'I'm just saying, you used to be so slim.'",
     "That's for starting the drama and watching from the sidelines.", "For every guilt trip disguised as concern.",
     "And the martyrdom speech at Christmas.", "That's for treating my partner like a threat.",
-    "For 'I sacrificed everything and this is the thanks I get.'", "And the Amazon parcel that arrived every single day.",
+    "For 'I sacrificed everything and this is the thanks I get.'", "And the Amazon package that arrived every single day.",
     "That's for needing to be the most important person in every room.",
     "For 'I only say it because I love you.' You don't get to decide that.",
     "And every family argument that started with you and ended with someone else being blamed.",
