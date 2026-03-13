@@ -1249,10 +1249,10 @@ const COMMITMENT_PHOBE: DollConfig = {
     "__NAME__ will finally know exactly what they want. The person they wanted will know too. They'll have moved on.",
     "__NAME__'s 'I care about you' will be tested. The test will not go well.",
     "__NAME__ will describe themselves as 'just going with the flow' to someone who has very specific currents.",
-    "The 'let's not put a label on it' will be put on a label. By a solicitor.",
-    "__NAME__'s next partner will want a timeline. In writing. Notarised.",
+    "The 'let's not put a label on it' will be put on a label. By a lawyer.",
+    "__NAME__'s next partner will want a timeline. In writing. Notarized.",
     "__NAME__ will be introduced as 'a friend' to someone they've been seeing for two years.",
-    "__NAME__ will realise, quietly, that they were never afraid of commitment. Just of choosing.",
+    "__NAME__ will realize, quietly, that they were never afraid of commitment. Just of choosing.",
   ],
   goodVibes: [
     "Today I stop being available to someone who hasn't decided if they want me.",
