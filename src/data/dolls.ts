@@ -913,10 +913,10 @@ const LOVE_BOMBER: DollConfig = {
   ouchLines: [
     "I deserved better than this.", "That one's for the flowers.", "And the other phone.",
     "I was never crazy.", "For every 'she's just a friend.'", "That's for the playlist you made her.",
-    "The therapist said it wasn't my fault.", "For every time I apologised first.",
+    "The therapist said it wasn't my fault.", "For every time I apologized first.",
     "This one's for my friend who tried to warn me.", "That's for the deleted texts.",
     "For the fake name in your contacts.", "Felt. Now move on. Unlike him.",
-    "For the Grand Gesture that changed nothing.", "That's for crying outside my flat at midnight.",
+    "For the Grand Gesture that changed nothing.", "That's for crying outside my apartment at midnight.",
     "I am not the problem.",
   ],
   zoneLines: {
