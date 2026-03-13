@@ -983,7 +983,7 @@ const LOVE_BOMBER: DollConfig = {
     "Every 'you're too insecure' __NAME__ says will land with someone six steps ahead of them.",
     "__NAME__'s charm will work on one more person before the group chat circulates.",
     "The story __NAME__ has prepared will unravel at the first follow-up question.",
-    "__NAME__'s new profile picture will be recognised by someone it probably shouldn't be.",
+    "__NAME__'s new profile picture will be recognized by someone it probably shouldn't be.",
     "The word 'boundaries' will enter __NAME__'s vocabulary twelve months too late.",
     "__NAME__'s 'trust me' will be the last thing said before everything comes out.",
     "Someone will calmly lay out a timeline and __NAME__ will have no response.",
