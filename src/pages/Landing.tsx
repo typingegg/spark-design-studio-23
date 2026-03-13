@@ -197,11 +197,6 @@ export default function Landing() {
                   No spoilers.
                 </p>
               </FadeUp>
-              <FadeUp>
-                <Link to={`/doll/${bonusDoll.id}`} className="bg-transparent text-cream border border-cream/40 px-8 py-3 rounded-sm text-sm tracking-[0.12em] uppercase font-medium hover:border-cream hover:-translate-y-0.5 transition-all no-underline">
-                  Meet The Inner You ✦
-                </Link>
-              </FadeUp>
             </div>
           </section>
         );
