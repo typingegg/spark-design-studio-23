@@ -232,7 +232,7 @@ export default function MakerPage() {
           </div>
 
           {/* Text about the maker */}
-          <div className="mt-12 max-w-[560px] text-center">
+          <div className="mt-12 max-w-[560px] text-left">
             <h1 className="font-display font-black text-ink leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
               Meet the <em className="italic text-voodoo-gold">Doll Maker.</em>
             </h1>
