@@ -1586,7 +1586,7 @@ const GOLDEN_CHILD: DollConfig = {
       { text: "He has described someone as 'not a team player' this week. That person is universally liked.", rarity: "Common" },
       { text: "He genuinely believes the flowers were his idea. They were not.", rarity: "Common" },
       { text: "He is the most charming person in the room he is currently in. He chose the room carefully.", rarity: "Common" },
-      { text: "He has never once been told he was not the favourite. This has done significant and specific damage.", rarity: "Common" },
+      { text: "He has never once been told he was not the favorite. This has done significant and specific damage.", rarity: "Common" },
       { text: "He will mention his bonus before the end of the week to someone who did not ask.", rarity: "Common" },
       { text: "He is doing extremely well by every metric he has chosen. He chose the metrics.", rarity: "Common" },
       { text: "Someone in his orbit is keeping a very detailed mental record.", rarity: "Common" },
