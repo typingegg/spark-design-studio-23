@@ -299,7 +299,7 @@ export default function Landing() {
           <p className="text-base text-cream/60 leading-relaxed mb-10 max-w-[520px] mx-auto">
             One person made all {ALL_DOLLS.length} of these. If the pins landed, consider fuelling the next round.
           </p>
-          <DonationButtons variant="light" />
+          <DonationButtons variant="dark" />
         </div>
       </section>
 
