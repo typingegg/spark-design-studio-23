@@ -1911,7 +1911,7 @@ const SISTER: DollConfig = {
   curseSectionBody: "Not a real curse. Just the universe temporarily suspending her wi-fi. On behalf of every room she walked into like a photoshoot, every tantrum she threw when she didn't get her way, every friend she lost and blamed.",
   curseSectionNote: '❆ No selfies were taken in bad lighting. Allegedly.',
   curseSectionPrompt: '❆ Read this aloud. For every photo of her you had to pretend to like. ❆',
-  cursePlaceholder: 'Enter their name to personalise the consequence…',
+  cursePlaceholder: 'Enter their name to personalize…',
   vibesSectionBody: "You grew up in the same house. You did not grow up with the same rules. Pick something. Say it. Mean it. The ring light doesn't have to be on.",
   vibesSectionNote: '❆ The universe takes these seriously. Allegedly.',
   vibesSectionPrompt: '❆ Say it out loud — your next partner is listening ❆',
