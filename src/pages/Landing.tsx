@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { ALL_DOLLS, CATEGORY_META, type DollCategory } from '@/data/dolls';
 import { getDollImage } from '@/data/dollImages';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import mysteryDollImg from '@/assets/dolls/mystery-doll.jpeg';
 import DonationButtons from '@/components/DonationButtons';
 
