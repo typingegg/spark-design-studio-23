@@ -2106,7 +2106,7 @@ const GOLD_DIGGER: DollConfig = {
     "Every dinner paid for, every trip covered, every 'I'll get you back' — being tallied. Reimbursement is spiritual but it's coming.",
     "I stop funding lifestyles that don't include me in the long-term plan.",
     "Today I accept that love is not a transaction. Anyone who treats it as one is not the person.",
-    "Every time __NAME__'s card was used without question, ten pounds of self-worth was being quietly deposited elsewhere.",
+    "Every time __NAME__'s card was used without question, ten dollars of self-worth was being quietly deposited elsewhere.",
     "I am done being someone's financial safety net. I am a person, not a contingency plan.",
     "The savings account is recovering. Faster than expected. The bank is rooting for __NAME__.",
     "I no longer mistake someone needing me for someone wanting me. Different things entirely.",
