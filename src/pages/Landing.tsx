@@ -262,12 +262,6 @@ export default function Landing() {
               Ko-Fi
             </a>
           </div>
-          <div className="flex justify-center mt-4">
-            <a href="#" target="_blank" rel="noopener noreferrer"
-              className="no-underline bg-voodoo-gold text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:brightness-110 transition-all cursor-pointer min-w-[200px]">
-              Buy Me a Coffee
-            </a>
-          </div>
         </div>
       </section>
 
