@@ -17,6 +17,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/doll/:dollId" element={<DollPage />} />
+          <Route path="/about-the-maker" element={<MakerPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
