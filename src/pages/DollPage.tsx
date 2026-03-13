@@ -294,8 +294,13 @@ export default function DollPage() {
     setEscPct(esc.pct);
     setEscLabel(esc.label);
 
-    setStabbed(true);
-    setTimeout(() => setStabbed(false), 320);
+    // Trigger stab animation via DOM to avoid React re-render blink
+    const imgEl = dollAreaRef.current.querySelector('img, .doll-emoji') as HTMLElement;
+    if (imgEl) {
+      imgEl.style.animation = 'none';
+      imgEl.offsetHeight; // force reflow
+      imgEl.style.animation = 'stab 0.32s ease';
+    }
 
     spawnSparkles(area, x, y);
 
