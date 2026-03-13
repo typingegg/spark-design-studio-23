@@ -2994,7 +2994,7 @@ const BAD_INFLUENCE: DollConfig = {
       { text: "The morning after will feature an entirely preventable conversation with your bank.", rarity: "Uncommon" },
       { text: "She will call the plans 'low key.' No plans she describes as 'low key' have ever been low key.", rarity: "Uncommon" },
       { text: "The borrowed twenty will become a borrowed forty over the course of an evening. This is her core competency.", rarity: "Uncommon" },
-      { text: "You will have a genuinely wonderful time. The tab will arrive and the wonderful time will cost £180.", rarity: "Uncommon" },
+      { text: "You will have a genuinely wonderful time. The tab will arrive and the wonderful time will cost $180.", rarity: "Uncommon" },
     ],
     rare: [
       { text: "The fun was real. The consequences are also real. Both things get to be true.", rarity: "Rare ✦" },
