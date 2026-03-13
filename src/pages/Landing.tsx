@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { ALL_DOLLS, CATEGORY_META, type DollCategory } from '@/data/dolls';
 import { getDollImage } from '@/data/dollImages';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import mysteryDollImg from '@/assets/dolls/mystery-doll.jpeg';
 import DonationButtons from '@/components/DonationButtons';
 
@@ -35,6 +35,7 @@ function FadeUp({ children, className = '' }: { children: React.ReactNode; class
 export default function Landing() {
   const [count, setCount] = useState(55000);
   const [requestSent, setRequestSent] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const today = new Date();
@@ -50,6 +51,31 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen bg-cream">
+      {/* MOBILE MENU OVERLAY */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[200] bg-ink/95 backdrop-blur-md flex flex-col items-center justify-center gap-6"
+          >
+            <button onClick={() => setMobileMenuOpen(false)} className="absolute top-4 right-6 text-cream text-2xl" aria-label="Close menu">✕</button>
+            <span className="font-handwritten text-cream text-lg mb-2">Virtual Voodoo <span className="text-voodoo-gold">Dolls</span></span>
+            {CATEGORY_ORDER.map(cat => (
+              <a key={cat} href={`#${cat}`} onClick={() => setMobileMenuOpen(false)} className="font-body text-sm tracking-[0.14em] uppercase text-voodoo-gold no-underline hover:text-cream transition-colors">
+                {cat === 'friendship' ? 'Friends' : cat.charAt(0).toUpperCase() + cat.slice(1)}
+              </a>
+            ))}
+            <a href="#bonus" onClick={() => setMobileMenuOpen(false)} className="font-body text-sm tracking-[0.14em] uppercase text-voodoo-gold no-underline hover:text-cream transition-colors">Bonus</a>
+            <div className="w-12 h-px bg-voodoo-gold/30 my-2" />
+            <Link to="/doll/micromanager" onClick={() => setMobileMenuOpen(false)} className="bg-voodoo-red text-cream px-6 py-3 text-sm tracking-[0.1em] uppercase font-medium rounded-sm hover:brightness-90 transition no-underline">
+              Play Now ✦
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-[100] h-[58px] bg-ink flex items-center justify-between px-6 md:px-10 border-b-2 border-voodoo-gold">
         <Link to="/" className="font-handwritten text-cream text-lg tracking-wider">
@@ -66,6 +92,9 @@ export default function Landing() {
             Play Now ✦
           </Link>
         </div>
+        <button className="md:hidden text-cream text-xl" onClick={() => setMobileMenuOpen(true)} aria-label="Open menu">
+          ☰
+        </button>
       </nav>
 
       {/* HERO */}
@@ -139,7 +168,7 @@ export default function Landing() {
                       <Link key={doll.id} to={`/doll/${doll.id}`} className="no-underline">
                         <div className="relative rounded-md overflow-hidden aspect-[3/4] bg-ink cursor-pointer hover:-translate-y-1.5 hover:rotate-[-1deg] transition-all duration-300 group">
                           {img ? (
-                            <img src={img} alt={doll.name} className="w-full h-full object-cover object-top" />
+                            <img src={img} alt={doll.name} loading="lazy" className="w-full h-full object-cover object-top" />
                           ) : (
                             <div className="w-full h-full flex flex-col items-center justify-center gap-2"
                               style={{ background: `linear-gradient(135deg, ${doll.accentColor}22, ${doll.accentColor}08)` }}>
@@ -183,7 +212,7 @@ export default function Landing() {
               <FadeUp>
                 <Link to={`/doll/${bonusDoll.id}`} className="no-underline">
                   <div className="w-[140px] h-[180px] rounded-md mx-auto mb-8 overflow-hidden hover:-translate-y-2 hover:border-voodoo-gold transition-all duration-300 border-2 border-voodoo-gold/30">
-                    <img src={mysteryDollImg} alt="Mystery Doll" className="w-full h-full object-cover" />
+                    <img src={mysteryDollImg} alt="Mystery Doll" loading="lazy" className="w-full h-full object-cover" />
                   </div>
                 </Link>
               </FadeUp>
@@ -219,7 +248,7 @@ export default function Landing() {
                 <Link to={`/doll/${genericDoll.id}`} className="no-underline">
                   <div className="w-[140px] h-[180px] rounded-md mx-auto mb-8 overflow-hidden hover:-translate-y-2 hover:border-ink transition-all duration-300 border-2 border-foreground/20">
                     {genericImg ? (
-                      <img src={genericImg} alt="Generic Doll" className="w-full h-full object-cover" />
+                      <img src={genericImg} alt="Generic Doll" loading="lazy" className="w-full h-full object-cover" />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center bg-cream text-5xl">{genericDoll.emoji}</div>
                     )}

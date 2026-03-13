@@ -213,7 +213,7 @@ export default function MakerPage() {
                 aspectRatio: '1/1',
                 boxShadow: 'inset 0 0 0 5px rgba(255,255,255,0.32), inset 0 0 0 7px rgba(26,20,16,0.07), 0 32px 80px rgba(40,24,8,0.32), 0 6px 18px rgba(40,24,8,0.14)',
               }}>
-              <img src={makerImg} alt="The Doll Maker"
+              <img src={makerImg} alt="The Doll Maker" loading="lazy"
                 className="w-full h-full object-cover object-[center_10%] select-none pointer-events-none"
                 style={{ filter: 'drop-shadow(0 20px 56px rgba(60,35,10,0.42)) drop-shadow(0 4px 14px rgba(60,35,10,0.22))' }}
               />
