@@ -386,6 +386,28 @@ export default function DollPage() {
 
   return (
     <div className="min-h-screen bg-cream">
+      {/* MOBILE MENU OVERLAY */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[400] bg-ink/95 backdrop-blur-md flex flex-col items-center justify-center gap-6"
+          >
+            <button onClick={() => setMobileMenuOpen(false)} className="absolute top-4 right-6 text-cream text-2xl" aria-label="Close menu">✕</button>
+            <span className="font-display font-black text-cream text-lg mb-4">{doll.name}</span>
+            {hasFortunes && <a href="#fortune" onClick={() => setMobileMenuOpen(false)} className="font-mono text-sm tracking-[0.14em] uppercase text-voodoo-gold no-underline hover:text-cream transition-colors">Fortune</a>}
+            {hasAnnoyances && <a href="#curse" onClick={() => setMobileMenuOpen(false)} className="font-mono text-sm tracking-[0.14em] uppercase text-voodoo-gold no-underline hover:text-cream transition-colors">Annoyance</a>}
+            {hasVibes && <a href="#good-vibes" onClick={() => setMobileMenuOpen(false)} className="font-mono text-sm tracking-[0.14em] uppercase text-voodoo-gold no-underline hover:text-cream transition-colors">Good Vibes</a>}
+            <div className="w-12 h-px bg-voodoo-gold/30 my-2" />
+            <Link to="/" onClick={() => setMobileMenuOpen(false)} className="font-body text-sm font-bold tracking-[0.08em] uppercase bg-voodoo-red text-cream px-6 py-3 no-underline hover:brightness-90 transition">
+              All Dolls ✦
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-[300] h-[58px] flex items-center justify-between px-8 bg-cream/95 backdrop-blur-[18px] border-b border-foreground/[0.14]">
         <Link to="/" className="font-display font-black text-base text-ink no-underline tracking-tight">
@@ -404,6 +426,9 @@ export default function DollPage() {
           <Link to="/" className="font-body text-[0.7rem] font-bold tracking-[0.08em] uppercase bg-ink text-cream border-none px-4 py-2 cursor-pointer hover:bg-voodoo-red transition-colors no-underline">
             All Dolls ✦
           </Link>
+          <button className="md:hidden text-ink text-xl" onClick={() => setMobileMenuOpen(true)} aria-label="Open menu">
+            ☰
+          </button>
         </div>
       </nav>
 
