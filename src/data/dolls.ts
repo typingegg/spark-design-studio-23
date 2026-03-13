@@ -3058,7 +3058,7 @@ const BAD_INFLUENCE: DollConfig = {
   curseSectionBody: 'She said "YOLO" every time you asked if this was a good idea. The universe is now ready to send her one. Targeted. Proportionate. Largely her own fault.',
   curseSectionNote: '❆ No actual YOLO-ers were harmed. The $40 tab is a different matter.',
   curseSectionPrompt: '❆ Read this out loud for maximum karmic dispatch ❆',
-  cursePlaceholder: 'Enter her name to personalise the invoice…',
+  cursePlaceholder: 'Enter her name to personalize…',
   vibesSectionBody: "You went along with it. Every time. Because she made it sound fun and your sensible inner voice got drowned out by the second round. These are yours now. Read one. Mean it. Maybe text your actual savings goal.",
   vibesSectionNote: '❆ The universe respects these. It is tired too.',
   vibesSectionPrompt: '❆ Say it out loud — your bank account is listening ❆',
