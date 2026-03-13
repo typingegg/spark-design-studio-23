@@ -2434,7 +2434,7 @@ const BRIDEZILLA: DollConfig = {
     ],
     uncommon: [
       { text: "She will find something wrong with the right thing. This is a skill. It has been refined over many years.", rarity: "Uncommon" },
-      { text: "The speech that makes her cry will not be from the person she expected. She will smile through it. Later she will analyse it.", rarity: "Uncommon" },
+      { text: "The speech that makes her cry will not be from the person she expected. She will smile through it. Later she will analyze it.", rarity: "Uncommon" },
       { text: "The thing she cared most about will go unnoticed by every guest. She will notice that they didn't notice.", rarity: "Uncommon" },
       { text: "She will apologise to her bridesmaids once on the day. It will be sincere. They will mean it when they say it's fine.", rarity: "Uncommon" },
       { text: "The moment she stops trying to control it will be the moment she remembers. Not the other moments.", rarity: "Uncommon" },
