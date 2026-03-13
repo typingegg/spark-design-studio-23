@@ -213,24 +213,31 @@ export default function Landing() {
           <h2 className="font-display font-black leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}>
             Request a Doll<br />for Your <em className="italic text-voodoo-red">Ex.</em>
           </h2>
-          <div className="inline-flex items-center gap-2 bg-voodoo-gold/15 text-[#a07820] font-mono text-[0.7rem] tracking-[0.14em] uppercase px-5 py-2.5 rounded-sm mb-6">
-            🚧 This feature is under construction
-          </div>
           <p className="text-base text-ink-mid leading-relaxed mb-8">
             No doll in the collection quite captures them? Send us a description and the things they actually say. We'll build something truly personal.
           </p>
-          <form className="flex flex-col gap-4 text-left opacity-50 pointer-events-none" onSubmit={(e) => { e.preventDefault(); setRequestSent(true); }}>
-            <input type="text" placeholder="Your name" maxLength={80}
+          <form className="flex flex-col gap-4 text-left" onSubmit={(e) => {
+            e.preventDefault();
+            const form = e.target as HTMLFormElement;
+            const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+            const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+            const desc = (form.elements.namedItem('description') as HTMLTextAreaElement).value;
+            const quotes = (form.elements.namedItem('quotes') as HTMLTextAreaElement).value;
+            const body = `Name: ${name}%0AEmail: ${email}%0A%0ADescription:%0A${encodeURIComponent(desc)}%0A%0AThings they say:%0A${encodeURIComponent(quotes)}`;
+            window.location.href = `mailto:virtualvoodoodolls@gmail.com?subject=${encodeURIComponent('Custom Ex Doll Request from ' + name)}&body=${body}`;
+            setRequestSent(true);
+          }}>
+            <input name="name" type="text" placeholder="Your name" maxLength={80} required
               className="font-body text-base bg-white border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-4 text-ink outline-none focus:border-ink transition-colors" />
-            <input type="email" placeholder="Your email" maxLength={120}
+            <input name="email" type="email" placeholder="Your email" maxLength={120} required
               className="font-body text-base bg-white border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-4 text-ink outline-none focus:border-ink transition-colors" />
-            <textarea placeholder="Describe them. Appearance, personality, red flags…" maxLength={1000} rows={4}
+            <textarea name="description" placeholder="Describe them. Appearance, personality, red flags…" maxLength={1000} rows={4} required
               className="font-body text-base bg-white border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-4 text-ink outline-none focus:border-ink transition-colors resize-none" />
-            <textarea placeholder="Things they say. The more specific, the better." maxLength={1000} rows={4}
+            <textarea name="quotes" placeholder="Things they say. The more specific, the better." maxLength={1000} rows={4}
               className="font-body text-base bg-white border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-4 text-ink outline-none focus:border-ink transition-colors resize-none" />
             <button type="submit"
               className="font-body text-sm font-bold tracking-[0.12em] uppercase bg-ink text-cream border-none px-8 py-4 cursor-pointer hover:bg-voodoo-red transition-colors w-full">
-              Coming Soon
+              {requestSent ? '✓ Request Sent' : 'Submit Request'}
             </button>
           </form>
         </div>
