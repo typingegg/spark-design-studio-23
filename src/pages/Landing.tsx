@@ -313,11 +313,14 @@ export default function Landing() {
           <p className="text-sm text-ink-mid mb-6">
             ⚠️ No real voodoo was used. Only wishful thinking. Maybe. 😉
           </p>
-          <p className="text-sm text-ink-mid leading-relaxed">
+          <p className="text-sm text-ink-mid leading-relaxed mb-6">
             Got a complaint? A suggestion? A deeply personal grievance? Want a custom corporate doll made in someone's exact likeness? <em>Oh, we can talk.</em> We hear you. We feel you. We are also underpaid.{' '}
             <a href="#" className="text-voodoo-red font-bold underline hover:text-ink transition-colors">Send a small donation — help us stick it to them!</a>{' '}
             We might fix it. Big might.
           </p>
+          <Link to="/about-the-maker" className="inline-flex items-center gap-2 font-body text-[0.78rem] font-bold tracking-[0.08em] uppercase bg-ink text-cream border-none px-6 py-3.5 cursor-pointer hover:bg-voodoo-red transition-colors no-underline">
+            ✦ Meet the Doll Maker
+          </Link>
         </div>
       </section>
 
