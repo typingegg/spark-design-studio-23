@@ -461,7 +461,7 @@ export default function DollPage() {
               </button>
             )}
           </div>
-          <div className="flex gap-2.5 flex-wrap mb-2">
+          <div className="flex gap-2.5 flex-wrap mb-2 justify-center">
             {hasAnnoyances && (
               <button onClick={() => document.getElementById('curse')?.scrollIntoView({ behavior: 'smooth' })}
                 className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
