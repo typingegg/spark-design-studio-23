@@ -51,6 +51,7 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-cream">
       {/* NAV */}
+      <MobileMenu categories={CATEGORY_ORDER} />
       <nav className="fixed top-0 left-0 right-0 z-[100] h-[58px] bg-ink flex items-center justify-between px-6 md:px-10 border-b-2 border-voodoo-gold">
         <Link to="/" className="font-handwritten text-cream text-lg tracking-wider">
           Virtual Voodoo <span className="text-voodoo-gold">Dolls</span>
@@ -66,6 +67,9 @@ export default function Landing() {
             Play Now ✦
           </Link>
         </div>
+        <button className="md:hidden text-cream text-xl" onClick={() => setMobileMenuOpen(true)} aria-label="Open menu">
+          ☰
+        </button>
       </nav>
 
       {/* HERO */}
