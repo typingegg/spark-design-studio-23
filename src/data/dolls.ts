@@ -3006,7 +3006,7 @@ const BAD_INFLUENCE: DollConfig = {
   },
   annoyances: [
     "__NAME__'s 'I'll pay you back' will arrive as a Venmo request going the other direction.",
-    "__NAME__ will plan a 'low-key one' that somehow ends at 4am in a karaoke bar in an unfamiliar neighbourhood.",
+    "__NAME__ will plan a 'low-key one' that somehow ends at 4am in a karaoke bar in an unfamiliar neighborhood.",
     "Every guy __NAME__ calls 'actually really nice' will fail to text back within 48 hours.",
     "__NAME__'s YOLO will be overruled by her bank's fraud department.",
     "__NAME__'s 'just around the corner' will be forty-five minutes away by taxi.",
