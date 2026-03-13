@@ -563,6 +563,8 @@ export default function DollPage() {
           </div>
         </div>
       </section>
+        </>
+      )}
 
       <hr className="border-none border-t border-foreground/[0.14]" />
 
