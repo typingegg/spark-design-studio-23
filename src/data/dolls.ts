@@ -1887,7 +1887,7 @@ const SISTER: DollConfig = {
     "Every family event I showed up to while being made to feel invisible was witnessed. The universe was there.",
     "Today I accept that being overlooked by the wrong people is just the price of eventually being seen by the right ones.",
     "Every time she mentioned dad's card in front of people, something quietly shifted in how they saw her.",
-    "I stop performing for an audience that has already picked their favourite. I'm doing a different show.",
+    "I stop performing for an audience that has already picked their favorite. I'm doing a different show.",
     "Something better is coming. It doesn't need to be announced. It doesn't need a sash.",
     "Every room I made smaller to avoid conflict is being given back to me, one square foot at a time.",
     "I do not need to win. I need to leave. Those have always been different things.",
