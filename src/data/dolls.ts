@@ -3239,7 +3239,7 @@ const GENERIC_DOLL: DollConfig = {
   archetype: 'Universal Stress Relief',
   tagline: 'No backstory. No judgment. Just pins.',
   emoji: '🪡',
-  category: 'bonus',
+  category: 'generic',
   categoryLabel: 'Virtual Voodoo™',
   navTagText: 'Generic Edition',
   accentColor: '#b82a24',

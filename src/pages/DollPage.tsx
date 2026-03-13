@@ -105,7 +105,7 @@ function WishesSection({ wishes, showToast }: { wishes: WishCategory[]; showToas
 export default function DollPage() {
   const { dollId } = useParams<{ dollId: string }>();
   const doll = getDollById(dollId || '');
-  const isBonus = doll?.category === 'bonus' && doll?.id !== 'generic-doll';
+  const isBonus = doll?.category === 'bonus';
   const hasFortunes = doll ? (doll.fortunes.common.length + doll.fortunes.uncommon.length + doll.fortunes.rare.length) > 0 : false;
   const hasAnnoyances = doll ? doll.annoyances.length > 0 : false;
   const hasVibes = doll ? doll.goodVibes.length > 0 : false;
