@@ -1632,7 +1632,7 @@ const GOLDEN_CHILD: DollConfig = {
     "__NAME__ will, briefly and unexpectedly, be held accountable.",
   ],
   goodVibes: [
-    "Today I stop explaining myself to someone who has already written the verdict and given it to mum.",
+    "Today I stop explaining myself to someone who has already written the verdict and given it to mom.",
     "Every time __NAME__ got away with something, the universe opened a tab. The tab is still open.",
     "I stop competing with someone who has home advantage. I'm playing a different game entirely.",
     "The family sees what they want to see. The right people see what's actually there.",
