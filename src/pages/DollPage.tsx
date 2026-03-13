@@ -65,7 +65,7 @@ function WishesSection({ wishes, showToast }: { wishes: WishCategory[]; showToas
   }
 
   return (
-    <section id="wishes" className="px-8 py-16">
+    <section id="wishes" className="px-8 py-16 max-w-[720px] mx-auto">
       <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
         <span className="w-8 h-px bg-voodoo-muted" />The Seven Wishes
       </div>
