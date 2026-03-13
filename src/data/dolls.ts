@@ -2423,7 +2423,7 @@ const BRIDEZILLA: DollConfig = {
     common: [
       { text: "The flowers will arrive in the wrong shade. She will know immediately. The florist will deny it.", rarity: "Common" },
       { text: "The seating chart will be revised seventeen times. The eighteenth will be done at 2am the night before.", rarity: "Common" },
-      { text: "She will cry at a venue that didn't do anything wrong. The venue will apologise anyway.", rarity: "Common" },
+      { text: "She will cry at a venue that didn't do anything wrong. The venue will apologize anyway.", rarity: "Common" },
       { text: "The photographer will miss the moment. There will always be a moment that was missed.", rarity: "Common" },
       { text: "The caterer will misread 'blush' as 'ivory'. This will not be forgiven.", rarity: "Common" },
       { text: "She will send a message to the group chat that begins with 'Just a quick reminder'. It will be long.", rarity: "Common" },
