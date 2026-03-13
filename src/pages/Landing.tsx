@@ -69,6 +69,9 @@ export default function Landing() {
             ))}
             <a href="#bonus" onClick={() => setMobileMenuOpen(false)} className="font-body text-sm tracking-[0.14em] uppercase text-voodoo-gold no-underline hover:text-cream transition-colors">Bonus</a>
             <div className="w-12 h-px bg-voodoo-gold/30 my-2" />
+            <Link to="/about-the-maker" onClick={() => setMobileMenuOpen(false)} className="font-body text-sm tracking-[0.14em] uppercase text-cream/60 no-underline hover:text-cream transition-colors">
+              The Doll Maker
+            </Link>
             <Link to="/doll/micromanager" onClick={() => setMobileMenuOpen(false)} className="bg-voodoo-red text-cream px-6 py-3 text-sm tracking-[0.1em] uppercase font-medium rounded-sm hover:brightness-90 transition no-underline">
               Play Now ✦
             </Link>
