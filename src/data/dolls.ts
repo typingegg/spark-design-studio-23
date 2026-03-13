@@ -2817,7 +2817,7 @@ const FAKE_FRIEND: DollConfig = {
       { text: "She will be the last person in the room to admit what she has been doing. She may never admit it. She knows.", rarity: "Rare ✦" },
       { text: "The people she turns against you will eventually see it. They always eventually see it. The seeing takes longer than it should.", rarity: "Rare ✦" },
       { text: "She stays close because proximity to you feels like success to her. When you understand this, everything she has done will make complete sense.", rarity: "Rare ✦" },
-      { text: "She will move on to someone else. Watch what she does to them. You will recognise all of it.", rarity: "Rare ✦" },
+      { text: "She will move on to someone else. Watch what she does to them. You will recognize all of it.", rarity: "Rare ✦" },
     ],
   },
   annoyances: [
