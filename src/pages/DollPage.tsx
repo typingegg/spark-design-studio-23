@@ -159,7 +159,7 @@ export default function DollPage() {
 
   function shuffleCurse() {
     if (!doll || doll.annoyances.length === 0) return;
-    const template = pick(doll.annoyances);
+    const template = pickNoRepeat(doll.annoyances, 'annoyance');
     curAnnoyance.current = template;
     const name = (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || defaultCurseName;
     setCurseText(buildPersonalized(template, name, doll.accentColor));
