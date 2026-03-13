@@ -2869,7 +2869,7 @@ const FAKE_FRIEND: DollConfig = {
   curseSectionBody: "Not a real curse. Just a small, cosmically-delivered moment of exposure for someone who has been performing friendship while dismantling yours.",
   curseSectionNote: '❆ No pearls were authenticated in the making of this curse.',
   curseSectionPrompt: '❆ Read this with a smile — just like she would ❆',
-  cursePlaceholder: 'Enter her name to personalise the karma…',
+  cursePlaceholder: 'Enter her name to personalize…',
   vibesSectionBody: "You defended her. You confided in her. You celebrated her wins while she quietly worked against yours. You absorbed her backhanded compliments and called it friendship. These are yours now. Read one. Believe it.",
   vibesSectionNote: '❆ The universe has seen your search history. It knows you googled "what is a backhanded compliment."',
   vibesSectionPrompt: '❆ Say it out loud — the fake version cannot hear this ❆',
