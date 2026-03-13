@@ -104,7 +104,7 @@ export default function Landing() {
       <section className="mt-[58px] min-h-[92vh] bg-ink flex flex-col items-center justify-center text-center px-8 py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_60%,rgba(200,160,48,0.08)_0%,transparent_70%)] pointer-events-none" />
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          <div className="font-body text-[0.72rem] tracking-[0.3em] uppercase text-voodoo-gold mb-6">
+          <div className="font-body text-[0.72rem] tracking-[0.3em] uppercase text-voodoo-gold mb-6 px-4" style={{ textWrap: 'balance' }}>
             The Complete Collection — {ALL_DOLLS.length} Dolls & Counting
           </div>
         </motion.div>
