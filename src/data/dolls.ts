@@ -1789,7 +1789,7 @@ const DRUNK_UNCLE: DollConfig = {
   curseSectionBody: "Not a real curse. Just a gentle temporary shortage of cold beer at the exact moment he wants one. On behalf of everyone who had to sit next to him, everyone who hid in the kitchen, and every friend you couldn't bring to Christmas.",
   curseSectionNote: '❆ No knee was injured in a legitimate career. Allegedly.',
   curseSectionPrompt: '❆ Read this aloud. For every Christmas you had to manage him. ❆',
-  cursePlaceholder: 'Enter their name to personalise the consequence…',
+  cursePlaceholder: 'Enter their name to personalize…',
   vibesSectionBody: "You've managed him. You've pre-warned people. You've repositioned yourself at every gathering since you can remember. Pick something. The spirits have been at these dinners. They know.",
   vibesSectionNote: '❆ The universe takes these seriously. Allegedly.',
   vibesSectionPrompt: '❆ Say it out loud — your next partner is listening ❆',
