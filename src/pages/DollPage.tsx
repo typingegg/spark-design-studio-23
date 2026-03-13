@@ -567,7 +567,7 @@ export default function DollPage() {
                   <span className="w-8 h-px bg-voodoo-muted" />{doll.curseLabel}
                 </div>
                 <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
-                  {doll.curseSectionTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor }}>{doll.curseSectionTitle[1]}</em>
+                  {doll.curseSectionTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>{doll.curseSectionTitle[1]}</em>
                 </h2>
                 <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px]">
                   {doll.curseSectionBody || 'Not a curse. An annoyance. A minor inconvenience with impeccable aim. Think of someone who deserves a little cosmic nudge today.'}
