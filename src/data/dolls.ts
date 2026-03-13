@@ -2593,7 +2593,7 @@ const MESSY_ROOMMATE: DollConfig = {
       "The rent is coming, I just need to move some things around.",
       "I didn't open it on purpose. It was right there.",
       "I meant to tell you about the guests. I forgot. It's not a big deal.",
-      "I'll return the jumper. I just need to find it first.",
+      "I'll return the sweater. I just need to find it first.",
       "I'm going to sort the Netflix thing. Financially. Soon.",
     ],
     intense: [
