@@ -3260,6 +3260,9 @@ export const ALL_DOLLS: DollConfig[] = [
 
   // ── BONUS (1) ──
   INNER_YOU,
+
+  // ── GENERIC (standalone) ──
+  GENERIC_DOLL,
 ];
 
 export function getDollById(id: string): DollConfig | undefined {

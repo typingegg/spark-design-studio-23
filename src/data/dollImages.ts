@@ -55,6 +55,7 @@ export const DOLL_IMAGES: Record<string, string> = {
   'fake-friend': fakeFriend,
   'bad-influence': badInfluence,
   'inner-you': innerYou,
+  'generic-doll': genericDoll,
 };
 
 export const BONUS_PLACEHOLDER = bonusPlaceholder;
