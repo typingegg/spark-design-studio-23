@@ -2608,7 +2608,7 @@ const MESSY_ROOMMATE: DollConfig = {
     common: [
       { text: "She will eat your leftovers. She will be surprised you're upset about it. She had no idea those were yours specifically.", rarity: "Common" },
       { text: "The dishes will be done. Eventually. By you. While she watches something on your Netflix.", rarity: "Common" },
-      { text: "She will borrow your jumper. It will come back smelling of her perfume and not washed. She will say she meant to.", rarity: "Common" },
+      { text: "She will borrow your sweater. It will come back smelling of her perfume and not washed. She will say she meant to.", rarity: "Common" },
       { text: "The rent will arrive three days late with a paragraph of explanation that contains no apology.", rarity: "Common" },
       { text: "She will open your Amazon package. She will say it looked like it could have been hers. It had your name on the label.", rarity: "Common" },
       { text: "She will have people over on a Friday night without telling you. You will find out at 11pm when you're already in bed.", rarity: "Common" },
