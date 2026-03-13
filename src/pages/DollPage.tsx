@@ -65,7 +65,7 @@ function WishesSection({ wishes, showToast }: { wishes: WishCategory[]; showToas
   }
 
   return (
-    <section id="wishes" className="px-8 py-16">
+    <section id="wishes" className="px-8 py-16 max-w-[720px] mx-auto">
       <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
         <span className="w-8 h-px bg-voodoo-muted" />The Seven Wishes
       </div>
@@ -434,9 +434,9 @@ export default function DollPage() {
       </nav>
 
       {/* HERO */}
-      <section className="grid grid-cols-1 lg:grid-cols-[28fr_72fr] min-h-screen pt-[58px]">
-        {/* Left panel */}
-        <div className="flex flex-col justify-center px-8 py-12 bg-cream relative z-[2]">
+      <section className="pt-[58px]">
+        {/* Info panel */}
+        <div className="flex flex-col items-center text-center px-8 py-12 bg-cream relative z-[2] max-w-[720px] mx-auto">
           <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-4">
             <span className="w-8 h-px bg-voodoo-muted" />
             {doll.navTagText}
@@ -449,7 +449,7 @@ export default function DollPage() {
             {doll.heroDescription}
           </p>
 
-          <div className="flex gap-2.5 flex-wrap mb-2">
+          <div className="flex gap-2.5 flex-wrap mb-2 justify-center">
             <button onClick={() => dollAreaRef.current?.scrollIntoView({ behavior: 'smooth' })}
               className="font-body text-[0.7rem] font-bold tracking-[0.08em] uppercase bg-ink text-cream border-none px-5 py-3 cursor-pointer hover:bg-voodoo-red transition-colors">
               ↓ Meet {doll.name}
@@ -461,7 +461,7 @@ export default function DollPage() {
               </button>
             )}
           </div>
-          <div className="flex gap-2.5 flex-wrap mb-2">
+          <div className="flex gap-2.5 flex-wrap mb-2 justify-center">
             {hasAnnoyances && (
               <button onClick={() => document.getElementById('curse')?.scrollIntoView({ behavior: 'smooth' })}
                 className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
@@ -475,7 +475,7 @@ export default function DollPage() {
               </button>
             )}
           </div>
-          <div className="flex gap-2.5 flex-wrap">
+          <div className="flex gap-2.5 flex-wrap justify-center">
             <button onClick={shareDoll}
               className="font-body text-[0.7rem] font-bold tracking-[0.08em] uppercase text-cream border-none px-5 py-3 cursor-pointer hover:brightness-90 transition-all"
               style={{ background: doll.accentColor }}>
@@ -487,7 +487,7 @@ export default function DollPage() {
             </button>
           </div>
 
-          <div className="flex items-start gap-8 pt-6">
+          <div className="flex items-center justify-center gap-8 pt-6">
             <div>
               <span className="font-display font-black text-5xl leading-none block text-ink">{pinCount}</span>
               <span className="font-mono text-[0.54rem] tracking-[0.16em] uppercase block text-voodoo-muted mt-0.5">Pins Stuck</span>
@@ -495,10 +495,10 @@ export default function DollPage() {
           </div>
         </div>
 
-        {/* Right panel - Doll area */}
+        {/* Doll area */}
         <div
           ref={dollAreaRef}
-          className="relative flex flex-col items-center justify-center min-h-[calc(100vh-58px)] lg:min-h-0 px-8 py-12 cursor-crosshair border-l border-foreground/[0.14] overflow-visible"
+          className="relative flex flex-col items-center justify-center min-h-[70vh] px-8 py-12 cursor-crosshair border-t border-foreground/[0.14] overflow-visible"
           style={{
             background: 'hsl(var(--cream))',
             boxShadow: 'inset 8px 0 60px rgba(200,160,48,0.07), inset -2px 0 0 rgba(200,160,48,0.04)',
@@ -561,7 +561,7 @@ export default function DollPage() {
 
           {/* FORTUNE */}
           <section id="fortune">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-8 py-16">
+            <div className="flex flex-col gap-10 px-8 py-16 max-w-[720px] mx-auto">
               <div>
                 <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
                   <span className="w-8 h-px bg-voodoo-muted" />{doll.fortuneEyebrow || 'Office Oracle'}
@@ -610,7 +610,7 @@ export default function DollPage() {
           {/* CURSE / ANNOYANCE */}
           {doll.annoyances.length > 0 && (
             <section id="curse">
-              <div className="px-8 py-16 flex flex-col gap-4 items-start">
+              <div className="px-8 py-16 flex flex-col gap-4 items-start max-w-[720px] mx-auto">
                 <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
                   <span className="w-8 h-px bg-voodoo-muted" />{doll.curseLabel}
                 </div>
@@ -659,7 +659,7 @@ export default function DollPage() {
           {/* GOOD VIBES */}
           {doll.goodVibes.length > 0 && (
             <section id="good-vibes">
-              <div className="px-8 py-16 flex flex-col gap-4 items-start">
+              <div className="px-8 py-16 flex flex-col gap-4 items-start max-w-[720px] mx-auto">
                 <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
                   <span className="w-8 h-px bg-voodoo-muted" />{doll.vibesLabel}
                 </div>
