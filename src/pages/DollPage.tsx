@@ -140,11 +140,13 @@ export default function DollPage() {
     return template.split('__NAME__').join(styled);
   }
 
+  const defaultCurseName = doll?.category === 'corporate' ? 'YOUR BOSS' : 'THIS PERSON';
+
   function shuffleCurse() {
     if (!doll || doll.annoyances.length === 0) return;
     const template = pick(doll.annoyances);
     curAnnoyance.current = template;
-    const name = (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR BOSS';
+    const name = (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || defaultCurseName;
     setCurseText(buildPersonalized(template, name, doll.accentColor));
   }
 
