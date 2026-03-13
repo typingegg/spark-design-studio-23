@@ -140,6 +140,8 @@ export default function DollPage() {
     if (dollAreaRef.current) {
       dollAreaRef.current.querySelectorAll('.doll-pin, .ouch-pop, .sparkle').forEach(el => el.remove());
     }
+    // Scroll to top on doll change
+    window.scrollTo(0, 0);
   }, [dollId]);
 
   if (!doll) return <div className="min-h-screen bg-cream flex items-center justify-center font-display text-2xl text-ink">Doll not found</div>;
@@ -223,7 +225,11 @@ export default function DollPage() {
     const el = document.createElement("span");
     el.className = "ouch-pop";
     el.textContent = pickNoRepeat(doll!.ouchLines, 'ouch');
-    el.style.left = (x - 32) + "px";
+    // Clamp position so the text stays within the doll area
+    const areaRect = area.getBoundingClientRect();
+    const maxLeft = areaRect.width - 120;
+    const clampedX = Math.max(8, Math.min(x - 32, maxLeft));
+    el.style.left = clampedX + "px";
     el.style.top = (y - 22) + "px";
     area.appendChild(el);
     setTimeout(() => el.remove(), 2400);
