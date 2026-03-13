@@ -2184,7 +2184,7 @@ const KAREN: DollConfig = {
     head: [
       "I am not being unreasonable. I know exactly what I want and no one here is capable of providing it.",
       "I don't understand why this is so difficult. I've explained it four times now.",
-      "I've memorised the terms and conditions. Have you? I didn't think so.",
+      "I've memorized the terms and conditions. Have you? I didn't think so.",
       "I spoke to someone last week who told me something completely different.",
       "I want everything documented. Everything.",
     ],
