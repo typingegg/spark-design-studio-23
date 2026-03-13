@@ -182,13 +182,7 @@ export default function Landing() {
               <FadeUp>
                 <Link to={`/doll/${bonusDoll.id}`} className="no-underline">
                   <div className="w-[140px] h-[180px] rounded-md mx-auto mb-8 overflow-hidden hover:-translate-y-2 hover:border-voodoo-gold transition-all duration-300 border-2 border-voodoo-gold/30">
-                    {bonusImg ? (
-                      <img src={bonusImg} alt="Bonus Doll" className="w-full h-full object-cover" />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-ink/50">
-                        <span className="text-5xl">{bonusDoll.emoji}</span>
-                      </div>
-                    )}
+                    <img src={mysteryDollImg} alt="Mystery Doll" className="w-full h-full object-cover" />
                   </div>
                 </Link>
               </FadeUp>
