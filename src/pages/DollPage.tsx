@@ -487,7 +487,7 @@ export default function DollPage() {
             </button>
           </div>
 
-          <div className="flex items-start gap-8 pt-6">
+          <div className="flex items-center justify-center gap-8 pt-6">
             <div>
               <span className="font-display font-black text-5xl leading-none block text-ink">{pinCount}</span>
               <span className="font-mono text-[0.54rem] tracking-[0.16em] uppercase block text-voodoo-muted mt-0.5">Pins Stuck</span>
@@ -495,10 +495,10 @@ export default function DollPage() {
           </div>
         </div>
 
-        {/* Right panel - Doll area */}
+        {/* Doll area */}
         <div
           ref={dollAreaRef}
-          className="relative flex flex-col items-center justify-center min-h-[calc(100vh-58px)] lg:min-h-0 px-8 py-12 cursor-crosshair border-l border-foreground/[0.14] overflow-visible"
+          className="relative flex flex-col items-center justify-center min-h-[70vh] px-8 py-12 cursor-crosshair border-t border-foreground/[0.14] overflow-visible"
           style={{
             background: 'hsl(var(--cream))',
             boxShadow: 'inset 8px 0 60px rgba(200,160,48,0.07), inset -2px 0 0 rgba(200,160,48,0.04)',
