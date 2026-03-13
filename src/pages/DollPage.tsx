@@ -434,9 +434,9 @@ export default function DollPage() {
       </nav>
 
       {/* HERO */}
-      <section className="grid grid-cols-1 lg:grid-cols-[28fr_72fr] min-h-screen pt-[58px]">
-        {/* Left panel */}
-        <div className="flex flex-col justify-center px-8 py-12 bg-cream relative z-[2]">
+      <section className="pt-[58px]">
+        {/* Info panel */}
+        <div className="flex flex-col items-center text-center px-8 py-12 bg-cream relative z-[2] max-w-[720px] mx-auto">
           <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-4">
             <span className="w-8 h-px bg-voodoo-muted" />
             {doll.navTagText}
