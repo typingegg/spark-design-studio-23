@@ -283,18 +283,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* ALL DOLLS CTA */}
-      <section className="bg-cream pb-16 pt-4 px-8 text-center">
-        <FadeUp>
-          <button
-            onClick={() => document.getElementById('corporate')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-ink text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:bg-voodoo-red transition-colors cursor-pointer border-none"
-          >
-            ✦ Browse All {ALL_DOLLS.length} Dolls ✦
-          </button>
-        </FadeUp>
-      </section>
-
       {/* FOOTER */}
       <footer className="bg-ink py-12 px-8 text-center border-t border-voodoo-gold/20">
         <div className="font-handwritten text-xl text-cream mb-2">
