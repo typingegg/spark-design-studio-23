@@ -658,8 +658,18 @@ export default function DollPage() {
         </>
       )}
 
-      {/* SEE ALL DOLLS */}
-      <section className="px-8 py-12 flex justify-center">
+      {/* NEXT DOLL + SEE ALL DOLLS */}
+      <section className="px-8 py-12 flex flex-col items-center gap-4">
+        {(() => {
+          const currentIndex = ALL_DOLLS.findIndex(d => d.id === doll.id);
+          const nextDoll = ALL_DOLLS[(currentIndex + 1) % ALL_DOLLS.length];
+          return (
+            <Link to={`/doll/${nextDoll.id}`}
+              className="font-mono text-[0.7rem] tracking-[0.14em] uppercase font-bold bg-voodoo-red text-cream px-8 py-4 hover:-translate-y-0.5 hover:shadow-[3px_3px_0_hsl(var(--ink))] transition-all no-underline inline-flex items-center gap-2">
+              Next Doll: {nextDoll.name} →
+            </Link>
+          );
+        })()}
         <Link to="/"
           className="font-mono text-[0.7rem] tracking-[0.14em] uppercase font-bold bg-ink text-cream px-8 py-4 hover:-translate-y-0.5 hover:shadow-[3px_3px_0_hsl(var(--voodoo-red))] transition-all no-underline inline-flex items-center gap-2">
           ✦ See All Dolls
