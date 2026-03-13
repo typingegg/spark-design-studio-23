@@ -372,14 +372,20 @@ export default function Landing() {
         </div>
         <div className="text-xs tracking-[0.15em] uppercase text-voodoo-muted mb-8">Stick it to them. Virtually.</div>
         <div className="flex gap-8 justify-center mb-8 flex-wrap">
-          {['Corporate Pack', 'Relationships', 'Family', 'Friends', 'Bonus'].map(label => (
-            <a key={label} href="#" className="text-xs text-voodoo-muted no-underline tracking-[0.1em] uppercase hover:text-voodoo-gold transition-colors">
-              {label}
+          {[
+            { label: 'Corporate Pack', href: '#corporate' },
+            { label: 'Relationships', href: '#relationship' },
+            { label: 'Family', href: '#family' },
+            { label: 'Friends', href: '#friendship' },
+            { label: 'Bonus', href: '#bonus' },
+          ].map(item => (
+            <a key={item.label} href={item.href} className="text-xs text-voodoo-muted no-underline tracking-[0.1em] uppercase hover:text-voodoo-gold transition-colors">
+              {item.label}
             </a>
           ))}
         </div>
         <div className="text-[0.7rem] text-voodoo-muted/50">
-          © 2025 Virtual Voodoo Dolls · Purely fictional. No actual harm intended. Probably.
+          © {new Date().getFullYear()} Virtual Voodoo Dolls · Purely fictional. No actual harm intended. Probably.
         </div>
       </footer>
     </div>

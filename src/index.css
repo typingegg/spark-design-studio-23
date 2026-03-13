@@ -225,6 +225,9 @@
   z-index: 500;
   white-space: nowrap;
   pointer-events: none;
+  max-width: calc(100vw - 2rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .toast-notification.show {
