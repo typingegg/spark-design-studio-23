@@ -1156,7 +1156,7 @@ const CLINGY_ONE: DollConfig = {
   fortuneItalicWord: 'Read You.',
   fortuneBody: "The universe watched every 3am text, every fake emergency, every 'if you loved me you wouldn't go.' Pull a reading. The spirits have concerns.",
   fortuneNote: '❆ Fortunes have 3 tiers: Common · Uncommon · ❆ Rare (10%)',
-  curseSectionBody: "Not a real curse. Just a gentle cosmic suggestion that she try being alone for five minutes. On behalf of every cancelled plan, every guilt trip, every time she cried at a birthday party that wasn't hers.",
+  curseSectionBody: "Not a real curse. Just a gentle cosmic suggestion that she try being alone for five minutes. On behalf of every canceled plan, every guilt trip, every time she cried at a birthday party that wasn't hers.",
   curseSectionNote: '❆ No tears were verified as genuine. Allegedly.',
   curseSectionPrompt: '❆ Read this aloud. For every canceled plan. ❆',
   cursePlaceholder: 'Enter their name to personalize…',
