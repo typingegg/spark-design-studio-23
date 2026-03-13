@@ -885,7 +885,7 @@ const GHOSTER: DollConfig = {
   curseSectionBody: 'Not a real curse. Just a harmless little inconvenience, cosmically dispatched to the person who deserves to be left on read by the universe.',
   curseSectionNote: '❆ No ghosters were actually harmed. Allegedly.',
   curseSectionPrompt: '❆ Read this out loud for maximum effect ❆',
-  cursePlaceholder: 'Enter their name to personalise the pain…',
+  cursePlaceholder: 'Enter their name to personalize…',
   vibesSectionBody: "You waited. You checked your phone. You made excuses for someone who was never going to text back. These are yours now. Read one. Mean it.",
   vibesSectionNote: '❆ The universe takes these seriously. Allegedly.',
   vibesSectionPrompt: '❆ Say it out loud — your next partner is listening ❆',
