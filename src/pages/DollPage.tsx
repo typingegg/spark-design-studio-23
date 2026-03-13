@@ -339,6 +339,7 @@ export default function DollPage() {
 
     if (isBonus) {
       spawnHearts(area, x, y);
+      spawnOuch(area, x, y);
     } else {
       spawnOuch(area, x, y);
       spawnPin(area, x, y);
