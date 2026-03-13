@@ -2116,7 +2116,7 @@ const GOLD_DIGGER: DollConfig = {
     "I deserve someone who insists on paying sometimes. Not always. Just sometimes. Enthusiastically.",
     "Every time she mentioned her ex's money, something in the universe took a small, satisfied note.",
     "I am building something real. It doesn't have a wish list and it doesn't need a sponsor.",
-    "Today I recognise my own worth without checking anyone else's balance.",
+    "Today I recognize my own worth without checking anyone else's balance.",
     "The right person will show up with their own wallet and absolutely no interest in mine.",
     "Every 'you're so stressed about money' said to someone being financially drained is being archived.",
     "I stop performing generosity for people who have already decided I'm the budget option.",
