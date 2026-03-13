@@ -103,7 +103,6 @@ export default function DollPage() {
   const [vibesText, setVibesText] = useState('');
   const [toastMsg, setToastMsg] = useState('');
   const [toastShow, setToastShow] = useState(false);
-  const [stabbed, setStabbed] = useState(false);
 
   const dollAreaRef = useRef<HTMLDivElement>(null);
   const pinColorIdx = useRef(0);
@@ -294,8 +293,13 @@ export default function DollPage() {
     setEscPct(esc.pct);
     setEscLabel(esc.label);
 
-    setStabbed(true);
-    setTimeout(() => setStabbed(false), 320);
+    // Trigger stab animation via DOM to avoid React re-render blink
+    const imgEl = dollAreaRef.current.querySelector('img, .doll-emoji') as HTMLElement;
+    if (imgEl) {
+      imgEl.style.animation = 'none';
+      imgEl.offsetHeight; // force reflow
+      imgEl.style.animation = 'stab 0.32s ease';
+    }
 
     spawnSparkles(area, x, y);
 
@@ -447,11 +451,11 @@ export default function DollPage() {
               const img = getDollImage(doll.id);
               return img ? (
                 <img src={img} alt={doll.name}
-                  className={`w-full h-full object-cover object-[center_10%] select-none pointer-events-none transition-transform ${stabbed ? 'animate-[stab_0.32s_ease]' : ''}`}
+                  className="w-full h-full object-cover object-[center_10%] select-none pointer-events-none"
                   style={{ filter: 'drop-shadow(0 20px 56px rgba(60,35,10,0.42)) drop-shadow(0 4px 14px rgba(60,35,10,0.22))' }}
                 />
               ) : (
-                <div className={`text-[12rem] select-none pointer-events-none transition-transform ${stabbed ? 'animate-[stab_0.32s_ease]' : ''}`}
+                <div className="text-[12rem] select-none pointer-events-none doll-emoji"
                   style={{ filter: 'drop-shadow(0 20px 56px rgba(60,35,10,0.42)) drop-shadow(0 4px 14px rgba(60,35,10,0.22))' }}>
                   {doll.emoji}
                 </div>
