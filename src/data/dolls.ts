@@ -1,4 +1,4 @@
-export type DollCategory = 'corporate' | 'relationship' | 'family' | 'friendship' | 'bonus';
+export type DollCategory = 'corporate' | 'relationship' | 'family' | 'friendship' | 'bonus' | 'generic';
 
 export interface WishCategory {
   icon: string;
