@@ -106,6 +106,9 @@ export default function DollPage() {
   const { dollId } = useParams<{ dollId: string }>();
   const doll = getDollById(dollId || '');
   const isBonus = doll?.category === 'bonus';
+  const hasFortunes = doll ? (doll.fortunes.common.length + doll.fortunes.uncommon.length + doll.fortunes.rare.length) > 0 : false;
+  const hasAnnoyances = doll ? doll.annoyances.length > 0 : false;
+  const hasVibes = doll ? doll.goodVibes.length > 0 : false;
 
   const [pinCount, setPinCount] = useState(0);
   const [escPct, setEscPct] = useState(2);
@@ -381,9 +384,9 @@ export default function DollPage() {
           {doll.categoryLabel}
         </Link>
         <div className="hidden md:flex gap-6 items-center">
-          <a href="#fortune" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Fortune</a>
-          <a href="#curse" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Annoyance</a>
-          <a href="#good-vibes" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Good Vibes</a>
+          {hasFortunes && <a href="#fortune" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Fortune</a>}
+          {hasAnnoyances && <a href="#curse" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Annoyance</a>}
+          {hasVibes && <a href="#good-vibes" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Good Vibes</a>}
         </div>
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-1.5 font-mono text-[0.56rem] tracking-[0.1em] text-voodoo-muted">
@@ -417,20 +420,26 @@ export default function DollPage() {
               className="font-body text-[0.7rem] font-bold tracking-[0.08em] uppercase bg-ink text-cream border-none px-5 py-3 cursor-pointer hover:bg-voodoo-red transition-colors">
               ↓ Meet {doll.name}
             </button>
-            <button onClick={() => { revealFortune(); document.getElementById('fortune')?.scrollIntoView({ behavior: 'smooth' }); }}
-              className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
-              Get a Fortune
-            </button>
+            {hasFortunes && (
+              <button onClick={() => { revealFortune(); document.getElementById('fortune')?.scrollIntoView({ behavior: 'smooth' }); }}
+                className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
+                Get a Fortune
+              </button>
+            )}
           </div>
           <div className="flex gap-2.5 flex-wrap mb-2">
-            <button onClick={() => document.getElementById('curse')?.scrollIntoView({ behavior: 'smooth' })}
-              className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
-              🎲 Send an Annoyance
-            </button>
-            <button onClick={() => document.getElementById('good-vibes')?.scrollIntoView({ behavior: 'smooth' })}
-              className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
-              ✨ Send Good Vibes
-            </button>
+            {hasAnnoyances && (
+              <button onClick={() => document.getElementById('curse')?.scrollIntoView({ behavior: 'smooth' })}
+                className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
+                🎲 Send an Annoyance
+              </button>
+            )}
+            {hasVibes && (
+              <button onClick={() => document.getElementById('good-vibes')?.scrollIntoView({ behavior: 'smooth' })}
+                className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
+                ✨ Send Good Vibes
+              </button>
+            )}
           </div>
           <div className="flex gap-2.5 flex-wrap">
             <button onClick={shareDoll}
@@ -512,46 +521,50 @@ export default function DollPage() {
         </div>
       </div>
 
-      <hr className="border-none border-t border-foreground/[0.14]" />
+      {hasFortunes && (
+        <>
+          <hr className="border-none border-t border-foreground/[0.14]" />
 
-      {/* FORTUNE */}
-      <section id="fortune">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-8 py-16">
-          <div>
-            <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
-              <span className="w-8 h-px bg-voodoo-muted" />{doll.fortuneEyebrow || 'Office Oracle'}
-            </div>
-            <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
-              {doll.fortuneTitle ? (
-                <>{doll.fortuneTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>{doll.fortuneTitle[1]}</em></>
-              ) : (
-                <>Your Corporate<br /><em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>Fortune.</em></>
-              )}
-            </h2>
-            <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
-              {doll.fortuneBody || 'The Office Spirits have a message for you. It may be vaguely prophetic. It may be deeply uncomfortable. Either way — you asked.'}
-            </p>
-            {doll.fortuneNote && (
-              <p className="text-[0.78rem] text-voodoo-muted font-light mb-4">{doll.fortuneNote}</p>
-            )}
-            <button onClick={revealFortune}
-              className="font-mono text-[0.64rem] tracking-[0.14em] uppercase bg-transparent text-ink border-[1.5px] border-ink px-8 py-3.5 cursor-pointer hover:bg-ink hover:text-cream transition-all inline-flex items-center gap-2 mb-3">
-              🔮 Reveal Fortune
-            </button>
-          </div>
-          <div>
-            {fortuneVisible && (
-              <div className="bg-cream border-[1.5px] border-ink p-7 rounded-sm fortune-card-show" style={{ boxShadow: '4px 4px 0 hsl(var(--ink))' }}>
-                <div className="font-mono text-[0.52rem] tracking-[0.18em] uppercase text-voodoo-muted mb-2.5">Your Fortune</div>
-                <p className="font-handwritten text-base text-ink leading-relaxed mb-3">{fortuneText}</p>
-                <span className={`font-mono text-[0.54rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm inline-block ${rarityBg}`}>
-                  {fortuneRarity.text}
-                </span>
+          {/* FORTUNE */}
+          <section id="fortune">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-8 py-16">
+              <div>
+                <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
+                  <span className="w-8 h-px bg-voodoo-muted" />{doll.fortuneEyebrow || 'Office Oracle'}
+                </div>
+                <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
+                  {doll.fortuneTitle ? (
+                    <>{doll.fortuneTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>{doll.fortuneTitle[1]}</em></>
+                  ) : (
+                    <>Your Corporate<br /><em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>Fortune.</em></>
+                  )}
+                </h2>
+                <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
+                  {doll.fortuneBody || 'The Office Spirits have a message for you. It may be vaguely prophetic. It may be deeply uncomfortable. Either way — you asked.'}
+                </p>
+                {doll.fortuneNote && (
+                  <p className="text-[0.78rem] text-voodoo-muted font-light mb-4">{doll.fortuneNote}</p>
+                )}
+                <button onClick={revealFortune}
+                  className="font-mono text-[0.64rem] tracking-[0.14em] uppercase bg-transparent text-ink border-[1.5px] border-ink px-8 py-3.5 cursor-pointer hover:bg-ink hover:text-cream transition-all inline-flex items-center gap-2 mb-3">
+                  🔮 Reveal Fortune
+                </button>
               </div>
-            )}
+              <div>
+                {fortuneVisible && (
+                  <div className="bg-cream border-[1.5px] border-ink p-7 rounded-sm fortune-card-show" style={{ boxShadow: '4px 4px 0 hsl(var(--ink))' }}>
+                    <div className="font-mono text-[0.52rem] tracking-[0.18em] uppercase text-voodoo-muted mb-2.5">Your Fortune</div>
+                    <p className="font-handwritten text-base text-ink leading-relaxed mb-3">{fortuneText}</p>
+                    <span className={`font-mono text-[0.54rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm inline-block ${rarityBg}`}>
+                      {fortuneRarity.text}
+                    </span>
+                  </div>
+                )}
           </div>
         </div>
       </section>
+        </>
+      )}
 
       <hr className="border-none border-t border-foreground/[0.14]" />
 
