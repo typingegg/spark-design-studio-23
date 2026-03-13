@@ -1276,7 +1276,7 @@ const COMMITMENT_PHOBE: DollConfig = {
     "I spent too long making it easy for someone to leave while pretending to stay. That ends.",
     "Today I stop shrinking the question so the answer is less scary for someone else.",
     "Something is coming that requires no translation, no patience, and no detective work.",
-    "Every time __NAME__ almost sent the 'are we okay' text and didn't, ten pounds is added to their peace.",
+    "Every time __NAME__ almost sent the 'are we okay' text and didn't, ten dollars is added to their peace.",
     "I will be chosen clearly, officially, and in front of people. That is not too much to ask.",
     "I have a voodoo doll and zero more time to wait. We're moving forward.",
   ],
