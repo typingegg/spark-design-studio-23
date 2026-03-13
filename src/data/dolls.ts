@@ -3243,7 +3243,7 @@ const GENERIC_DOLL: DollConfig = {
   categoryLabel: 'Virtual Voodoo™',
   navTagText: 'Generic Edition',
   accentColor: '#b82a24',
-  heroTitle: ['Stick It To', 'Whatever\'s'],
+  heroTitle: ['Stick It To', 'Whoever\'s'],
   heroItalicWord: 'Bothering You.',
   heroDescription: 'No specific person. No elaborate backstory.\nJust a doll, some pins, and whatever you need to get out of your system.\nClick. Stick. Breathe.',
   escLabels: ["Warming Up", "Getting Into It", "Committed", "Fully Invested", "⚡ Maximum Chaos ⚡"],
