@@ -1028,7 +1028,7 @@ const LOVE_BOMBER: DollConfig = {
   curseSectionBody: "Not a real curse. Just a harmless cosmic inconvenience dispatched to the man who thought flowers would cover for everything.",
   curseSectionNote: '❆ No love bombers were actually harmed. Allegedly.',
   curseSectionPrompt: '❆ Read this out loud for maximum effect ❆',
-  cursePlaceholder: 'Enter their name to personalise the pain…',
+  cursePlaceholder: 'Enter their name to personalize…',
   vibesSectionBody: "You believed them. You were supposed to. That was the whole point. These are yours now — take one and hold it like you mean it this time.",
   vibesSectionNote: '❆ The universe takes these seriously. Allegedly.',
   vibesSectionPrompt: '❆ Say it out loud — your next partner is listening ❆',
