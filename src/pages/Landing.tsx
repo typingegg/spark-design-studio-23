@@ -203,6 +203,51 @@ export default function Landing() {
         );
       })()}
 
+      {/* GENERIC DOLL */}
+      {(() => {
+        const genericDoll = ALL_DOLLS.find(d => d.id === 'generic-doll');
+        if (!genericDoll) return null;
+        const genericImg = getDollImage(genericDoll.id);
+        return (
+          <section className="bg-[#f0ebe0] py-20 px-8 text-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(184,42,36,0.08)_0%,transparent_70%)]" />
+            <div className="relative z-10">
+              <FadeUp>
+                <div className="text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-muted mb-6 font-body">The Generic Doll</div>
+              </FadeUp>
+              <FadeUp>
+                <Link to={`/doll/${genericDoll.id}`} className="no-underline">
+                  <div className="w-[140px] h-[180px] rounded-md mx-auto mb-8 overflow-hidden hover:-translate-y-2 hover:border-ink transition-all duration-300 border-2 border-foreground/20">
+                    {genericImg ? (
+                      <img src={genericImg} alt="Generic Doll" className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-cream text-5xl">{genericDoll.emoji}</div>
+                    )}
+                  </div>
+                </Link>
+              </FadeUp>
+              <FadeUp>
+                <h2 className="font-display font-black italic text-ink mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
+                  No Name.<br /><span className="text-voodoo-red">No Backstory.</span>
+                </h2>
+              </FadeUp>
+              <FadeUp>
+                <p className="font-handwritten text-base text-ink-mid max-w-[440px] mx-auto mb-8 leading-loose">
+                  Just a doll, some pins, and whatever<br />
+                  you need to get out of your system.
+                </p>
+              </FadeUp>
+              <FadeUp>
+                <Link to={`/doll/${genericDoll.id}`}
+                  className="inline-block bg-ink text-cream px-8 py-3.5 text-xs tracking-[0.14em] uppercase font-bold rounded-sm hover:bg-voodoo-red transition-colors no-underline">
+                  Stick a Pin ✦
+                </Link>
+              </FadeUp>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* REQUEST A DOLL */}
       <section className="bg-cream py-20 px-8">
         <div className="max-w-[600px] mx-auto text-center">

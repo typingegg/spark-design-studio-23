@@ -188,7 +188,13 @@ export default function DollPage() {
     else if (r < 0.9) { pool = doll.fortunes.uncommon; cls = 'uncommon'; }
     else { pool = doll.fortunes.rare; cls = 'rare'; }
     const f = pickNoRepeat(pool, 'fortune-' + cls);
-    setFortuneText(f.text);
+    // Substitute __NAME__ if present
+    let text = f.text;
+    if (text.includes('__NAME__')) {
+      const name = (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'SOMEONE';
+      text = text.split('__NAME__').join(name);
+    }
+    setFortuneText(text);
     setFortuneRarity({ text: f.rarity, cls });
     setFortuneVisible(false);
     requestAnimationFrame(() => setFortuneVisible(true));
