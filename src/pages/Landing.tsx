@@ -167,7 +167,7 @@ export default function Landing() {
                   {cat.charAt(0).toUpperCase() + cat.slice(1)}
                 </span>
                 <span className="font-display text-2xl font-bold">{meta.packTitle}</span>
-                <span className="ml-auto text-xs tracking-[0.15em] uppercase text-voodoo-muted">
+                <span className="ml-auto text-xs tracking-[0.15em] uppercase text-voodoo-muted hidden sm:inline">
                   {dolls.length} dolls · {dolls.length} live
                 </span>
               </FadeUp>
