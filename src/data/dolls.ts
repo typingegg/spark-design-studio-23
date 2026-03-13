@@ -2453,7 +2453,7 @@ const BRIDEZILLA: DollConfig = {
     ],
   },
   annoyances: [
-    "__NAME__'s favourite vendor will be booked on her date. By someone with fewer opinions.",
+    "__NAME__'s favorite vendor will be booked on her date. By someone with fewer opinions.",
     "__NAME__ will discover at 11pm the night before that the wrong napkin fold has been set. She will go in person to refold them.",
     "The wedding hashtag __NAME__ chose will have been used by another couple. Four hundred photos. None of them hers.",
     "__NAME__'s vision board will be admired by all guests. As a table centrepiece, because the actual centrepieces didn't arrive.",
