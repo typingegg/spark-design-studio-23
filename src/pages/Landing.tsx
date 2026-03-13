@@ -290,8 +290,8 @@ export default function Landing() {
       {/* REQUEST A DOLL */}
       <section className="bg-cream py-20 px-8">
         <div className="max-w-[600px] mx-auto text-center">
-          <h2 className="font-display font-black leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}>
-            Request a Doll<br />for Your <em className="italic text-voodoo-red">Ex.</em>
+          <h2 className="font-display font-black leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', textWrap: 'balance' }}>
+            Request a Doll for Your <em className="italic text-voodoo-red">Ex.</em>
           </h2>
           <p className="text-base text-ink-mid leading-relaxed mb-8">
             No doll in the collection quite captures them? Send us a description and the things they actually say. We'll build something truly personal.
