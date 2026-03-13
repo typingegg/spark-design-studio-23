@@ -1146,7 +1146,7 @@ const CLINGY_ONE: DollConfig = {
     "I will have a hobby by the end of this month. Something that isn't waiting.",
     "Today I am the only one overthinking this. I am also the only one who cares this much. Those facts are related.",
     "I am not broken. I am just wired for closeness in a world that keeps telling me that's a problem.",
-    "Every friend I cancelled on for someone who didn't notice — I'm calling them back.",
+    "Every friend I canceled on for someone who didn't notice — I'm calling them back.",
     "I have a voodoo doll and zero more time to wait. We're moving forward.",
   ],
   curseLabel: 'Minor Emotional Annoyance', vibesLabel: 'Karmic Balance',
