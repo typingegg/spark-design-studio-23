@@ -657,7 +657,7 @@ const EXPLOITER: DollConfig = {
     ],
     rare: [
       { text: "You can't have a bad day at work if you don't go.", rarity: "Rare ✦" },
-      { text: "Your boss will realise they could have done it themselves. They will not do it themselves.", rarity: "Rare ✦" },
+      { text: "Your boss will realize they could have done it themselves. They will not do it themselves.", rarity: "Rare ✦" },
       { text: "Every task delegated today will return with corrections. The corrections will be wrong.", rarity: "Rare ✦" },
       { text: "Your boss will send an urgent Slack at 11pm. It will not be urgent.", rarity: "Rare ✦" },
       { text: "The entire project will be redone from scratch. The original was fine.", rarity: "Rare ✦" },
