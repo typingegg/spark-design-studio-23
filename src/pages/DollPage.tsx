@@ -103,7 +103,6 @@ export default function DollPage() {
   const [vibesText, setVibesText] = useState('');
   const [toastMsg, setToastMsg] = useState('');
   const [toastShow, setToastShow] = useState(false);
-  const [toastShow, setToastShow] = useState(false);
 
   const dollAreaRef = useRef<HTMLDivElement>(null);
   const pinColorIdx = useRef(0);
