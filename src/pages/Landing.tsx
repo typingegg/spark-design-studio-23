@@ -213,10 +213,13 @@ export default function Landing() {
           <h2 className="font-display font-black leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}>
             Request a Doll<br />for Your <em className="italic text-voodoo-red">Ex.</em>
           </h2>
+          <div className="inline-flex items-center gap-2 bg-voodoo-gold/15 text-[#a07820] font-mono text-[0.7rem] tracking-[0.14em] uppercase px-5 py-2.5 rounded-sm mb-6">
+            🚧 This feature is under construction
+          </div>
           <p className="text-base text-ink-mid leading-relaxed mb-8">
             No doll in the collection quite captures them? Send us a description and the things they actually say. We'll build something truly personal.
           </p>
-          <form className="flex flex-col gap-4 text-left" onSubmit={(e) => { e.preventDefault(); setRequestSent(true); }}>
+          <form className="flex flex-col gap-4 text-left opacity-50 pointer-events-none" onSubmit={(e) => { e.preventDefault(); setRequestSent(true); }}>
             <input type="text" placeholder="Your name" maxLength={80}
               className="font-body text-base bg-white border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-4 text-ink outline-none focus:border-ink transition-colors" />
             <input type="email" placeholder="Your email" maxLength={120}
@@ -227,7 +230,7 @@ export default function Landing() {
               className="font-body text-base bg-white border-[1.5px] border-foreground/[0.14] rounded-sm px-5 py-4 text-ink outline-none focus:border-ink transition-colors resize-none" />
             <button type="submit"
               className="font-body text-sm font-bold tracking-[0.12em] uppercase bg-ink text-cream border-none px-8 py-4 cursor-pointer hover:bg-voodoo-red transition-colors w-full">
-              {requestSent ? '✦ Request Sent!' : 'Send the Request'}
+              Coming Soon
             </button>
           </form>
         </div>

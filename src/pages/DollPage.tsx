@@ -691,7 +691,7 @@ export default function DollPage() {
       {/* FOOTER */}
       <footer className="bg-cream border-t-[1.5px] border-foreground/[0.14] px-8 py-6 flex flex-col items-center gap-1 text-center">
         <div className="font-display font-black text-base text-ink">
-          {doll.categoryLabel.split('™')[0]} <span style={{ color: doll.accentColor }}>Voodoo</span>™
+          {doll.categoryLabel}
         </div>
         <div className="text-xs text-voodoo-muted leading-relaxed">{doll.footerTagline}</div>
         <div className="text-[0.65rem] text-voodoo-muted/50 mt-1">{doll.footerDisclaimer}</div>
