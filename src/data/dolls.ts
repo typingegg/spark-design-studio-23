@@ -3348,7 +3348,7 @@ const GENERIC_DOLL: DollConfig = {
   footerDisclaimer: 'This doll represents no one in particular. It is simply here to absorb your feelings.',
 };
 
-
+export const ALL_DOLLS: DollConfig[] = [
   // ── CORPORATE (5) ──
   MICROMANAGER,
   CREDIT_GRABBER,
