@@ -972,7 +972,7 @@ const LOVE_BOMBER: DollConfig = {
     "All of __NAME__'s flowers will arrive visibly Googled at 11pm.",
     "__NAME__'s 'you're paranoid' will be said to someone who has receipts.",
     "The next person __NAME__ gaslights will be recording.",
-    "__NAME__'s love bombing will be recognised immediately by someone who's been in therapy.",
+    "__NAME__'s love bombing will be recognized immediately by someone who's been in therapy.",
     "Every grand gesture __NAME__ makes will be received with a polite 'I've seen this before.'",
     "__NAME__'s excuse will be interrupted by the exact evidence they claim doesn't exist.",
     "The person __NAME__ calls 'crazy' will turn out to be completely correct about everything.",
