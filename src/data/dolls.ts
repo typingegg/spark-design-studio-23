@@ -2470,7 +2470,7 @@ const BRIDEZILLA: DollConfig = {
     "The venue coordinator will call __NAME__ by the wrong name. In the speech. Twice.",
   ],
   goodVibes: [
-    "Today I stop apologising for not caring enough about the napkin fold. The napkin fold did not matter.",
+    "Today I stop apologizing for not caring enough about the napkin fold. The napkin fold did not matter.",
     "Every hour I spent in a venue walkthrough I didn't want to attend is being returned to me. In peace. Starting now.",
     "I wore a dress that wasn't my choice to an event I co-funded. I did it with grace. The universe has logged this.",
     "I am allowed to have been tired. That was a lot. That was genuinely a lot.",
