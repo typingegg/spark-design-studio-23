@@ -156,13 +156,14 @@
 
 .ouch-pop {
   position: absolute;
-  font-family: var(--font-handwritten);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
   font-size: clamp(0.75rem, 2.8vw, 1.15rem);
-  color: #1a1a1a;
+  color: hsl(var(--voodoo-red));
   pointer-events: none;
   z-index: 20;
   white-space: nowrap;
-  background: rgba(200, 40, 40, 0.45);
+  background: rgba(255, 255, 255, 0.75);
   padding: 2px 8px;
   border-radius: 4px;
   text-shadow: none;
