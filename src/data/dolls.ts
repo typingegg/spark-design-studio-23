@@ -1655,7 +1655,7 @@ const GOLDEN_CHILD: DollConfig = {
     "Something mildly but meaningfully inconvenient is about to happen to the right person.",
     "I no longer need to be believed by people who have chosen not to look clearly.",
     "Every version of the story where I was the problem is being quietly revised by everyone who was there.",
-    "I have a voodoo doll and the satisfaction of knowing the universe keeps a more accurate score than mum.",
+    "I have a voodoo doll and the satisfaction of knowing the universe keeps a more accurate score than mom.",
   ],
   curseLabel: 'Minor Family Annoyance', vibesLabel: 'Karmic Balance',
   curseSectionTitle: ['Send Him a Little', 'Consequence.'], vibesSectionTitle: ['Now Manifest', 'What You Deserve.'],
