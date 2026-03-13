@@ -140,11 +140,13 @@ export default function DollPage() {
     return template.split('__NAME__').join(styled);
   }
 
+  const defaultCurseName = doll?.category === 'corporate' ? 'YOUR BOSS' : 'THIS PERSON';
+
   function shuffleCurse() {
     if (!doll || doll.annoyances.length === 0) return;
     const template = pick(doll.annoyances);
     curAnnoyance.current = template;
-    const name = (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR BOSS';
+    const name = (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || defaultCurseName;
     setCurseText(buildPersonalized(template, name, doll.accentColor));
   }
 
@@ -557,7 +559,7 @@ export default function DollPage() {
                   placeholder={doll.cursePlaceholder || 'Enter their name…'}
                   maxLength={40}
                   className="font-body text-[0.88rem] bg-cream border-none border-b-[1.5px] border-b-ink px-1 py-2 text-ink w-full max-w-[460px] outline-none"
-                  onChange={() => { if (curAnnoyance.current) setCurseText(buildPersonalized(curAnnoyance.current, (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR BOSS', doll.accentColor)); }}
+                  onChange={() => { if (curAnnoyance.current) setCurseText(buildPersonalized(curAnnoyance.current, (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || defaultCurseName, doll.accentColor)); }}
                 />
                 {doll.curseSectionPrompt && (
                   <p className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-voodoo-muted">{doll.curseSectionPrompt}</p>
