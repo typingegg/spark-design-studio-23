@@ -920,9 +920,9 @@ const LOVE_BOMBER: DollConfig = {
     "I am not the problem.",
   ],
   zoneLines: {
-    head: ["The audacity living rent-free in that head.", "That's where he stores all the lies. Makes sense.", "His therapist is going to hear about this. Oh wait — he cancelled.", "Somewhere in there is the story he tells himself.", "The brain that thought this was a good idea."],
+    head: ["The audacity living rent-free in that head.", "That's where he stores all the lies. Makes sense.", "His therapist is going to hear about this. Oh wait — he canceled.", "Somewhere in there is the story he tells himself.", "The brain that thought this was a good idea."],
     shoulders: ["Carrying zero accountability on those shoulders.", "The weight of 'she meant nothing' lives here.", "He shrugs this well. He's had practice.", "Broad shoulders. Narrow values.", "This is where he kept your trust. Briefly."],
-    torso: ["Right in the pink heart shirt. Poetic.", "The flowers were covering for exactly this.", "A heart-print shirt. The audacity is layered.", "That's where the 'I love you' comes from. And the lies.", "Centre mass. He'll say it's your fault."],
+    torso: ["Right in the pink heart shirt. Poetic.", "The flowers were covering for exactly this.", "A heart-print shirt. The audacity is layered.", "That's where the 'I love you' comes from. And the lies.", "Center mass. He'll say it's your fault."],
     hands: ["The hand that held yours AND typed those texts.", "These hands gave you flowers and someone else your time.", "He sent 'thinking of you' with this hand. To two people.", "The hand that deleted the evidence. Not quite fast enough.", "These hands carried both bouquets. Just not to you."],
     feet: ["He runs back every time. He'll run again.", "These feet have been somewhere they shouldn't.", "Quick to leave. Quicker to come back when convenient.", "He always comes back. That's the problem.", "Every return trip started here."],
   },
