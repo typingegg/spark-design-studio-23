@@ -332,8 +332,8 @@ export default function Landing() {
             <span className="font-body text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-gold">Support the Creator</span>
             <span className="w-10 h-px bg-voodoo-gold/40" />
           </div>
-          <h2 className="font-display font-black text-cream leading-tight mb-6" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}>
-            If this brought you joy,<br />support the <em className="italic text-voodoo-gold">revenge arc.</em>
+          <h2 className="font-display font-black text-cream leading-tight mb-6" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', textWrap: 'balance' }}>
+            If this brought you joy, support the <em className="italic text-voodoo-gold">revenge arc.</em>
           </h2>
           <p className="text-base text-cream/60 leading-relaxed mb-10 max-w-[520px] mx-auto">
             One person made all {ALL_DOLLS.length} of these. If the pins landed, consider fuelling the next round.
