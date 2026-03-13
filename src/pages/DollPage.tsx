@@ -7,6 +7,21 @@ function pick<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+// Pick a random item that differs from the last pick for that key
+const lastPicks = new Map<string, unknown>();
+function pickNoRepeat<T>(arr: T[], key: string): T {
+  if (arr.length <= 1) return arr[0];
+  const last = lastPicks.get(key);
+  let choice: T;
+  let attempts = 0;
+  do {
+    choice = arr[Math.floor(Math.random() * arr.length)];
+    attempts++;
+  } while (choice === last && attempts < 10);
+  lastPicks.set(key, choice);
+  return choice;
+}
+
 const PIN_COLORS = ["#c62828","#1565c0","#2e7d32","#f9a825","#6a1b9a","#ad1457","#e65100","#00838f"];
 const ESCALATIONS = [
   { min: 0, pct: 2, tier: 'mild' },
