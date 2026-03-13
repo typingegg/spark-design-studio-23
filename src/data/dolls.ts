@@ -1502,7 +1502,7 @@ const JUDGMENTAL_AUNT: DollConfig = {
     "__NAME__ will be asked to lead the prayer. She will be unable to remember a single verse on demand.",
     "Every comment __NAME__ made about someone's weight will be returned in a single conversation.",
     "__NAME__ will describe someone as 'not very successful' to someone who knows exactly how successful they are.",
-    "The pastor will preach on gossip. __NAME__ will not realise it is about her. Everyone else will.",
+    "The pastor will preach on gossip. __NAME__ will not realize it is about her. Everyone else will.",
     "__NAME__ will ask why someone isn't married yet. That someone will have been through something.",
     "__NAME__'s 'I'm just being honest' will be met with equal honesty. She will not enjoy it.",
     "Someone will stop performing at family events. __NAME__ will not know what to do with sincerity.",
