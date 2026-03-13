@@ -66,7 +66,7 @@ export const CATEGORY_META: Record<DollCategory, { label: string; tagClass: stri
 // SHARED GOOD VIBES (used by multiple corporate dolls)
 // ═══════════════════════════════════════════════════════════════
 const CORPORATE_GOOD_VIBES = [
-  "May __NAME__'s worst meeting get cancelled with no explanation and no reschedule.",
+  "May __NAME__'s worst meeting get canceled with no explanation and no reschedule.",
   "May __NAME__'s boss suddenly forget they had notes on that.",
   "May __NAME__'s inbox stay mysteriously quiet for one full, golden hour.",
   "May __NAME__ receive unexpected praise from someone who never gives it.",
