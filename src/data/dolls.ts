@@ -871,7 +871,7 @@ const GHOSTER: DollConfig = {
     "For every evening spent staring at a screen, the universe owes __NAME__ a genuinely exciting notification.",
     "Good things are coming. They travel slower than anxiety but they arrive.",
     "I am not going to be the last person who loves someone this carelessly. That is their problem now.",
-    "Every time they post a story within an hour of leaving me on read, ten pounds is added to my peace fund.",
+    "Every time they post a story within an hour of leaving me on read, ten dollars is added to my peace fund.",
     "I am not confused. I know exactly what happened. I just needed a minute to admit it.",
     "I will stop explaining my worth to people who have already decided what it is.",
     "Something embarrassing is about to happen to the person who ghosted __NAME__. Nothing serious. Just enough.",
