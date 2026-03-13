@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Landing from "./pages/Landing";
 import DollPage from "./pages/DollPage";
+import MakerPage from "./pages/MakerPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,6 +17,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/doll/:dollId" element={<DollPage />} />
+          <Route path="/about-the-maker" element={<MakerPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
