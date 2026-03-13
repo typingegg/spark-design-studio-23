@@ -154,7 +154,8 @@ export default function DollPage() {
     if (!doll || doll.goodVibes.length === 0) return;
     const template = pick(doll.goodVibes);
     curVibe.current = template;
-    const name = (document.getElementById('vibesRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR FAVORITE PERSON';
+    const defaultVibesName = doll?.category === 'corporate' ? 'YOUR FAVORITE PERSON' : 'THIS PERSON';
+    const name = (document.getElementById('vibesRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || defaultVibesName;
     setVibesText(buildPersonalized(template, name, '#c8a030'));
   }
 
