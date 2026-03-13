@@ -134,7 +134,16 @@ export default function Landing() {
         >
           <strong className="text-voodoo-gold text-lg">{count.toLocaleString()}</strong> people helped & healed
         </motion.div>
-
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0 }}
+        >
+          <a href="#corporate"
+            className="inline-block font-body text-sm font-bold tracking-[0.1em] uppercase bg-voodoo-red text-cream px-8 py-3.5 rounded-sm hover:brightness-90 transition no-underline">
+            Explore the Collection ↓
+          </a>
+        </motion.div>
       </section>
 
       {/* CATEGORY SECTIONS */}
