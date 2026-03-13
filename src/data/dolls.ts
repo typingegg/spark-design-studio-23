@@ -1646,7 +1646,7 @@ const GOLDEN_CHILD: DollConfig = {
     "I stop rehearsing the confrontation. The confrontation changes nothing. Leaving changes everything.",
     "Every person who saw what I saw and said nothing is also part of the story. I've filed that too.",
     "Good things arrive for people who did the work without the safety net.",
-    "I stop needing mum to see it. Some realisations arrive too late to be useful.",
+    "I stop needing mom to see it. Some realizations arrive too late to be useful.",
     "Every family gathering I survived is one more piece of evidence that I'm harder to shake than I look.",
     "I am building something outside of this family's story. It will be mine. Fully. Completely.",
     "The universe has been watching. It takes longer than feels fair. It does not forget.",
