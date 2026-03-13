@@ -1075,7 +1075,7 @@ const CLINGY_ONE: DollConfig = {
       { text: "She has checked her phone seventeen times since you left the room. She is waiting for a sign that you still love her. The sign will arrive. It will not be enough.", rarity: "Common" },
       { text: "She will cry tonight. The reason will be something small — a tone of voice, a delay in a reply, a look she misread. The size of the reason will have no bearing on the size of the cry.", rarity: "Common" },
       { text: "She knows your location. She has not looked. She is about to look.", rarity: "Common" },
-      { text: "She will apologise for being too much. Then she will be too much again. Both of these things are true and neither cancels the other.", rarity: "Common" },
+      { text: "She will apologize for being too much. Then she will be too much again. Both of these things are true and neither cancels the other.", rarity: "Common" },
       { text: "She is currently composing a message she won't send. She will send a shorter version. It will still be a lot.", rarity: "Common" },
       { text: "She will ask if you're okay. You will say yes. She will not believe you. She will ask again.", rarity: "Common" },
       { text: "She loves you in a way that is absolutely genuine and completely unsustainable. You're already tired.", rarity: "Common" },
