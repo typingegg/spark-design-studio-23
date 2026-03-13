@@ -1513,7 +1513,7 @@ const JUDGMENTAL_AUNT: DollConfig = {
     "Today I stop trying to be enough for someone who has already decided I'm not.",
     "Every family dinner survived is being quietly converted into character. The character is excellent.",
     "I am the only one in this family who has done any actual reflection. That is tiring and also impressive.",
-    "Every time she mentions __NAME__'s name, ten pounds is added to an account she doesn't know about.",
+    "Every time she mentions __NAME__'s name, ten dollars is added to an account she doesn't know about.",
     "I stop explaining my choices to people who have already written the verdict.",
     "The comparison ends here. Not because she stops. Because I stop letting it land.",
     "Good things are coming. They will arrive without a side comment about the cousin.",
