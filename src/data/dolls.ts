@@ -3028,7 +3028,7 @@ const BAD_INFLUENCE: DollConfig = {
   ],
   goodVibes: [
     "I am allowed to go home before midnight. This is called self-respect and I have it.",
-    "Every £20 I didn't lend is a £20 I still have. I am reclaiming these.",
+    "Every $20 I didn't lend is a $20 I still have. I am reclaiming these.",
     "I will not answer a call from someone described to me as 'actually really nice.' I know what that means now.",
     "My bank account has never once let me down. It is my most consistent relationship.",
     "I am going to have exactly as much fun as I planned and not one drink more.",
