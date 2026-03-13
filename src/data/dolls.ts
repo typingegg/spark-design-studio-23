@@ -819,7 +819,7 @@ const GHOSTER: DollConfig = {
       { text: "They will say they miss you and then ghost you again. That's the arc.", rarity: "Uncommon" },
     ],
     rare: [
-      { text: "You will realise the last conversation you had ended with you saying something kind. They disappeared after kindness. File that.", rarity: "Rare ✦" },
+      { text: "You will realize the last conversation you had ended with you saying something kind. They disappeared after kindness. File that.", rarity: "Rare ✦" },
       { text: "They are not emotionally unavailable. They are emotionally available — for someone else. You are receiving the out-of-office response.", rarity: "Rare ✦" },
       { text: "The ghost will return. You will feel a warmth you forgot. Then they will disappear again. Same ghost. Different doorway.", rarity: "Rare ✦" },
       { text: "You did everything right. That was never the variable.", rarity: "Rare ✦" },
