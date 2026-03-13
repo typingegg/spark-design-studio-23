@@ -452,7 +452,7 @@ export default function DollPage() {
               const img = getDollImage(doll.id);
               return img ? (
                 <img src={img} alt={doll.name}
-                  className={`w-full h-full object-cover object-[center_10%] select-none pointer-events-none transition-transform ${stabbed ? 'animate-[stab_0.32s_ease]' : ''}`}
+                  className="w-full h-full object-cover object-[center_10%] select-none pointer-events-none"
                   style={{ filter: 'drop-shadow(0 20px 56px rgba(60,35,10,0.42)) drop-shadow(0 4px 14px rgba(60,35,10,0.22))' }}
                 />
               ) : (
