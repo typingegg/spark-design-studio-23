@@ -267,8 +267,8 @@ export default function Landing() {
                 </Link>
               </FadeUp>
               <FadeUp>
-                <h2 className="font-display font-black italic text-ink mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
-                  No Name.<br /><span className="text-voodoo-red">No Backstory.</span>
+                <h2 className="font-display font-black italic text-ink mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', textWrap: 'balance' }}>
+                  No Name. <span className="text-voodoo-red">No Backstory.</span>
                 </h2>
               </FadeUp>
               <FadeUp>
