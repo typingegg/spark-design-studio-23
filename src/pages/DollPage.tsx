@@ -595,12 +595,18 @@ export default function DollPage() {
                   {doll.vibesSectionTitle[0]}<br /><em className="italic text-voodoo-gold">{doll.vibesSectionTitle[1]}</em>
                 </h2>
                 <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px]">
-                  You stuck the pins. You sent the curse. Now balance the universe. Think of someone who deserves a little magic today.
+                  {doll.vibesSectionBody || 'You stuck the pins. You sent the curse. Now balance the universe. Think of someone who deserves a little magic today.'}
                 </p>
+                {doll.vibesSectionNote && (
+                  <p className="text-[0.78rem] text-voodoo-muted font-light">{doll.vibesSectionNote}</p>
+                )}
+                {doll.vibesSectionPrompt && (
+                  <p className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-voodoo-muted">{doll.vibesSectionPrompt}</p>
+                )}
                 <input
                   id="vibesRecipient"
                   type="text"
-                  placeholder="Enter their name for the full magic…"
+                  placeholder={doll.vibesPlaceholder || 'Enter their name for the full magic…'}
                   maxLength={40}
                   className="font-body text-[0.88rem] bg-cream border-none border-b-[1.5px] border-b-voodoo-gold px-1 py-2 text-ink w-full max-w-[460px] outline-none"
                   onChange={() => { if (curVibe.current) setVibesText(buildPersonalized(curVibe.current, (document.getElementById('vibesRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR FAVORITE PERSON', '#c8a030')); }}
@@ -614,12 +620,12 @@ export default function DollPage() {
                 <div className="flex gap-3 flex-wrap">
                   <button onClick={shuffleVibes}
                     className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-voodoo-muted border-[1.5px] border-foreground/[0.14] px-5 py-3.5 cursor-pointer hover:text-ink hover:border-ink transition-all">
-                    ✨ New Vibe
+                    ✨ New Manifestation
                   </button>
                   <button onClick={() => showToast(`✨ Good vibes sent. The universe is on it.`)}
                     className="font-body text-[0.78rem] font-bold tracking-[0.06em] uppercase text-white border-none px-6 py-3.5 cursor-pointer hover:brightness-90 transition-all inline-flex items-center gap-2"
                     style={{ background: '#c8a030' }}>
-                    ✨ Send the Good Vibes
+                    ✨ Send it to the Universe
                   </button>
                 </div>
               </div>
