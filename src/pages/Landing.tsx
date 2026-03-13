@@ -345,9 +345,8 @@ export default function Landing() {
       {/* DISCLAIMER */}
       <section className="bg-cream py-16 px-8 text-center">
         <div className="max-w-[640px] mx-auto">
-          <p className="font-display font-bold text-ink text-base leading-relaxed mb-4">
-            No actual dolls were harmed in the making of this experience.<br />
-            Any similarities to real people are purely coincidental… and deeply unfortunate for you.
+          <p className="font-display font-bold text-ink text-base leading-relaxed mb-4" style={{ textWrap: 'balance' }}>
+            No actual dolls were harmed in the making of this experience. Any similarities to real people are purely coincidental… and deeply unfortunate for you.
           </p>
           <p className="text-sm text-ink-mid mb-6">
             ⚠️ No real voodoo was used. Only wishful thinking. Maybe. 😉
