@@ -2013,7 +2013,7 @@ const GOLD_DIGGER: DollConfig = {
       "I left because the energy shifted. I go where I'm valued.",
       "I'm not going anywhere. Unless something better comes along. I'm only human.",
       "I know how to walk away. I've had practice.",
-      "These shoes cost three hundred pounds and I'm still here. Be grateful.",
+      "These shoes cost three hundred dollars and I'm still here. Be grateful.",
       "I don't chase. I attract. And when it stops working, I move on.",
     ],
   },
