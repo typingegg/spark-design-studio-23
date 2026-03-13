@@ -22,7 +22,26 @@ function pickNoRepeat<T>(arr: T[], key: string): T {
 }
 
 const OUCH_LINES = [
-  "Thank you!",
+  "A donation! The spirits rejoice!",
+  "Bless you.",
+  "Oh! Right in the creative process.",
+  "You clicked me. I felt that.",
+  "The candles stay lit!",
+  "Cha-ching, baby.",
+  "Lucky me. Literally.",
+  "Oh gosh, thank you.",
+  "The servers live another day.",
+  "Lucky you. Lucky me. Lucky us.",
+  "You're too kind. Keep going.",
+  "The universe logged this.",
+  "Oh! My motivation!",
+  "Right in the creative spirit.",
+  "Tee hee. You're generous.",
+  "Shucks. Really?",
+  "This pays for my iced coffee. Bless.",
+  "The voodoo must flow.",
+  "One click closer to world domination.",
+  "I felt that in my soul.",
 ];
 
 const ZONE_LINES: Record<string, string[]> = {
