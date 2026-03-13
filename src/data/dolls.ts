@@ -3033,7 +3033,7 @@ const BAD_INFLUENCE: DollConfig = {
     "My bank account has never once let me down. It is my most consistent relationship.",
     "I am going to have exactly as much fun as I planned and not one drink more.",
     "Every time __NAME__ said YOLO, the universe was testing whether I'd comply. I am exempting myself.",
-    "The Uber home at 11pm costs £12. I accept this transaction.",
+    "The Uber home at 11pm costs $12. I accept this transaction.",
     "I will not be left at any bar this season. I left. On purpose. That is different.",
     "Someone who borrows money without paying it back is running a system. I have opted out of the system.",
     "I will remember that fun and chaotic are not the same thing. One of them I choose. The other I survive.",
