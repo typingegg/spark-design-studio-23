@@ -384,9 +384,9 @@ export default function DollPage() {
           {doll.categoryLabel}
         </Link>
         <div className="hidden md:flex gap-6 items-center">
-          <a href="#fortune" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Fortune</a>
-          <a href="#curse" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Annoyance</a>
-          <a href="#good-vibes" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Good Vibes</a>
+          {hasFortunes && <a href="#fortune" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Fortune</a>}
+          {hasAnnoyances && <a href="#curse" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Annoyance</a>}
+          {hasVibes && <a href="#good-vibes" className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-voodoo-muted no-underline hover:text-ink transition-colors">Good Vibes</a>}
         </div>
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-1.5 font-mono text-[0.56rem] tracking-[0.1em] text-voodoo-muted">
