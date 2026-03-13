@@ -405,7 +405,7 @@ export default function DollPage() {
           </div>
           <h1 className="font-display font-black leading-none text-ink mb-4" style={{ fontSize: 'clamp(2.6rem, 4.8vw, 4.2rem)' }}>
             {doll.heroTitle.map((line, i) => <span key={i}>{line}<br /></span>)}
-            <span className="italic" style={{ color: doll.accentColor }}>{doll.heroItalicWord}</span>
+            <span className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>{doll.heroItalicWord}</span>
           </h1>
           <p className="text-base leading-relaxed text-ink-mid font-light max-w-[460px] mb-6 whitespace-pre-line">
             {doll.heroDescription}
