@@ -252,16 +252,7 @@ export default function Landing() {
           <p className="text-base text-cream/60 leading-relaxed mb-10 max-w-[520px] mx-auto">
             One person made all {ALL_DOLLS.length} of these. If the pins landed, consider fuelling the next round.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <a href="https://www.paypal.com/donate/?hosted_button_id=8RQANKNH3TUXQ" target="_blank" rel="noopener noreferrer"
-               className="no-underline bg-[#3b7bbf] text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:brightness-110 transition-all cursor-pointer min-w-[160px]">
-               PayPal
-            </a>
-            <a href="https://ko-fi.com/virtualvoodoodolls" target="_blank" rel="noopener noreferrer"
-              className="no-underline bg-[#ff5e5b] text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:brightness-110 transition-all cursor-pointer min-w-[160px]">
-              Ko-Fi
-            </a>
-          </div>
+          <DonationButtons variant="dark" />
         </div>
       </section>
 
