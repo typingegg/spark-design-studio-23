@@ -655,7 +655,7 @@ export default function DollPage() {
       {/* SEE ALL DOLLS */}
       <section className="px-8 py-12 flex justify-center">
         <Link to="/"
-          className="font-mono text-[0.7rem] tracking-[0.14em] uppercase font-bold border-[1.5px] border-foreground/[0.14] px-8 py-4 hover:border-ink hover:-translate-y-0.5 hover:shadow-[3px_3px_0_hsl(var(--ink))] transition-all text-ink no-underline inline-flex items-center gap-2">
+          className="font-mono text-[0.7rem] tracking-[0.14em] uppercase font-bold bg-ink text-cream px-8 py-4 hover:-translate-y-0.5 hover:shadow-[3px_3px_0_hsl(var(--voodoo-red))] transition-all no-underline inline-flex items-center gap-2">
           ✦ See All Dolls
         </Link>
       </section>
