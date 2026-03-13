@@ -51,8 +51,32 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen bg-cream">
+      {/* MOBILE MENU OVERLAY */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[200] bg-ink/95 backdrop-blur-md flex flex-col items-center justify-center gap-6"
+          >
+            <button onClick={() => setMobileMenuOpen(false)} className="absolute top-4 right-6 text-cream text-2xl" aria-label="Close menu">✕</button>
+            <span className="font-handwritten text-cream text-lg mb-2">Virtual Voodoo <span className="text-voodoo-gold">Dolls</span></span>
+            {CATEGORY_ORDER.map(cat => (
+              <a key={cat} href={`#${cat}`} onClick={() => setMobileMenuOpen(false)} className="font-body text-sm tracking-[0.14em] uppercase text-voodoo-gold no-underline hover:text-cream transition-colors">
+                {cat === 'friendship' ? 'Friends' : cat.charAt(0).toUpperCase() + cat.slice(1)}
+              </a>
+            ))}
+            <a href="#bonus" onClick={() => setMobileMenuOpen(false)} className="font-body text-sm tracking-[0.14em] uppercase text-voodoo-gold no-underline hover:text-cream transition-colors">Bonus</a>
+            <div className="w-12 h-px bg-voodoo-gold/30 my-2" />
+            <Link to="/doll/micromanager" onClick={() => setMobileMenuOpen(false)} className="bg-voodoo-red text-cream px-6 py-3 text-sm tracking-[0.1em] uppercase font-medium rounded-sm hover:brightness-90 transition no-underline">
+              Play Now ✦
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* NAV */}
-      <MobileMenu categories={CATEGORY_ORDER} />
       <nav className="fixed top-0 left-0 right-0 z-[100] h-[58px] bg-ink flex items-center justify-between px-6 md:px-10 border-b-2 border-voodoo-gold">
         <Link to="/" className="font-handwritten text-cream text-lg tracking-wider">
           Virtual Voodoo <span className="text-voodoo-gold">Dolls</span>
