@@ -1756,8 +1756,8 @@ const DRUNK_UNCLE: DollConfig = {
   goodVibes: [
     "Today I stop managing him. That is not my job and it has never been my job.",
     "Every gathering survived is one more piece of evidence that I am significantly harder to shake than I look.",
-    "I stop apologising to my friends for bringing them somewhere he was.",
-    "Every time __NAME__ made a comment that killed the vibe, ten pounds of peace was owed to the room.",
+    "I stop apologizing to my friends for bringing them somewhere he was.",
+    "Every time __NAME__ made a comment that killed the vibe, ten dollars of peace was owed to the room.",
     "I am done positioning myself at gatherings to stay out of his orbit. That ends.",
     "Every political speech that went unchallenged because it wasn't worth it — the universe logged it.",
     "Good things are coming. They arrive without a beer in hand and they keep their hands to themselves.",
