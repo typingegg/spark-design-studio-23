@@ -2557,7 +2557,7 @@ const MESSY_ROOMMATE: DollConfig = {
       "I'm not messy. I'm in the process of tidying. The process is ongoing.",
       "I find structure difficult. The chore chart felt aggressive. I've said this.",
       "I shrug because the situation genuinely doesn't feel as serious as everyone is making it.",
-      "I have explained before that I work better in organised chaos. This is the organised chaos.",
+      "I have explained before that I work better in organized chaos. This is the organized chaos.",
     ],
     torso: [
       "The pyjamas are because I'm working from home. I am not working from home today but I might later.",
