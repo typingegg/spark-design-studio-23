@@ -1545,7 +1545,7 @@ const JUDGMENTAL_AUNT: DollConfig = {
   curseSectionBody: "Not a real curse. Just a gentle cosmic audit of her character. On behalf of every family dinner she poisoned, every comparison she made, every 'I'll pray for you' that was actually a threat.",
   curseSectionNote: '❆ No bible quotes were posted in good faith. Allegedly.',
   curseSectionPrompt: '❆ Read this aloud. For every family dinner she poisoned. ❆',
-  cursePlaceholder: 'Enter their name to personalise the divine consequence…',
+  cursePlaceholder: 'Enter their name to personalize…',
   vibesSectionBody: "You've sat at that table. You've smiled through it. You've driven home replaying things that weren't your fault. Pick something better. Read it like you mean it.",
   vibesSectionNote: '❆ The universe takes these seriously. Allegedly.',
   vibesSectionPrompt: '❆ Say it out loud — your next partner is listening ❆',
