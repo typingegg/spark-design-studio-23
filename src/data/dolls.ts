@@ -1839,7 +1839,7 @@ const SISTER: DollConfig = {
       { text: "She's not performing confidence. She genuinely believes it. That's a very specific kind of damage.", rarity: "Uncommon" },
       { text: "She loses friends because she treats them like an audience. She wants witness, not reciprocity.", rarity: "Uncommon" },
       { text: "She throws tantrums because tantrums have always worked. The first person who doesn't fix it will genuinely confuse her.", rarity: "Uncommon" },
-      { text: "The British accent is armour. She put it on for a reason. Underneath it is someone who once desperately wanted to be taken seriously.", rarity: "Uncommon" },
+      { text: "The British accent is armor. She put it on for a reason. Underneath it is someone who once desperately wanted to be taken seriously.", rarity: "Uncommon" },
       { text: "She fills the walls with her own face because she was never sure anyone else would look.", rarity: "Uncommon" },
       { text: "She will find her people eventually. They will be equally chaotic, equally self-involved, and completely devoted to each other.", rarity: "Uncommon" },
     ],
