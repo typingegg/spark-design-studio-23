@@ -181,7 +181,7 @@ export default function DollPage() {
     if (r < 0.6) { pool = doll.fortunes.common; cls = 'common'; }
     else if (r < 0.9) { pool = doll.fortunes.uncommon; cls = 'uncommon'; }
     else { pool = doll.fortunes.rare; cls = 'rare'; }
-    const f = pick(pool);
+    const f = pickNoRepeat(pool, 'fortune-' + cls);
     setFortuneText(f.text);
     setFortuneRarity({ text: f.rarity, cls });
     setFortuneVisible(false);
