@@ -286,16 +286,12 @@ export default function Landing() {
       {/* ALL DOLLS CTA */}
       <section className="bg-cream pb-16 pt-4 px-8 text-center">
         <FadeUp>
-          <Link
-            to="/doll/micromanager"
-            className="no-underline inline-block bg-ink text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:bg-voodoo-red transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
+          <button
+            onClick={() => document.getElementById('corporate')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-ink text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:bg-voodoo-red transition-colors cursor-pointer border-none"
           >
             ✦ Browse All {ALL_DOLLS.length} Dolls ✦
-          </Link>
+          </button>
         </FadeUp>
       </section>
 
