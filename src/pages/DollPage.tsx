@@ -522,7 +522,7 @@ export default function DollPage() {
             </div>
             <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
               {doll.fortuneTitle ? (
-                <>{doll.fortuneTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor }}>{doll.fortuneTitle[1]}</em></>
+                <>{doll.fortuneTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>{doll.fortuneTitle[1]}</em></>
               ) : (
                 <>Your Corporate<br /><em className="italic" style={{ color: doll.accentColor }}>Fortune.</em></>
               )}
