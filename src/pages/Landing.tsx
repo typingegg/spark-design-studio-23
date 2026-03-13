@@ -166,26 +166,51 @@ export default function Landing() {
         );
       })}
 
-      {/* MYSTERY DOLL */}
-      <section id="bonus" className="bg-mystery py-20 px-8 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(192,57,74,0.15)_0%,transparent_70%)]" />
-        <div className="relative z-10">
-          <FadeUp>
-            <div className="text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-gold/60 mb-6 font-body">Coming Soon</div>
-          </FadeUp>
-          <FadeUp>
-            <h2 className="font-display font-black italic text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
-              The <span className="text-voodoo-red">Mystery</span><br />Doll.
-            </h2>
-          </FadeUp>
-          <FadeUp>
-            <p className="font-handwritten text-base text-cream/50 max-w-[440px] mx-auto mb-12 leading-loose">
-              One doll. No name. No category.<br />
-              No spoilers.
-            </p>
-          </FadeUp>
-        </div>
-      </section>
+      {/* MYSTERY DOLL — The Inner You */}
+      {(() => {
+        const bonusDoll = ALL_DOLLS.find(d => d.category === 'bonus');
+        if (!bonusDoll) return null;
+        const bonusImg = getDollImage(bonusDoll.id);
+        return (
+          <section id="bonus" className="bg-mystery py-20 px-8 text-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(192,57,74,0.15)_0%,transparent_70%)]" />
+            <div className="relative z-10">
+              <FadeUp>
+                <div className="text-[0.7rem] tracking-[0.3em] uppercase text-voodoo-gold/60 mb-6 font-body">Bonus Doll</div>
+              </FadeUp>
+              <FadeUp>
+                <Link to={`/doll/${bonusDoll.id}`} className="no-underline">
+                  <div className="w-[140px] h-[180px] rounded-md mx-auto mb-8 overflow-hidden hover:-translate-y-2 hover:border-voodoo-gold transition-all duration-300 border-2 border-voodoo-gold/30">
+                    {bonusImg ? (
+                      <img src={bonusImg} alt="Bonus Doll" className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-ink/50">
+                        <span className="text-5xl">{bonusDoll.emoji}</span>
+                      </div>
+                    )}
+                  </div>
+                </Link>
+              </FadeUp>
+              <FadeUp>
+                <h2 className="font-display font-black italic text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
+                  The <span className="text-voodoo-red">Mystery</span><br />Doll.
+                </h2>
+              </FadeUp>
+              <FadeUp>
+                <p className="font-handwritten text-base text-cream/50 max-w-[440px] mx-auto mb-12 leading-loose">
+                  One doll. No name. No category.<br />
+                  No spoilers.
+                </p>
+              </FadeUp>
+              <FadeUp>
+                <Link to={`/doll/${bonusDoll.id}`} className="bg-transparent text-cream border border-cream/40 px-8 py-3 rounded-sm text-sm tracking-[0.12em] uppercase font-medium hover:border-cream hover:-translate-y-0.5 transition-all no-underline">
+                  Meet The Inner You ✦
+                </Link>
+              </FadeUp>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* REQUEST A DOLL */}
       <section className="bg-cream py-20 px-8">
