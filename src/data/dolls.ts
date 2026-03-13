@@ -307,7 +307,7 @@ const MICROMANAGER: DollConfig = {
   vibesLabel: 'Karmic Balance',
   curseSectionTitle: ['Send a Minor', 'Annoyance.'],
   vibesSectionTitle: ['Now Send Some', 'Good Vibes.'],
-  footerTagline: 'No actual managers were harmed in the making of this experience.',
+  footerTagline: 'No actual dolls were harmed in the making of this experience.',
   footerDisclaimer: 'Any similarities to real people are purely coincidental… and deeply unfortunate for you.',
 };
 
