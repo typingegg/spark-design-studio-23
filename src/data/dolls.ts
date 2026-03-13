@@ -1049,8 +1049,8 @@ const CLINGY_ONE: DollConfig = {
   escLabels: ["Mildly Suspicious", "Where Are You Right Now", "You Don't Love Me Anymore", "Crying in the Bathroom", "💧 Full Emotional Collapse 💧"],
   bossLines: ["I just missed you. Is that a crime?", "I only texted twelve times. You always used to reply.", "I'm not jealous. I just don't like her energy.", "I just need to know you're okay. Why won't you just say you're okay?"],
   ouchLines: [
-    "That one's for my mum's birthday dinner.", "And the Sunday morning I spent explaining myself.",
-    "For every time you cried until I cancelled.", "That's for the location sharing you made non-negotiable.",
+    "That one's for my mom's birthday dinner.", "And the Sunday morning I spent explaining myself.",
+    "For every time you cried until I canceled.", "That's for the location sharing you made non-negotiable.",
     "For 'if you loved me you wouldn't go.'", "And the friends I slowly stopped seeing.",
     "For every guilt trip wrapped in tears.", "That's for the fake emergencies.",
     "For crying at my work event.", "And the jealousy of my actual sister.",
