@@ -494,14 +494,21 @@ export default function DollPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-8 py-16">
           <div>
             <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
-              <span className="w-8 h-px bg-voodoo-muted" />Office Oracle
+              <span className="w-8 h-px bg-voodoo-muted" />{doll.fortuneEyebrow || 'Office Oracle'}
             </div>
             <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.9rem, 3vw, 2.7rem)' }}>
-              Your Corporate<br /><em className="italic" style={{ color: doll.accentColor }}>Fortune.</em>
+              {doll.fortuneTitle ? (
+                <>{doll.fortuneTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor }}>{doll.fortuneTitle[1]}</em></>
+              ) : (
+                <>Your Corporate<br /><em className="italic" style={{ color: doll.accentColor }}>Fortune.</em></>
+              )}
             </h2>
             <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light mb-4">
-              The Office Spirits have a message for you. It may be vaguely prophetic. It may be deeply uncomfortable. Either way — you asked.
+              {doll.fortuneBody || 'The Office Spirits have a message for you. It may be vaguely prophetic. It may be deeply uncomfortable. Either way — you asked.'}
             </p>
+            {doll.fortuneNote && (
+              <p className="text-[0.78rem] text-voodoo-muted font-light mb-4">{doll.fortuneNote}</p>
+            )}
             <button onClick={revealFortune}
               className="font-mono text-[0.64rem] tracking-[0.14em] uppercase bg-transparent text-ink border-[1.5px] border-ink px-8 py-3.5 cursor-pointer hover:bg-ink hover:text-cream transition-all inline-flex items-center gap-2 mb-3">
               🔮 Reveal Fortune
@@ -539,16 +546,22 @@ export default function DollPage() {
                   {doll.curseSectionTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor }}>{doll.curseSectionTitle[1]}</em>
                 </h2>
                 <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px]">
-                  Not a curse. An annoyance. A minor inconvenience with impeccable aim. Think of someone who deserves a little cosmic nudge today.
+                  {doll.curseSectionBody || 'Not a curse. An annoyance. A minor inconvenience with impeccable aim. Think of someone who deserves a little cosmic nudge today.'}
                 </p>
+                {doll.curseSectionNote && (
+                  <p className="text-[0.78rem] text-voodoo-muted font-light">{doll.curseSectionNote}</p>
+                )}
                 <input
                   id="curseRecipient"
                   type="text"
-                  placeholder="Enter their name…"
+                  placeholder={doll.cursePlaceholder || 'Enter their name…'}
                   maxLength={40}
                   className="font-body text-[0.88rem] bg-cream border-none border-b-[1.5px] border-b-ink px-1 py-2 text-ink w-full max-w-[460px] outline-none"
                   onChange={() => { if (curAnnoyance.current) setCurseText(buildPersonalized(curAnnoyance.current, (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR BOSS', doll.accentColor)); }}
                 />
+                {doll.curseSectionPrompt && (
+                  <p className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-voodoo-muted">{doll.curseSectionPrompt}</p>
+                )}
                 <div className="bg-cream border-[1.5px] border-ink rounded-sm p-5 font-handwritten text-[0.95rem] text-ink leading-relaxed w-full max-w-[700px] min-h-[90px] cursor-pointer relative"
                   style={{ boxShadow: '3px 3px 0 hsl(var(--ink))' }}
                   onClick={shuffleCurse}>
@@ -562,7 +575,7 @@ export default function DollPage() {
                   </button>
                   <button onClick={() => showToast(`✦ The spirits have been dispatched.`)}
                     className="font-body text-[0.78rem] font-bold tracking-[0.06em] uppercase bg-ink text-cream border-none px-6 py-3.5 cursor-pointer hover:bg-voodoo-red transition-colors inline-flex items-center gap-2">
-                    ✉ Send the Curse
+                    ✉ Send It.
                   </button>
                 </div>
               </div>
@@ -582,12 +595,18 @@ export default function DollPage() {
                   {doll.vibesSectionTitle[0]}<br /><em className="italic text-voodoo-gold">{doll.vibesSectionTitle[1]}</em>
                 </h2>
                 <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px]">
-                  You stuck the pins. You sent the curse. Now balance the universe. Think of someone who deserves a little magic today.
+                  {doll.vibesSectionBody || 'You stuck the pins. You sent the curse. Now balance the universe. Think of someone who deserves a little magic today.'}
                 </p>
+                {doll.vibesSectionNote && (
+                  <p className="text-[0.78rem] text-voodoo-muted font-light">{doll.vibesSectionNote}</p>
+                )}
+                {doll.vibesSectionPrompt && (
+                  <p className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-voodoo-muted">{doll.vibesSectionPrompt}</p>
+                )}
                 <input
                   id="vibesRecipient"
                   type="text"
-                  placeholder="Enter their name for the full magic…"
+                  placeholder={doll.vibesPlaceholder || 'Enter their name for the full magic…'}
                   maxLength={40}
                   className="font-body text-[0.88rem] bg-cream border-none border-b-[1.5px] border-b-voodoo-gold px-1 py-2 text-ink w-full max-w-[460px] outline-none"
                   onChange={() => { if (curVibe.current) setVibesText(buildPersonalized(curVibe.current, (document.getElementById('vibesRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR FAVORITE PERSON', '#c8a030')); }}
@@ -601,12 +620,12 @@ export default function DollPage() {
                 <div className="flex gap-3 flex-wrap">
                   <button onClick={shuffleVibes}
                     className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-voodoo-muted border-[1.5px] border-foreground/[0.14] px-5 py-3.5 cursor-pointer hover:text-ink hover:border-ink transition-all">
-                    ✨ New Vibe
+                    ✨ New Manifestation
                   </button>
                   <button onClick={() => showToast(`✨ Good vibes sent. The universe is on it.`)}
                     className="font-body text-[0.78rem] font-bold tracking-[0.06em] uppercase text-white border-none px-6 py-3.5 cursor-pointer hover:brightness-90 transition-all inline-flex items-center gap-2"
                     style={{ background: '#c8a030' }}>
-                    ✨ Send the Good Vibes
+                    ✨ Send it to the Universe
                   </button>
                 </div>
               </div>

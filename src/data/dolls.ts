@@ -36,6 +36,19 @@ export interface DollConfig {
   vibesLabel: string;
   curseSectionTitle: string[];
   vibesSectionTitle: string[];
+  curseSectionBody?: string;
+  curseSectionNote?: string;
+  curseSectionPrompt?: string;
+  cursePlaceholder?: string;
+  vibesSectionBody?: string;
+  vibesSectionNote?: string;
+  vibesSectionPrompt?: string;
+  vibesPlaceholder?: string;
+  fortuneEyebrow?: string;
+  fortuneTitle?: string[];
+  fortuneItalicWord?: string;
+  fortuneBody?: string;
+  fortuneNote?: string;
   footerTagline: string;
   footerDisclaimer: string;
   wishes?: WishCategory[];
@@ -865,10 +878,22 @@ const GHOSTER: DollConfig = {
     "I am the only one who's been sitting with this. They moved on before they even left.",
     "I am done. I mean it this time. I meant it last time too but this time I have a voodoo doll.",
   ],
-  curseLabel: 'Minor Digital Annoyance',
-  vibesLabel: 'Karmic Balance',
-  curseSectionTitle: ['Send a Minor', 'Annoyance.'],
-  vibesSectionTitle: ['Now Send Some', 'Good Vibes.'],
+  curseLabel: 'Romantic Mischief',
+  vibesLabel: 'Relationship Manifestation',
+  curseSectionTitle: ['Send a Little', 'Annoyance.'],
+  vibesSectionTitle: ['Now Manifest', 'What You Deserve.'],
+  curseSectionBody: 'Not a real curse. Just a harmless little inconvenience, cosmically dispatched to the person who deserves to be left on read by the universe.',
+  curseSectionNote: '❆ No ghosters were actually harmed. Allegedly.',
+  curseSectionPrompt: '❆ Read this out loud for maximum effect ❆',
+  cursePlaceholder: 'Enter their name to personalise the pain…',
+  vibesSectionBody: 'You waited. You checked your phone. You made excuses for someone who was never going to text back. These are yours now. Read one. Mean it.',
+  vibesSectionNote: '❆ The universe takes these seriously. Allegedly.',
+  vibesSectionPrompt: '❆ Say it out loud — your next partner is listening ❆',
+  vibesPlaceholder: 'Enter their name…',
+  fortuneEyebrow: 'Romantic Prophecy',
+  fortuneTitle: ['The Spirits Have', 'Read You.'],
+  fortuneBody: 'The universe has been watching your situationship unfold. Pull a reading and let the spirits weigh in. Readings range from painfully on-the-nose to devastatingly rare.',
+  fortuneNote: '❆ Fortunes have 3 tiers: Common · Uncommon · ❆ Rare (10%)',
   footerTagline: 'For everyone who deserved a text back.',
   footerDisclaimer: 'The ghoster will still not text you back. Any catharsis experienced is purely coincidental.',
 };
