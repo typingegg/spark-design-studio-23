@@ -270,7 +270,7 @@ export default function Landing() {
       <section className="bg-cream py-16 px-8 text-center">
         <div className="max-w-[640px] mx-auto">
           <p className="font-display font-bold text-ink text-base leading-relaxed mb-4">
-            No actual managers were harmed in the making of this experience.<br />
+            No actual dolls were harmed in the making of this experience.<br />
             Any similarities to real people are purely coincidental… and deeply unfortunate for you.
           </p>
           <p className="text-sm text-ink-mid mb-6">

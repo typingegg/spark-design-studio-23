@@ -95,7 +95,8 @@
 
 @keyframes ouch-up {
   0% { opacity: 1; transform: translateY(0) scale(1); }
-  100% { opacity: 0; transform: translateY(-65px) scale(0.65); }
+  60% { opacity: 1; transform: translateY(-40px) scale(0.95); }
+  100% { opacity: 0; transform: translateY(-75px) scale(0.7); }
 }
 
 @keyframes spark-out {
@@ -156,12 +157,13 @@
 .ouch-pop {
   position: absolute;
   font-family: var(--font-handwritten);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: hsl(var(--voodoo-red));
   pointer-events: none;
   z-index: 20;
   white-space: nowrap;
-  animation: ouch-up 1.2s ease-out forwards;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.25), 0 0 6px rgba(255,255,255,0.7);
+  animation: ouch-up 2.4s ease-out forwards;
 }
 
 .sparkle {
