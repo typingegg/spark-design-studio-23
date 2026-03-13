@@ -420,20 +420,26 @@ export default function DollPage() {
               className="font-body text-[0.7rem] font-bold tracking-[0.08em] uppercase bg-ink text-cream border-none px-5 py-3 cursor-pointer hover:bg-voodoo-red transition-colors">
               ↓ Meet {doll.name}
             </button>
-            <button onClick={() => { revealFortune(); document.getElementById('fortune')?.scrollIntoView({ behavior: 'smooth' }); }}
-              className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
-              Get a Fortune
-            </button>
+            {hasFortunes && (
+              <button onClick={() => { revealFortune(); document.getElementById('fortune')?.scrollIntoView({ behavior: 'smooth' }); }}
+                className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
+                Get a Fortune
+              </button>
+            )}
           </div>
           <div className="flex gap-2.5 flex-wrap mb-2">
-            <button onClick={() => document.getElementById('curse')?.scrollIntoView({ behavior: 'smooth' })}
-              className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
-              🎲 Send an Annoyance
-            </button>
-            <button onClick={() => document.getElementById('good-vibes')?.scrollIntoView({ behavior: 'smooth' })}
-              className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
-              ✨ Send Good Vibes
-            </button>
+            {hasAnnoyances && (
+              <button onClick={() => document.getElementById('curse')?.scrollIntoView({ behavior: 'smooth' })}
+                className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
+                🎲 Send an Annoyance
+              </button>
+            )}
+            {hasVibes && (
+              <button onClick={() => document.getElementById('good-vibes')?.scrollIntoView({ behavior: 'smooth' })}
+                className="font-mono text-[0.6rem] tracking-[0.12em] uppercase bg-transparent text-ink border-[1.5px] border-foreground/[0.14] px-5 py-3 cursor-pointer hover:border-ink transition-colors">
+                ✨ Send Good Vibes
+              </button>
+            )}
           </div>
           <div className="flex gap-2.5 flex-wrap">
             <button onClick={shareDoll}
