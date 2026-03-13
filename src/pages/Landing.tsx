@@ -248,7 +248,7 @@ export default function Landing() {
                 <Link to={`/doll/${genericDoll.id}`} className="no-underline">
                   <div className="w-[140px] h-[180px] rounded-md mx-auto mb-8 overflow-hidden hover:-translate-y-2 hover:border-ink transition-all duration-300 border-2 border-foreground/20">
                     {genericImg ? (
-                      <img src={genericImg} alt="Generic Doll" className="w-full h-full object-cover" />
+                      <img src={genericImg} alt="Generic Doll" loading="lazy" className="w-full h-full object-cover" />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center bg-cream text-5xl">{genericDoll.emoji}</div>
                     )}
