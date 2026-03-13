@@ -298,7 +298,7 @@ const MICROMANAGER: DollConfig = {
     "May every parking spot __NAME__ needs appear instantly.",
     "May __NAME__'s WiFi be fast and the Zoom connection perfectly stable.",
     "May someone notice __NAME__'s hard work today and actually say something.",
-    "May __NAME__'s 4pm meeting get cancelled and never rescheduled.",
+    "May __NAME__'s 4pm meeting get canceled and never rescheduled.",
     "May __NAME__ leave work on time today. And tomorrow. And the day after.",
     "May __NAME__'s iced coffee stay iced for the entire afternoon.",
     "May __NAME__ sleep so well tonight that tomorrow actually feels manageable.",
