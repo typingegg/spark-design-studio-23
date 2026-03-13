@@ -7,6 +7,21 @@ function pick<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+// Pick a random item that differs from the last pick for that key
+const lastPicks = new Map<string, unknown>();
+function pickNoRepeat<T>(arr: T[], key: string): T {
+  if (arr.length <= 1) return arr[0];
+  const last = lastPicks.get(key);
+  let choice: T;
+  let attempts = 0;
+  do {
+    choice = arr[Math.floor(Math.random() * arr.length)];
+    attempts++;
+  } while (choice === last && attempts < 10);
+  lastPicks.set(key, choice);
+  return choice;
+}
+
 const PIN_COLORS = ["#c62828","#1565c0","#2e7d32","#f9a825","#6a1b9a","#ad1457","#e65100","#00838f"];
 const ESCALATIONS = [
   { min: 0, pct: 2, tier: 'mild' },
@@ -144,7 +159,7 @@ export default function DollPage() {
 
   function shuffleCurse() {
     if (!doll || doll.annoyances.length === 0) return;
-    const template = pick(doll.annoyances);
+    const template = pickNoRepeat(doll.annoyances, 'annoyance');
     curAnnoyance.current = template;
     const name = (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || defaultCurseName;
     setCurseText(buildPersonalized(template, name, doll.accentColor));
@@ -152,7 +167,7 @@ export default function DollPage() {
 
   function shuffleVibes() {
     if (!doll || doll.goodVibes.length === 0) return;
-    const template = pick(doll.goodVibes);
+    const template = pickNoRepeat(doll.goodVibes, 'vibe');
     curVibe.current = template;
     const defaultVibesName = doll?.category === 'corporate' ? 'YOUR FAVORITE PERSON' : 'THIS PERSON';
     const name = (document.getElementById('vibesRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || defaultVibesName;
@@ -166,7 +181,7 @@ export default function DollPage() {
     if (r < 0.6) { pool = doll.fortunes.common; cls = 'common'; }
     else if (r < 0.9) { pool = doll.fortunes.uncommon; cls = 'uncommon'; }
     else { pool = doll.fortunes.rare; cls = 'rare'; }
-    const f = pick(pool);
+    const f = pickNoRepeat(pool, 'fortune-' + cls);
     setFortuneText(f.text);
     setFortuneRarity({ text: f.rarity, cls });
     setFortuneVisible(false);
@@ -207,11 +222,11 @@ export default function DollPage() {
   function spawnOuch(area: HTMLElement, x: number, y: number) {
     const el = document.createElement("span");
     el.className = "ouch-pop";
-    el.textContent = pick(doll!.ouchLines);
+    el.textContent = pickNoRepeat(doll!.ouchLines, 'ouch');
     el.style.left = (x - 32) + "px";
     el.style.top = (y - 22) + "px";
     area.appendChild(el);
-    setTimeout(() => el.remove(), 1200);
+    setTimeout(() => el.remove(), 2400);
   }
 
   function spawnPin(area: HTMLElement, x: number, y: number) {
@@ -323,9 +338,9 @@ export default function DollPage() {
     else if (yPct < 0.88) zone = 'hands';
 
     if (newCount % 3 === 0) {
-      showBoss(pick(doll.zoneLines[zone] || doll.zoneLines.torso));
+      showBoss(pickNoRepeat(doll.zoneLines[zone] || doll.zoneLines.torso, 'zone'));
     } else {
-      showBoss(pick(doll.escLines[esc.tier] || doll.escLines.mild));
+      showBoss(pickNoRepeat(doll.escLines[esc.tier] || doll.escLines.mild, 'esc'));
     }
   }, [doll, pinCount, isBonus]);
 
@@ -676,7 +691,7 @@ export default function DollPage() {
       {/* FOOTER */}
       <footer className="bg-cream border-t-[1.5px] border-foreground/[0.14] px-8 py-6 flex flex-col items-center gap-1 text-center">
         <div className="font-display font-black text-base text-ink">
-          {doll.categoryLabel.split('™')[0]} <span style={{ color: doll.accentColor }}>Voodoo</span>™
+          {doll.categoryLabel}
         </div>
         <div className="text-xs text-voodoo-muted leading-relaxed">{doll.footerTagline}</div>
         <div className="text-[0.65rem] text-voodoo-muted/50 mt-1">{doll.footerDisclaimer}</div>
