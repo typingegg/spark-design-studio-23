@@ -1479,7 +1479,7 @@ const JUDGMENTAL_AUNT: DollConfig = {
     ],
     rare: [
       { text: "She built an entire identity out of being better. It worked. People were impressed. What she didn't expect was how lonely better would feel at the top of a hierarchy that only she believes in.", rarity: "Rare ✦" },
-      { text: "The gossip is armour. If she's talking about everyone else, nobody is talking about her. She suspects what they'd find would not be impressive.", rarity: "Rare ✦" },
+      { text: "The gossip is armor. If she's talking about everyone else, nobody is talking about her. She suspects what they'd find would not be impressive.", rarity: "Rare ✦" },
       { text: "One day, at a family gathering, someone younger will simply not perform for her. Won't flinch at the comparison. Won't justify their choices. She will not know what to do.", rarity: "Rare ✦" },
     ],
   },
