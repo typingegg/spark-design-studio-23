@@ -659,7 +659,7 @@ export default function DollPage() {
           {/* GOOD VIBES */}
           {doll.goodVibes.length > 0 && (
             <section id="good-vibes">
-              <div className="px-8 py-16 flex flex-col gap-4 items-start">
+              <div className="px-8 py-16 flex flex-col gap-4 items-start max-w-[720px] mx-auto">
                 <div className="flex items-center gap-2.5 font-mono text-[0.58rem] tracking-[0.22em] uppercase text-voodoo-muted mb-2">
                   <span className="w-8 h-px bg-voodoo-muted" />{doll.vibesLabel}
                 </div>
