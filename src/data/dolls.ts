@@ -2560,9 +2560,9 @@ const MESSY_ROOMMATE: DollConfig = {
       "I have explained before that I work better in organized chaos. This is the organized chaos.",
     ],
     torso: [
-      "The pyjamas are because I'm working from home. I am not working from home today but I might later.",
+      "The pajamas are because I'm working from home. I am not working from home today but I might later.",
       "The face mask is self-care. She said she was fine with self-care. She said that.",
-      "I'm wearing her jumper because mine are in the wash. My clothes are also in the wash. From three weeks ago.",
+      "I'm wearing her sweater because mine are in the wash. My clothes are also in the wash. From three weeks ago.",
       "I look relaxed because I genuinely do not feel the same urgency about dishes that she does.",
       "The Starbucks was a treat. I had a very difficult morning. I will explain the rent situation shortly.",
     ],
