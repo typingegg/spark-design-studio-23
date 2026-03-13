@@ -674,7 +674,7 @@ export default function DollPage() {
           <span className="w-8 h-px bg-voodoo-muted" />Support the Craft<span className="w-8 h-px bg-voodoo-muted" />
         </div>
         <h2 className="font-display font-black text-ink leading-tight mb-3" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>
-          Keep the <em className="italic" style={{ color: doll.accentColor }}>Spirits Funded.</em>
+          Keep the <em className="italic" style={{ color: doll.accentColor, ...(isBonus && { textShadow: '0 2px 8px rgba(0,0,0,0.3)' }) }}>Spirits Funded.</em>
         </h2>
         <p className="text-[0.85rem] leading-relaxed text-ink-mid font-light mb-8 max-w-[460px] mx-auto">
           If this brought you even a moment of relief — consider throwing the spirits a coin.
