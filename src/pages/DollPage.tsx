@@ -619,7 +619,7 @@ export default function DollPage() {
                   {doll.vibesSectionTitle[0]}<br /><em className="italic text-voodoo-gold">{doll.vibesSectionTitle[1]}</em>
                 </h2>
                 <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px]">
-                  {doll.vibesSectionBody || 'You stuck the pins. You sent the curse. Now balance the universe. Think of someone who deserves a little magic today.'}
+                  {doll.vibesSectionBody || 'You stuck the pins. You sent the annoyance. Now balance the universe. Think of someone who deserves a little magic today.'}
                 </p>
                 {doll.vibesSectionNote && (
                   <p className="text-[0.78rem] text-voodoo-muted font-light">{doll.vibesSectionNote}</p>
