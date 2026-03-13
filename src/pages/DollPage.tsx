@@ -449,7 +449,7 @@ export default function DollPage() {
             {doll.heroDescription}
           </p>
 
-          <div className="flex gap-2.5 flex-wrap mb-2">
+          <div className="flex gap-2.5 flex-wrap mb-2 justify-center">
             <button onClick={() => dollAreaRef.current?.scrollIntoView({ behavior: 'smooth' })}
               className="font-body text-[0.7rem] font-bold tracking-[0.08em] uppercase bg-ink text-cream border-none px-5 py-3 cursor-pointer hover:bg-voodoo-red transition-colors">
               ↓ Meet {doll.name}
