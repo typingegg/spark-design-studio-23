@@ -2986,7 +2986,7 @@ const BAD_INFLUENCE: DollConfig = {
     ],
     uncommon: [
       { text: "She will borrow money with the confidence of someone who plans to pay it back. She does not plan to pay it back.", rarity: "Uncommon" },
-      { text: "You will leave the bar with everything you arrived with except your dignity and £60.", rarity: "Uncommon" },
+      { text: "You will leave the bar with everything you arrived with except your dignity and $60.", rarity: "Uncommon" },
       { text: "The guy she vouched for will not be who she said he was. This will become apparent quickly.", rarity: "Uncommon" },
       { text: "Your sensible friend will text 'where are you?' You will not be where you said you would be.", rarity: "Uncommon" },
       { text: "She will disappear at 1am. You will find out where she went via Instagram four days later.", rarity: "Uncommon" },
