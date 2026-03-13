@@ -2056,7 +2056,7 @@ const GOLD_DIGGER: DollConfig = {
       { text: "She said 'I'm not materialistic' immediately after asking for something expensive. These two things are connected.", rarity: "Common" },
       { text: "She mentioned a holiday. It was not a suggestion. It was an invoice.", rarity: "Common" },
       { text: "She does love you. She also loves what you pay for. She has not examined the difference.", rarity: "Common" },
-      { text: "The iced coffee is £8. It happens every day. She doesn't think about it. You are thinking about it right now.", rarity: "Common" },
+      { text: "The iced coffee is $8. It happens every day. She doesn't think about it. You are thinking about it right now.", rarity: "Common" },
       { text: "She told her friend you're generous. Her friend asked how much. She told her. They both nodded.", rarity: "Common" },
       { text: "She will leave when it gets hard. Hard, in this context, means expensive.", rarity: "Common" },
       { text: "There is a wish list. You have not been shown the wish list. It is substantial.", rarity: "Common" },
