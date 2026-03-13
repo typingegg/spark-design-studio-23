@@ -1303,7 +1303,7 @@ const COMMITMENT_PHOBE: DollConfig = {
 // THE MOTHER — Fully configured
 // ═══════════════════════════════════════════════════════════════
 const MOTHER: DollConfig = {
-  id: 'mother', name: 'The Mother', archetype: 'Family Matriarch',
+  id: 'mother', name: 'The Mother / Mother-in-Law', archetype: 'Family Matriarch',
   tagline: 'Just checking in. Again. For the fourth time today.', emoji: '👩‍👧',
   category: 'family', categoryLabel: 'Family Matters™', navTagText: 'Mother Edition', accentColor: '#3a5a8c',
   heroTitle: ['Stick It To', 'The'], heroItalicWord: 'Mother.',

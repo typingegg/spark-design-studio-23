@@ -612,7 +612,7 @@ export default function DollPage() {
                   placeholder={doll.vibesPlaceholder || 'Enter their name for the full magic…'}
                   maxLength={40}
                   className="font-body text-[0.88rem] bg-cream border-none border-b-[1.5px] border-b-voodoo-gold px-1 py-2 text-ink w-full max-w-[460px] outline-none"
-                  onChange={() => { if (curVibe.current) setVibesText(buildPersonalized(curVibe.current, (document.getElementById('vibesRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR FAVORITE PERSON', '#c8a030')); }}
+                  onChange={() => { const dvn = doll?.category === 'corporate' ? 'YOUR FAVORITE PERSON' : 'THIS PERSON'; if (curVibe.current) setVibesText(buildPersonalized(curVibe.current, (document.getElementById('vibesRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || dvn, '#c8a030')); }}
                 />
                 <div className="rounded-sm p-5 font-handwritten text-[0.95rem] text-[#a07820] leading-relaxed w-full max-w-[700px] min-h-[90px] cursor-pointer relative"
                   style={{ background: 'linear-gradient(135deg, #fffef5, #fff8e7)', border: '2px solid #c8a030', boxShadow: '4px 4px 0 #c8a030' }}
