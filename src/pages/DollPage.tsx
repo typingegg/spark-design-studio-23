@@ -546,16 +546,22 @@ export default function DollPage() {
                   {doll.curseSectionTitle[0]}<br /><em className="italic" style={{ color: doll.accentColor }}>{doll.curseSectionTitle[1]}</em>
                 </h2>
                 <p className="text-[0.92rem] leading-relaxed text-ink-mid font-light max-w-[580px]">
-                  Not a curse. An annoyance. A minor inconvenience with impeccable aim. Think of someone who deserves a little cosmic nudge today.
+                  {doll.curseSectionBody || 'Not a curse. An annoyance. A minor inconvenience with impeccable aim. Think of someone who deserves a little cosmic nudge today.'}
                 </p>
+                {doll.curseSectionNote && (
+                  <p className="text-[0.78rem] text-voodoo-muted font-light">{doll.curseSectionNote}</p>
+                )}
                 <input
                   id="curseRecipient"
                   type="text"
-                  placeholder="Enter their name…"
+                  placeholder={doll.cursePlaceholder || 'Enter their name…'}
                   maxLength={40}
                   className="font-body text-[0.88rem] bg-cream border-none border-b-[1.5px] border-b-ink px-1 py-2 text-ink w-full max-w-[460px] outline-none"
                   onChange={() => { if (curAnnoyance.current) setCurseText(buildPersonalized(curAnnoyance.current, (document.getElementById('curseRecipient') as HTMLInputElement)?.value?.trim().toUpperCase() || 'YOUR BOSS', doll.accentColor)); }}
                 />
+                {doll.curseSectionPrompt && (
+                  <p className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-voodoo-muted">{doll.curseSectionPrompt}</p>
+                )}
                 <div className="bg-cream border-[1.5px] border-ink rounded-sm p-5 font-handwritten text-[0.95rem] text-ink leading-relaxed w-full max-w-[700px] min-h-[90px] cursor-pointer relative"
                   style={{ boxShadow: '3px 3px 0 hsl(var(--ink))' }}
                   onClick={shuffleCurse}>
@@ -569,7 +575,7 @@ export default function DollPage() {
                   </button>
                   <button onClick={() => showToast(`✦ The spirits have been dispatched.`)}
                     className="font-body text-[0.78rem] font-bold tracking-[0.06em] uppercase bg-ink text-cream border-none px-6 py-3.5 cursor-pointer hover:bg-voodoo-red transition-colors inline-flex items-center gap-2">
-                    ✉ Send the Curse
+                    ✉ Send It.
                   </button>
                 </div>
               </div>
