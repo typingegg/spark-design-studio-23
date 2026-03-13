@@ -2548,12 +2548,12 @@ const MESSY_ROOMMATE: DollConfig = {
     head: [
       "I have a system. It just doesn't look like a system from the outside.",
       "I was going to clean up. I just needed to finish this episode. And then the next one.",
-      "I didn't realise the music was that loud. The walls must be thinner than I thought.",
-      "I genuinely thought that was communal yoghurt. It was at the front of the fridge.",
+      "I didn't realize the music was that loud. The walls must be thinner than I thought.",
+      "I genuinely thought that was communal yogurt. It was at the front of the fridge.",
       "I have been meaning to sort the rent. Something always comes up. It will not come up tomorrow.",
     ],
     shoulders: [
-      "I carry a lot. Mostly her borrowed jumpers, but still.",
+      "I carry a lot. Mostly her borrowed sweaters, but still.",
       "I'm not messy. I'm in the process of tidying. The process is ongoing.",
       "I find structure difficult. The chore chart felt aggressive. I've said this.",
       "I shrug because the situation genuinely doesn't feel as serious as everyone is making it.",
