@@ -69,6 +69,9 @@ export default function Landing() {
             ))}
             <a href="#bonus" onClick={() => setMobileMenuOpen(false)} className="font-body text-sm tracking-[0.14em] uppercase text-voodoo-gold no-underline hover:text-cream transition-colors">Bonus</a>
             <div className="w-12 h-px bg-voodoo-gold/30 my-2" />
+            <Link to="/about-the-maker" onClick={() => setMobileMenuOpen(false)} className="font-body text-sm tracking-[0.14em] uppercase text-cream/60 no-underline hover:text-cream transition-colors">
+              The Doll Maker
+            </Link>
             <Link to="/doll/micromanager" onClick={() => setMobileMenuOpen(false)} className="bg-voodoo-red text-cream px-6 py-3 text-sm tracking-[0.1em] uppercase font-medium rounded-sm hover:brightness-90 transition no-underline">
               Play Now ✦
             </Link>
@@ -131,7 +134,16 @@ export default function Landing() {
         >
           <strong className="text-voodoo-gold text-lg">{count.toLocaleString()}</strong> people helped & healed
         </motion.div>
-
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0 }}
+        >
+          <a href="#corporate"
+            className="inline-block font-body text-sm font-bold tracking-[0.1em] uppercase bg-voodoo-red text-cream px-8 py-3.5 rounded-sm hover:brightness-90 transition no-underline">
+            Explore the Collection ↓
+          </a>
+        </motion.div>
       </section>
 
       {/* CATEGORY SECTIONS */}
@@ -155,7 +167,7 @@ export default function Landing() {
                   {cat.charAt(0).toUpperCase() + cat.slice(1)}
                 </span>
                 <span className="font-display text-2xl font-bold">{meta.packTitle}</span>
-                <span className="ml-auto text-xs tracking-[0.15em] uppercase text-voodoo-muted">
+                <span className="ml-auto text-xs tracking-[0.15em] uppercase text-voodoo-muted hidden sm:inline">
                   {dolls.length} dolls · {dolls.length} live
                 </span>
               </FadeUp>
@@ -360,14 +372,20 @@ export default function Landing() {
         </div>
         <div className="text-xs tracking-[0.15em] uppercase text-voodoo-muted mb-8">Stick it to them. Virtually.</div>
         <div className="flex gap-8 justify-center mb-8 flex-wrap">
-          {['Corporate Pack', 'Relationships', 'Family', 'Friends', 'Bonus'].map(label => (
-            <a key={label} href="#" className="text-xs text-voodoo-muted no-underline tracking-[0.1em] uppercase hover:text-voodoo-gold transition-colors">
-              {label}
+          {[
+            { label: 'Corporate Pack', href: '#corporate' },
+            { label: 'Relationships', href: '#relationship' },
+            { label: 'Family', href: '#family' },
+            { label: 'Friends', href: '#friendship' },
+            { label: 'Bonus', href: '#bonus' },
+          ].map(item => (
+            <a key={item.label} href={item.href} className="text-xs text-voodoo-muted no-underline tracking-[0.1em] uppercase hover:text-voodoo-gold transition-colors">
+              {item.label}
             </a>
           ))}
         </div>
         <div className="text-[0.7rem] text-voodoo-muted/50">
-          © 2025 Virtual Voodoo Dolls · Purely fictional. No actual harm intended. Probably.
+          © {new Date().getFullYear()} Virtual Voodoo Dolls · Purely fictional. No actual harm intended. Probably.
         </div>
       </footer>
     </div>
