@@ -1290,7 +1290,7 @@ const COMMITMENT_PHOBE: DollConfig = {
   curseSectionBody: "Not a real curse. Just the universe gently asking him to have one uncomfortable conversation. On behalf of every 'what are we?' you were too scared to ask.",
   curseSectionNote: '❆ No situationships were actually defined. Allegedly.',
   curseSectionPrompt: '❆ Read this aloud. For every unanswered question. ❆',
-  cursePlaceholder: 'Enter their name to personalise the consequence…',
+  cursePlaceholder: 'Enter their name to personalize…',
   vibesSectionBody: "You waited for clarity from someone who was never going to provide it. The waiting is over. Pick a manifestation. Say it out loud. You don't need his permission.",
   vibesSectionNote: '❆ The universe takes these seriously. Allegedly.',
   vibesSectionPrompt: '❆ Say it out loud — your next partner is listening ❆',
