@@ -283,6 +283,22 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* ALL DOLLS CTA */}
+      <section className="bg-cream pb-16 pt-4 px-8 text-center">
+        <FadeUp>
+          <Link
+            to="/doll/micromanager"
+            className="no-underline inline-block bg-ink text-cream font-body text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded-sm hover:bg-voodoo-red transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
+            ✦ Browse All {ALL_DOLLS.length} Dolls ✦
+          </Link>
+        </FadeUp>
+      </section>
+
       {/* FOOTER */}
       <footer className="bg-ink py-12 px-8 text-center border-t border-voodoo-gold/20">
         <div className="font-handwritten text-xl text-cream mb-2">
