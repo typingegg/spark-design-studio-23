@@ -1621,7 +1621,7 @@ const GOLDEN_CHILD: DollConfig = {
     "Someone __NAME__ dismissed professionally will be invited to speak at a conference he applied to attend.",
     "__NAME__'s most charming story will be heard by someone who knows the other version of it.",
     "__NAME__ will make a joke at a family dinner. The table will go briefly, quietly quiet.",
-    "__NAME__'s mum will, in a moment of honesty, describe him to a stranger as 'complicated.'",
+    "__NAME__'s mom will, in a moment of honesty, describe him to a stranger as 'complicated.'",
     "Someone will describe __NAME__ as 'a lot' to someone who hasn't met him.",
     "__NAME__ will be the smartest person in a room he chose specifically because of this.",
     "A performance review will include the phrase 'interpersonal feedback.' __NAME__ will ask who said it.",
