@@ -3,6 +3,11 @@ import { useEffect, useRef, useState } from 'react';
 import { ALL_DOLLS, CATEGORY_META, type DollCategory } from '@/data/dolls';
 import { getDollImage, BONUS_PLACEHOLDER } from '@/data/dollImages';
 import { motion } from 'framer-motion';
+import mysteryDollImg from '@/assets/dolls/mystery-doll.jpeg';
+import { useEffect, useRef, useState } from 'react';
+import { ALL_DOLLS, CATEGORY_META, type DollCategory } from '@/data/dolls';
+import { getDollImage, BONUS_PLACEHOLDER } from '@/data/dollImages';
+import { motion } from 'framer-motion';
 
 const CATEGORY_ORDER: DollCategory[] = ['corporate', 'relationship', 'family', 'friendship'];
 
