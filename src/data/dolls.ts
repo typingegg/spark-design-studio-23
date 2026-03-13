@@ -2497,7 +2497,7 @@ const BRIDEZILLA: DollConfig = {
   fortuneEyebrow: 'Wedding Day Prophecy',
   fortuneTitle: ['The Spirits Have', 'Read the Seating Plan.'],
   fortuneItalicWord: 'Read the Seating Plan.',
-  fortuneBody: "The universe has been cc'd on every vendor email, every colour swatch dispute, and every passive-aggressive group chat message. Pull a reading. It knows things.",
+  fortuneBody: "The universe has been cc'd on every vendor email, every color swatch dispute, and every passive-aggressive group chat message. Pull a reading. It knows things.",
   fortuneNote: '❆ Fortunes have 3 tiers: Common · Uncommon · ❆ Rare (10%)',
   curseSectionBody: "Not a real curse. Just a harmless cosmic RSVP to the chaos she has dispatched to everyone in a three-mile radius.",
   curseSectionNote: '❆ No florists were actually harmed. Allegedly.',
