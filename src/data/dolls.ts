@@ -2040,7 +2040,7 @@ const GOLD_DIGGER: DollConfig = {
     ],
     intense: [
       "I thought you were different. Someone who could actually provide.",
-      "I'm not going to apologise for knowing what I'm worth.",
+      "I'm not going to apologize for knowing what I'm worth.",
       "You can't afford me emotionally or financially. That's not my fault.",
       "I gave you the best version of me. That version has a price.",
       "I need security. If you can't give me that, I'll find someone who can.",
