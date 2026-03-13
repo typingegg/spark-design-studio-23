@@ -234,9 +234,8 @@ export default function Landing() {
                 </h2>
               </FadeUp>
               <FadeUp>
-                <p className="font-handwritten text-base text-cream/50 max-w-[440px] mx-auto mb-12 leading-loose">
-                  One doll. No name. No category.<br />
-                  No spoilers.
+                <p className="font-handwritten text-base text-cream/50 max-w-[440px] mx-auto mb-12 leading-loose" style={{ textWrap: 'balance' }}>
+                  One doll. No name. No category. No spoilers.
                 </p>
               </FadeUp>
             </div>
