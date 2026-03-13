@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { getDollById, ALL_DOLLS, type DollConfig, type WishCategory } from '@/data/dolls';
 import { getDollImage } from '@/data/dollImages';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import DonationButtons from '@/components/DonationButtons';
 
 function pick<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];

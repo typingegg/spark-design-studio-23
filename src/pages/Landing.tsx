@@ -4,6 +4,7 @@ import { ALL_DOLLS, CATEGORY_META, type DollCategory } from '@/data/dolls';
 import { getDollImage } from '@/data/dollImages';
 import { motion } from 'framer-motion';
 import mysteryDollImg from '@/assets/dolls/mystery-doll.jpeg';
+import DonationButtons from '@/components/DonationButtons';
 
 const CATEGORY_ORDER: DollCategory[] = ['corporate', 'relationship', 'family', 'friendship'];
 
