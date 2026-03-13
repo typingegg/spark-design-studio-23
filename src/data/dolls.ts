@@ -1423,7 +1423,7 @@ const MOTHER: DollConfig = {
   curseSectionBody: "Not a real curse. Just a gentle temporary suspension of her Amazon Prime account. On behalf of every comment about your body, every guilt trip, every dinner she turned into a tribunal.",
   curseSectionNote: '❆ No comments were made out of love. Allegedly.',
   curseSectionPrompt: '❆ Read this aloud. For every comment about your body. ❆',
-  cursePlaceholder: 'Enter their name to personalise the consequence…',
+  cursePlaceholder: 'Enter their name to personalize…',
   vibesSectionBody: "You've smiled through the comments. You've absorbed the guilt trips. You've driven home replaying things that weren't your fault. Pick something. Mean it.",
   vibesSectionNote: '❆ The universe takes these seriously. Allegedly.',
   vibesSectionPrompt: '❆ Say it out loud — your next partner is listening ❆',
