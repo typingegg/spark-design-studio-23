@@ -475,7 +475,7 @@ export default function DollPage() {
               </button>
             )}
           </div>
-          <div className="flex gap-2.5 flex-wrap">
+          <div className="flex gap-2.5 flex-wrap justify-center">
             <button onClick={shareDoll}
               className="font-body text-[0.7rem] font-bold tracking-[0.08em] uppercase text-cream border-none px-5 py-3 cursor-pointer hover:brightness-90 transition-all"
               style={{ background: doll.accentColor }}>
