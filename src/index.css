@@ -95,7 +95,8 @@
 
 @keyframes ouch-up {
   0% { opacity: 1; transform: translateY(0) scale(1); }
-  100% { opacity: 0; transform: translateY(-65px) scale(0.65); }
+  60% { opacity: 1; transform: translateY(-40px) scale(0.95); }
+  100% { opacity: 0; transform: translateY(-75px) scale(0.7); }
 }
 
 @keyframes spark-out {
