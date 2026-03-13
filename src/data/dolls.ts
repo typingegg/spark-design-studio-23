@@ -1610,7 +1610,7 @@ const GOLDEN_CHILD: DollConfig = {
     "__NAME__'s bonus will be slightly lower than expected. He will mention it more than the previous bonus.",
     "Someone at __NAME__'s firm will be promoted above him. He will describe them as 'political.'",
     "__NAME__ will tell a story at a family gathering. A sibling will fact-check one detail.",
-    "Mum will accidentally praise a sibling in front of __NAME__. The room will notice his face.",
+    "Mom will accidentally praise a sibling in front of __NAME__. The room will notice his face.",
     "__NAME__'s LinkedIn post will receive fewer likes than last time. He will refresh it fourteen times.",
     "Someone will beat __NAME__'s salary and mention it casually. __NAME__ will not sleep that night.",
     "__NAME__ will give someone unsolicited financial advice. That person will be significantly wealthier than him.",
