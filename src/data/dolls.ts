@@ -2458,7 +2458,7 @@ const BRIDEZILLA: DollConfig = {
     "The wedding hashtag __NAME__ chose will have been used by another couple. Four hundred photos. None of them hers.",
     "__NAME__'s vision board will be admired by all guests. As a table centerpiece, because the actual centerpieces didn't arrive.",
     "The weather on __NAME__'s wedding day will be perfect. She will find something else.",
-    "__NAME__'s colour palette will be described by the photographer as 'that pink wedding'. She will see the album. She will read the caption.",
+    "__NAME__'s color palette will be described by the photographer as 'that pink wedding'. She will see the album. She will read the caption.",
     "Every vendor __NAME__ calls will put her on hold. The hold music will be someone else's first dance song.",
     "__NAME__ will receive the thank-you cards she ordered with a typo in her own name.",
     "The florist __NAME__ rehired after firing will remember. The flowers will be fine. The florist will know they're fine.",
