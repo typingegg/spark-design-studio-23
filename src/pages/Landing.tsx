@@ -33,14 +33,27 @@ function FadeUp({ children, className = '' }: { children: React.ReactNode; class
 }
 
 export default function Landing() {
-  const [count, setCount] = useState(55000);
+  const [count, setCount] = useState(3000);
   const [requestSent, setRequestSent] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    // Launch date: March 15, 2026
+    const launchDate = new Date('2026-03-15');
     const today = new Date();
-    const base = 55000 + (today.getFullYear() - 2024) * 8000 + today.getMonth() * 600 + today.getDate() * 18;
-    let current = base - 420;
+    const daysSinceLaunch = Math.max(0, Math.floor((today.getTime() - launchDate.getTime()) / (1000 * 60 * 60 * 24)));
+
+    // Seed-based daily random visitors (deterministic per day)
+    let total = 3000;
+    for (let d = 0; d < daysSinceLaunch; d++) {
+      // Simple seed from day index for deterministic "random"
+      const seed = Math.sin(d * 9301 + 4927) * 10000;
+      const dailyVisitors = 80 + Math.floor((seed - Math.floor(seed)) * 170); // 80–249 per day
+      total += dailyVisitors;
+    }
+
+    const base = total;
+    let current = Math.max(3000, base - 400);
     const iv = setInterval(() => {
       current += Math.floor(Math.random() * 13) + 3;
       setCount(current);
